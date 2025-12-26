@@ -1,0 +1,29 @@
+"use client"
+import React from 'react';
+import { AudioOutlined } from '@ant-design/icons';
+import { Input, Space } from 'antd';
+import type { GetProps } from 'antd';
+
+type SearchProps = GetProps<typeof Input.Search>;
+
+const { Search } = Input;
+
+const suffix = <AudioOutlined style={{ fontSize: 16, color: '#1677ff' }} />;
+
+const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?.source, value);
+
+
+
+const SearchBox: React.FC = () => (
+  <Space vertical style = {{width:"100%"}}>
+    <Search
+      placeholder="input search text"
+      enterButton="Search"
+      size="large"
+      suffix={suffix}
+      onSearch={onSearch}
+    />
+  </Space>
+);
+
+export default SearchBox;

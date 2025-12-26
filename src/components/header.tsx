@@ -1,10 +1,12 @@
+import Account from "./home/account";
+import Cart from "./home/cart";
+import CategoriesButton from "./home/categories_button";
+import SearchBox from "./search_box";
 
 
 export default function Header() {
   return (
-
-
-
+    
     <div className = "header"
       style = {{
         backgroundColor: "white",
@@ -22,31 +24,38 @@ export default function Header() {
         </div>
         <div
         style = {{
-            border: "1px black solid",
-            flex: "1"
+            flex: "1",
+            display: "flex",
+            alignItems: "center"
         }}>
-
+          <CategoriesButton />
         </div>
         <div
         style = {{
-            border: "1px black solid",
-            flex: "3"
+            flex: "3",
+            display: "flex",
+            alignItems: "center",
         }}>
-
+          <SearchBox />
         </div>
         <div
         style = {{
-            border: "1px black solid",
-            flex: "1"
-        }}>
+            flex: "1",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "10px"
 
+
+        }}>
+          <Account />
         </div>
         <div
         style = {{
-            border: "1px black solid",
-            flex: "1"
+            flex: "1",
+            display: "flex",
+            alignItems: "center"
         }}>
-
+          <Cart/>
         </div>
 
       </div>
