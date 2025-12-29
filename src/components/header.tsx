@@ -2,6 +2,7 @@ import Account from "./home/account";
 import Cart from "./home/cart";
 import CategoriesButton from "./home/categories_button";
 import SearchBox from "./search_box";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -20,10 +21,12 @@ export default function Header() {
           justifyContent: "center",
         }}
       >
-        <img
-          style={{ width: "90px" }}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWQSpo-QHOmMpJ1go7HJjuPedQf4YP-BppRQ&s"
-        />
+        <Link href="/" className="cursor-pointer">
+          <img
+            style={{ width: "90px" }}
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWQSpo-QHOmMpJ1go7HJjuPedQf4YP-BppRQ&s"
+          />
+        </Link>
       </div>
       <div
         style={{
