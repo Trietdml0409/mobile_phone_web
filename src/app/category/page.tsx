@@ -7,8 +7,8 @@ import {
   EyeOutlined,
 } from "@ant-design/icons";
 import { Button, Flex } from "antd";
-import { Card } from "antd";
 import { useState } from "react";
+// TODO: @triet import useRouter từ next/navigation để sử dụng navigation
 
 interface IProduct {
   id: number;
@@ -96,10 +96,16 @@ export default function Category() {
   const [totalProducts, setTotalProducts] = useState<number>(
     PRODUCTS_INITIALIZE.length
   );
+  // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
+  // Hint: import useEffect từ react và thêm dependency [products]
   // state save Products
   const [products, setProducts] = useState<IProduct[]>(PRODUCTS_INITIALIZE);
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
+  // TODO: @triet thêm state để lưu danh sách sản phẩm yêu thích (favorites)
+  // Hint: sử dụng useState với mảng các product id: number[]
+  // TODO: @triet thêm state để lưu giỏ hàng (cart)
+  // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
@@ -120,7 +126,30 @@ export default function Category() {
           (a, b) => a.price - b.price
         );
         setProducts(sortedByPriceAsc);
-      // TODO: @triet add more sort by options
+      case "price-decrease":
+        // TODO: @triet sort by price decrease (từ cao xuống thấp)
+        // Hint: sử dụng sort() với logic ngược lại so với price-increase
+        break;
+      case "name-a-z":
+        // TODO: @triet sort by name from A-Z
+        // Hint: sử dụng sort() với localeCompare() để so sánh chuỗi
+        break;
+      case "name-z-a":
+        // TODO: @triet sort by name from Z-A
+        // Hint: tương tự name-a-z nhưng đảo ngược
+        break;
+      case "newest":
+        // TODO: @triet sort by newest (mới nhất trước)
+        // Hint: cần thêm createdAt vào IProduct interface và sử dụng sort()
+        break;
+      case "oldest":
+        // TODO: @triet sort by oldest (cũ nhất trước)
+        // Hint: tương tự newest nhưng đảo ngược
+        break;
+      case "best-seller":
+        // TODO: @triet sort by best seller
+        // Hint: cần thêm isBestSeller vào IProduct interface và filter/sort
+        break;
       default:
         break;
     }
@@ -146,6 +175,11 @@ export default function Category() {
           Filter by: Brand [Intel, AMD, Ryzen,]
           {/* TODO: @triet add filter Button -> when click -> filter by brand */}
         </p>
+        {/* TODO: @triet tạo state để lưu selectedBrand (string | null) */}
+        {/* TODO: @triet tạo mảng BRANDS với các brand có sẵn */}
+        {/* TODO: @triet render các Button cho từng brand, khi click -> setSelectedBrand */}
+        {/* TODO: @triet tạo hàm handleFilterByBrand để filter products theo brand */}
+        {/* TODO: @triet cần thêm brandName vào IProduct interface trước */}
         <Flex gap="small">
           <Button>OFFICE PC</Button>
           <Button>MINI PC</Button>
@@ -346,6 +380,8 @@ export default function Category() {
                   src={product.image}
                 />
               </Flex>
+              {/* TODO: @triet thêm onClick vào tên sản phẩm để navigate đến product-details */}
+              {/* Hint: có thể wrap trong một div hoặc thẻ có thể click được */}
               <p
                 style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}
               >
@@ -372,11 +408,24 @@ export default function Category() {
                 <Button
                   icon={<ShoppingCartOutlined />}
                   style={{ backgroundColor: "royalblue", color: "white" }}
+                  // TODO: @triet thêm onClick handler để thêm sản phẩm vào cart
+                  // Hint: tạo hàm handleAddToCart(productId) và cập nhật cart state
                 >
                   Add to Cart
                 </Button>
-                <Button icon={<HeartOutlined />}></Button>
-                <Button icon={<EyeOutlined />}></Button>
+                <Button
+                  icon={<HeartOutlined />}
+                  // TODO: @triet thêm onClick handler để toggle favorite
+                  // Hint: tạo hàm handleToggleFavorite(productId)
+                  // Nếu productId đã có trong favorites thì xóa, nếu chưa thì thêm vào
+                  // TODO: @triet thay đổi màu button khi sản phẩm đã được yêu thích
+                  // Hint: kiểm tra product.id có trong favorites state không
+                ></Button>
+                <Button
+                  icon={<EyeOutlined />}
+                  // TODO: @triet thêm onClick handler để navigate đến trang product-details
+                  // Hint: sử dụng useRouter từ next/navigation và router.push('/product-details?id=' + product.id)
+                ></Button>
               </Flex>
             </Flex>
           ))}
