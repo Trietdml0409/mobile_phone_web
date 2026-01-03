@@ -7,7 +7,7 @@ import {
   EyeOutlined,
 } from "@ant-design/icons";
 import { Button, Flex } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // TODO: @triet import useRouter từ next/navigation để sử dụng navigation
 
 interface IProduct {
@@ -16,8 +16,11 @@ interface IProduct {
   price: number;
   image: string;
   // createdAt: string; // time when the product was created in format: "YYYY-MM-DD HH:MM:SS"
+  createdAt: string;
   // isBestSeller: boolean; // true if the product is a best seller, false otherwise
+  isBestSeller: boolean;
   // brandName: string; // name of the brand of the product -> for filter by brand
+  brandName: string;
 }
 // PRODUCTS: IProduct[]
 // PRODUCTS: Array<IProduct>
@@ -29,6 +32,10 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     price: 11000000,
     image:
       "https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png",
+    createdAt: "2026-3-1",
+    isBestSeller: true,
+    brandName: "NVIDIA"
+
   },
   {
     id: 2,
@@ -36,6 +43,10 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     price: 10000000,
     image:
       "https://cdn.hstatic.net/products/200000420363/5888-5050_866c83a581f44117a7dcb6264f71490f_large.jpg",
+    createdAt: "2026-3-1",
+    isBestSeller: true,
+    brandName: "NVIDIA"
+
   },
   {
     id: 3,
@@ -43,6 +54,9 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     price: 50000000,
     image:
       "https://cdn.hstatic.net/products/200000420363/screenshot_2_e5ef09c2fb354e1b86a804bbb10e02a0_large.png",
+    createdAt: "2026-3-1",
+    isBestSeller: false,
+    brandName: "AMD"
   },
   {
     id: 4,
@@ -50,6 +64,9 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     price: 45000000,
     image:
       "https://cdn.hstatic.net/products/200000420363/_new_-_nh-sp-web_60fb8f06edf64bb5968c786a5aa36734_large.png",
+    createdAt: "2026-3-1",
+    isBestSeller: false,
+    brandName: "AMD"
   },
   {
     id: 5,
@@ -57,6 +74,9 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     price: 30000000,
     image:
       "https://product.hstatic.net/200000420363/product/ls27dg502eexxv-2_a4e1e2792a654f66923442db7a43084b_large.png",
+    createdAt: "2026-3-1",
+    isBestSeller: false,
+    brandName: "AMD"
   },
 ];
 
@@ -98,12 +118,19 @@ export default function Category() {
   );
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
+
+
+
   // state save Products
   const [products, setProducts] = useState<IProduct[]>(PRODUCTS_INITIALIZE);
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
+
+
   // TODO: @triet thêm state để lưu danh sách sản phẩm yêu thích (favorites)
   // Hint: sử dụng useState với mảng các product id: number[]
+
+  
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
 
@@ -118,6 +145,8 @@ export default function Category() {
     setSelectedSortBy(newValue);
 
     // TODO: @triet check what is switch statement in JavaScript/TS
+    
+
     // Handle sort by options
     switch (newValue) {
       case "price-increase":
@@ -129,14 +158,30 @@ export default function Category() {
       case "price-decrease":
         // TODO: @triet sort by price decrease (từ cao xuống thấp)
         // Hint: sử dụng sort() với logic ngược lại so với price-increase
-        break;
+        const sortedByPriceDesc = [...products].sort(
+          (a, b) => b.price - a.price
+        );
+        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
+        setProducts(sortedByPriceDesc)
       case "name-a-z":
         // TODO: @triet sort by name from A-Z
         // Hint: sử dụng sort() với localeCompare() để so sánh chuỗi
+        const sortedByNameAZ = [...products].sort(
+          (a,b) => a.name.localeCompare(b.name)
+        );
+        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
+        //WHAT IS THE MEANING OF THIS KIND OF SORT
+        setProducts(sortedByNameAZ)
         break;
       case "name-z-a":
         // TODO: @triet sort by name from Z-A
         // Hint: tương tự name-a-z nhưng đảo ngược
+        const sortedByNameZA = [...products].sort(
+          (a,b) => b.name.localeCompare(a.name)
+        );
+        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
+        //WHAT IS THE MEANING OF THIS KIND OF SORT
+        setProducts(sortedByNameZA)
         break;
       case "newest":
         // TODO: @triet sort by newest (mới nhất trước)
@@ -149,6 +194,12 @@ export default function Category() {
       case "best-seller":
         // TODO: @triet sort by best seller
         // Hint: cần thêm isBestSeller vào IProduct interface và filter/sort
+        const sortedByIsBestSeller = [...products].filter(
+          product => product.isBestSeller === true
+        );
+        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
+        //WHAT IS THE MEANING OF THIS KIND OF SORT
+        setProducts(sortedByIsBestSeller)
         break;
       default:
         break;
