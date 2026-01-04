@@ -7,20 +7,17 @@ import {
   EyeOutlined,
 } from "@ant-design/icons";
 import { Button, Flex } from "antd";
-import { useState, useEffect } from "react";
-// TODO: @triet import useRouter từ next/navigation để sử dụng navigation
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface IProduct {
   id: number;
   name: string;
   price: number;
   image: string;
-  // createdAt: string; // time when the product was created in format: "YYYY-MM-DD HH:MM:SS"
-  createdAt: string;
-  // isBestSeller: boolean; // true if the product is a best seller, false otherwise
-  isBestSeller: boolean;
-  // brandName: string; // name of the brand of the product -> for filter by brand
-  brandName: string;
+  createdAt: string; // time when the product was created in format: "YYYY-MM-DD HH:MM:SS"
+  isBestSeller: boolean; // true if the product is a best seller, false otherwise
+  brandName: string; // name of the brand of the product -> for filter by brand
 }
 // PRODUCTS: IProduct[]
 // PRODUCTS: Array<IProduct>
@@ -34,8 +31,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
       "https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png",
     createdAt: "2026-3-1",
     isBestSeller: true,
-    brandName: "NVIDIA"
-
+    brandName: "NVIDIA",
   },
   {
     id: 2,
@@ -45,8 +41,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
       "https://cdn.hstatic.net/products/200000420363/5888-5050_866c83a581f44117a7dcb6264f71490f_large.jpg",
     createdAt: "2026-3-1",
     isBestSeller: true,
-    brandName: "NVIDIA"
-
+    brandName: "NVIDIA",
   },
   {
     id: 3,
@@ -56,7 +51,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
       "https://cdn.hstatic.net/products/200000420363/screenshot_2_e5ef09c2fb354e1b86a804bbb10e02a0_large.png",
     createdAt: "2026-3-1",
     isBestSeller: false,
-    brandName: "AMD"
+    brandName: "AMD",
   },
   {
     id: 4,
@@ -66,7 +61,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
       "https://cdn.hstatic.net/products/200000420363/_new_-_nh-sp-web_60fb8f06edf64bb5968c786a5aa36734_large.png",
     createdAt: "2026-3-1",
     isBestSeller: false,
-    brandName: "AMD"
+    brandName: "AMD",
   },
   {
     id: 5,
@@ -76,7 +71,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
       "https://product.hstatic.net/200000420363/product/ls27dg502eexxv-2_a4e1e2792a654f66923442db7a43084b_large.png",
     createdAt: "2026-3-1",
     isBestSeller: false,
-    brandName: "AMD"
+    brandName: "AMD",
   },
 ];
 
@@ -111,6 +106,10 @@ const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   },
 ];
 
+const ProductCard = ({ product }: { product: IProduct }) => {
+  //  todo: tạo component ProductCard để hiển thị thông tin sản phẩm
+};
+
 export default function Category() {
   // state save total products
   const [totalProducts, setTotalProducts] = useState<number>(
@@ -119,18 +118,15 @@ export default function Category() {
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
 
-
-
   // state save Products
   const [products, setProducts] = useState<IProduct[]>(PRODUCTS_INITIALIZE);
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
-
+  const router = useRouter();
 
   // TODO: @triet thêm state để lưu danh sách sản phẩm yêu thích (favorites)
   // Hint: sử dụng useState với mảng các product id: number[]
 
-  
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
 
@@ -142,68 +138,70 @@ export default function Category() {
       "2. new value: ",
       newValue
     );
-    setSelectedSortBy(newValue);
+    setSelectedSortBy(newValue); // selectedSortBy = newValue
 
     // TODO: @triet check what is switch statement in JavaScript/TS
-    
 
+    let newProducts: IProduct[] = [...PRODUCTS_INITIALIZE];
     // Handle sort by options
     switch (newValue) {
       case "price-increase":
         // sort by price increase
-        const sortedByPriceAsc = [...products].sort(
+        newProducts = [...PRODUCTS_INITIALIZE].sort(
           (a, b) => a.price - b.price
         );
-        setProducts(sortedByPriceAsc);
+        break;
       case "price-decrease":
         // TODO: @triet sort by price decrease (từ cao xuống thấp)
         // Hint: sử dụng sort() với logic ngược lại so với price-increase
-        const sortedByPriceDesc = [...products].sort(
+        newProducts = [...PRODUCTS_INITIALIZE].sort(
           (a, b) => b.price - a.price
         );
-        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
-        setProducts(sortedByPriceDesc)
+        break;
       case "name-a-z":
         // TODO: @triet sort by name from A-Z
         // Hint: sử dụng sort() với localeCompare() để so sánh chuỗi
-        const sortedByNameAZ = [...products].sort(
-          (a,b) => a.name.localeCompare(b.name)
+        newProducts = [...PRODUCTS_INITIALIZE].sort((a, b) =>
+          a.name.localeCompare(b.name)
         );
-        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
-        //WHAT IS THE MEANING OF THIS KIND OF SORT
-        setProducts(sortedByNameAZ)
         break;
       case "name-z-a":
         // TODO: @triet sort by name from Z-A
         // Hint: tương tự name-a-z nhưng đảo ngược
-        const sortedByNameZA = [...products].sort(
-          (a,b) => b.name.localeCompare(a.name)
+        newProducts = [...PRODUCTS_INITIALIZE].sort((a, b) =>
+          b.name.localeCompare(a.name)
         );
-        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
-        //WHAT IS THE MEANING OF THIS KIND OF SORT
-        setProducts(sortedByNameZA)
         break;
       case "newest":
         // TODO: @triet sort by newest (mới nhất trước)
         // Hint: cần thêm createdAt vào IProduct interface và sử dụng sort()
+        newProducts = [...PRODUCTS_INITIALIZE].sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
+        // timestamp: 1714857600000 -> 2024-05-01 00:00:00. timestamp | UTC time, ISO string| timezone: UTC+0
         break;
       case "oldest":
         // TODO: @triet sort by oldest (cũ nhất trước)
         // Hint: tương tự newest nhưng đảo ngược
+        newProducts = [...PRODUCTS_INITIALIZE].sort(
+          (a, b) =>
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+        );
         break;
       case "best-seller":
         // TODO: @triet sort by best seller
         // Hint: cần thêm isBestSeller vào IProduct interface và filter/sort
-        const sortedByIsBestSeller = [...products].filter(
-          product => product.isBestSeller === true
+        newProducts = [...PRODUCTS_INITIALIZE].filter(
+          (product) => product.isBestSeller === true
         );
-        //??????WHY DO WE NEED TO CALL SETPRODUCTS HERE
-        //WHAT IS THE MEANING OF THIS KIND OF SORT
-        setProducts(sortedByIsBestSeller)
         break;
       default:
         break;
     }
+
+    setProducts(newProducts);
+    setTotalProducts(newProducts.length);
   };
 
   return (
@@ -239,13 +237,13 @@ export default function Category() {
           <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
             Sorted By:
           </p>
-          {/* <Button>Price: Increase</Button>
-          <Button>Price: Decrease</Button>
-          <Button>Name: From A-Z</Button>
-          <Button>Name: From Z-A</Button>
-          <Button>Newest</Button>
-          <Button>Oldest</Button>
-          <Button>Best seller</Button> */}
+          {/* <Button key="price-increase" >Price: Increase</Button>
+          <Button key="price-decrease" >Price: Decrease</Button>
+          <Button key="name-a-z" >Name: From A-Z</Button>
+          <Button key="name-z-a" >Name: From Z-A</Button>
+          <Button key="newest" >Newest</Button>
+          <Button key="oldest" >Oldest</Button>
+          <Button key="best-seller" >Best seller</Button> */}
           {SORT_BY_OPTIONS.map((option) => (
             <Button
               key={option.value}
@@ -421,6 +419,7 @@ export default function Category() {
               vertical
             >
               <Flex justify="center" align="center" style={{ height: "240px" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
                 <img
                   style={{
                     height: "auto",
@@ -474,8 +473,10 @@ export default function Category() {
                 ></Button>
                 <Button
                   icon={<EyeOutlined />}
-                  // TODO: @triet thêm onClick handler để navigate đến trang product-details
                   // Hint: sử dụng useRouter từ next/navigation và router.push('/product-details?id=' + product.id)
+                  onClick={() =>
+                    router.push(`/product-details?id=${product.id}`)
+                  }
                 ></Button>
               </Flex>
             </Flex>
