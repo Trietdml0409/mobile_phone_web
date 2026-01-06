@@ -1,5 +1,6 @@
 "use client";
 
+
 import Header from "@/components/header";
 import {
   ShoppingCartOutlined,
@@ -32,6 +33,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     createdAt: "2026-3-1",
     isBestSeller: true,
     brandName: "NVIDIA",
+    liked: false
   },
   {
     id: 2,
@@ -110,6 +112,7 @@ const ProductCard = ({ product }: { product: IProduct }) => {
   //  todo: tạo component ProductCard để hiển thị thông tin sản phẩm
 };
 
+
 export default function Category() {
   // state save total products
   const [totalProducts, setTotalProducts] = useState<number>(
@@ -123,6 +126,7 @@ export default function Category() {
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
   const router = useRouter();
+  const [likedName, setLikedName] = useState<string|null>(null);
 
   // TODO: @triet thêm state để lưu danh sách sản phẩm yêu thích (favorites)
   // Hint: sử dụng useState với mảng các product id: number[]
@@ -264,145 +268,7 @@ export default function Category() {
         </Flex>
 
         <Flex wrap gap="middle">
-          {/* <Flex
-            align="center"
-            justify="start"
-            style={{
-              height: "300px",
-              width: "200px",
-              border: "1px solid black",
-              borderRadius: "10%",
-            }}
-            vertical
-          >
-            <img
-              style={{ height: "250px", width: "200px", borderRadius: "15%" }}
-              src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
-            />
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-              PC RTX 3050 2023
-            </p>
-          </Flex>
 
-          <Flex
-            align="center"
-            justify="start"
-            style={{
-              height: "300px",
-              width: "200px",
-              border: "1px solid black",
-              borderRadius: "10%",
-            }}
-            vertical
-          >
-            <img
-              style={{ height: "250px", width: "200px", borderRadius: "15%" }}
-              src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
-            />
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-              PC RTX 3050 2023
-            </p>
-          </Flex>
-
-          <Flex
-            align="center"
-            justify="start"
-            style={{
-              height: "300px",
-              width: "200px",
-              border: "1px solid black",
-              borderRadius: "10%",
-            }}
-            vertical
-          >
-            <img
-              style={{ height: "250px", width: "200px", borderRadius: "15%" }}
-              src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
-            />
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-              PC RTX 3050 2023
-            </p>
-          </Flex>
-
-          <Flex
-            align="center"
-            justify="start"
-            style={{
-              height: "300px",
-              width: "200px",
-              border: "1px solid black",
-              borderRadius: "10%",
-            }}
-            vertical
-          >
-            <img
-              style={{ height: "250px", width: "200px", borderRadius: "15%" }}
-              src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
-            />
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-              PC RTX 3050 2023
-            </p>
-          </Flex>
-
-          <Flex
-            align="center"
-            justify="start"
-            style={{
-              height: "300px",
-              width: "200px",
-              border: "1px solid black",
-              borderRadius: "10%",
-            }}
-            vertical
-          >
-            <img
-              style={{ height: "250px", width: "200px", borderRadius: "15%" }}
-              src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
-            />
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-              PC RTX 3050 2023
-            </p>
-          </Flex>
-
-          <Flex
-            align="center"
-            justify="start"
-            style={{
-              height: "300px",
-              width: "200px",
-              border: "1px solid black",
-              borderRadius: "10%",
-            }}
-            vertical
-          >
-            <img
-              style={{ height: "250px", width: "200px", borderRadius: "15%" }}
-              src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
-            />
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-              PC RTX 3050 2023
-            </p>
-          </Flex>
-
-          <Flex
-            align="center"
-            justify="start"
-            style={{
-              height: "300px",
-              width: "200px",
-              border: "1px solid black",
-              borderRadius: "10%",
-            }}
-            vertical
-          >
-            <img
-              style={{ height: "250px", width: "200px", borderRadius: "15%" }}
-              src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
-            />
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-              PC RTX 3050 2023
-            </p>
-          </Flex> */}
 
           {products.map((product: IProduct) => (
             <Flex
@@ -464,7 +330,8 @@ export default function Category() {
                   Add to Cart
                 </Button>
                 <Button
-                  icon={<HeartOutlined />}
+                  icon={<HeartOutlined style={{...(product.name === likedName ? {color:"red"}: {})}} />}
+                  onClick = {() => setLikedName(product.name)}
                   // TODO: @triet thêm onClick handler để toggle favorite
                   // Hint: tạo hàm handleToggleFavorite(productId)
                   // Nếu productId đã có trong favorites thì xóa, nếu chưa thì thêm vào
