@@ -7,15 +7,17 @@ import {
 import { Flex, Button } from "antd";
 import { useRouter } from "next/navigation";
 
+interface CatergoryProductCardProps {
+  product: IProduct;
+  isLiked: boolean;
+  toggleLike: () => void;
+}
+
 export default function CatergoryProductCard({
   product,
-  likedName,
-  setLikedName,
-}: {
-  product: IProduct;
-  likedName: string | null;
-  setLikedName: (name: string) => void;
-}) {
+  isLiked,
+  toggleLike,
+}: CatergoryProductCardProps) {
   const router = useRouter();
 
   return (
@@ -79,11 +81,17 @@ export default function CatergoryProductCard({
           icon={
             <HeartOutlined
               style={{
-                ...(product.name === likedName ? { color: "red" } : {}),
+                ...(isLiked
+                  ? {
+                      color: "red",
+                      transform: "scale(1.5)",
+                      transition: "all 0.3s ease",
+                    }
+                  : {}),
               }}
             />
           }
-          onClick={() => setLikedName(product.name)}
+          onClick={toggleLike}
           // TODO: @triet thêm onClick handler để toggle favorite
           // Hint: tạo hàm handleToggleFavorite(productId)
           // Nếu productId đã có trong favorites thì xóa, nếu chưa thì thêm vào

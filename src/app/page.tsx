@@ -3,12 +3,14 @@
 import Banner from "@/components/home/banner"; //$ is src
 import Header from "@/components/header";
 import Contents from "@/components/home/contents";
+import { useEffect, useState } from "react";
+import MessageBanner from "@/components/MessageBanner";
 // TODO: @triet import useState và useEffect từ react
 // TODO: @triet import Button và Input từ antd để sử dụng trong các bài tập
 
 export default function Home() {
   // TODO: @triet tạo state để đếm số lượt truy cập trang (visitCount)
-  // Hint: const [visitCount, setVisitCount] = useState<number>(0);
+  const [visitCount, setVisitCount] = useState<number>(0);
 
   // TODO: @triet tạo state để hiển thị/ẩn một thông báo chào mừng (showWelcome)
   // Hint: const [showWelcome, setShowWelcome] = useState<boolean>(true);
@@ -26,8 +28,28 @@ export default function Home() {
   // TODO: @triet tạo hàm handleChangeUserName để cập nhật userName
   // Hint: const handleChangeUserName = (name: string) => { setUserName(name); };
 
+  // -----------
+  useEffect(() => {
+    // function to increase visitCount
+    // const newVisitCount = visitCount + 1;
+    // setVisitCount(newVisitCount);
+    setVisitCount((prev) => prev + 1);
+  }, []); // [] = empty dependency array = run only once when the component mounts
+
+  // visitCount: 5 => show message: "Xin chào, bạn đã truy cập trang này 5 lần"
+
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        minWidth: "100vw",
+        backgroundColor: "white",
+        padding: "10px",
+        paddingBottom: "50px",
+      }}
+    >
       <Header />
 
       {/* TODO: @triet hiển thị thông báo chào mừng nếu showWelcome === true */}
@@ -48,6 +70,8 @@ export default function Home() {
       {/* Tạo mảng features: ["Free Shipping", "24/7 Support", "Best Price"] */}
       {/* Sử dụng map() để render danh sách này */}
       {/* Hint: features.map((feature, index) => <div key={index}>...</div>) */}
+
+      <MessageBanner visitCount={visitCount} />
     </div>
   );
 }

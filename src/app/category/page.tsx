@@ -94,11 +94,9 @@ const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   },
 ];
 
-const ProductCard = ({ product }: { product: IProduct }) => {
-  //  todo: tạo component ProductCard để hiển thị thông tin sản phẩm
-};
-
 export default function Category() {
+  const [likedProductIds, setLikedProductIds] = useState<number[]>([]);
+
   // state save total products
   const [totalProducts, setTotalProducts] = useState<number>(
     PRODUCTS_INITIALIZE.length
@@ -110,8 +108,6 @@ export default function Category() {
   const [products, setProducts] = useState<IProduct[]>(PRODUCTS_INITIALIZE);
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
-
-  const [likedName, setLikedName] = useState<string | null>(null);
 
   // TODO: @triet thêm state để lưu danh sách sản phẩm yêu thích (favorites)
   // Hint: sử dụng useState với mảng các product id: number[]
@@ -193,6 +189,31 @@ export default function Category() {
     setTotalProducts(newProducts.length);
   };
 
+  const handleToggleLike = (productId: number) => {
+    /*
+       likedProductIds: [1, 2, 3]
+      Case1: productId is already in likedProductIds
+       => HandleToggleLike(1) => [2,3] -remove 1 from likedProductIds
+
+      Case2: productId is not in likedProductIds
+      => HandleToggleLike(6) => [1,2,3,6] -add 6 to likedProductIds
+
+      => pseudo code
+    */
+    if (likedProductIds.includes(productId)) {
+      // remove productId from likedProductIds
+      const newLikedProductIds = likedProductIds.filter(
+        (id) => id !== productId
+      );
+      setLikedProductIds(newLikedProductIds);
+    } else {
+      // add productId to likedProductIds
+      const newLikedProductIds = [...likedProductIds, productId];
+      // spread operator to create a new array
+      setLikedProductIds(newLikedProductIds);
+    }
+  };
+
   return (
     <div
       style={{
@@ -257,8 +278,8 @@ export default function Category() {
             <CatergoryProductCard
               key={product.id}
               product={product}
-              likedName={likedName}
-              setLikedName={setLikedName}
+              isLiked={likedProductIds.includes(product.id)}
+              toggleLike={() => handleToggleLike(product.id)}
             />
           ))}
         </Flex>
