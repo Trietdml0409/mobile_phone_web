@@ -33,11 +33,13 @@ export default function Home() {
     // function to increase visitCount
     // const newVisitCount = visitCount + 1;
     // setVisitCount(newVisitCount);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setVisitCount((prev) => prev + 1);
   }, []); // [] = empty dependency array = run only once when the component mounts
 
   // visitCount: 5 => show message: "Xin chào, bạn đã truy cập trang này 5 lần"
 
+  console.log("visitCount: ", visitCount);
   return (
     <div
       className="app"

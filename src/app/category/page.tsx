@@ -2,7 +2,7 @@
 
 import Header from "@/components/header";
 import { Button, Flex } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 
@@ -11,7 +11,7 @@ import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 
 const PRODUCTS_INITIALIZE: Array<IProduct> = [
   {
-    id: 1,
+    id: 10,
     name: "PC RTX 3050 2023",
     price: 11000000,
     image:
@@ -22,7 +22,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     liked: false,
   },
   {
-    id: 2,
+    id: 20,
     name: "PC GTX 1050 2023",
     price: 10000000,
     image:
@@ -32,7 +32,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     brandName: "NVIDIA",
   },
   {
-    id: 3,
+    id: 30,
     name: "PC Ryzen 5 5600G 2023",
     price: 50000000,
     image:
@@ -42,7 +42,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     brandName: "AMD",
   },
   {
-    id: 4,
+    id: 40,
     name: "PC Ryzen 7 5800H Gen 1",
     price: 45000000,
     image:
@@ -52,7 +52,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     brandName: "AMD",
   },
   {
-    id: 5,
+    id: 50,
     name: "PC Ryzen 9 5900HX Gen 2",
     price: 30000000,
     image:
@@ -114,6 +114,23 @@ export default function Category() {
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
+
+  useEffect(() => {
+    // only run once when the component is mounted -(render first time)
+    const savedLikedProductIds: string | null =
+      localStorage.getItem("key_likeProducts");
+
+    if (savedLikedProductIds) {
+      // parse string => to array of numbers
+      try {
+        const values = JSON.parse(savedLikedProductIds) as number[];
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setLikedProductIds(values);
+      } catch (error) {
+        console.error("Error parsing saved liked product ids: ", error);
+      }
+    }
+  }, []);
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
@@ -200,18 +217,28 @@ export default function Category() {
 
       => pseudo code
     */
+    let newLikedProductIds: number[] = []; // empty array
     if (likedProductIds.includes(productId)) {
       // remove productId from likedProductIds
-      const newLikedProductIds = likedProductIds.filter(
-        (id) => id !== productId
-      );
-      setLikedProductIds(newLikedProductIds);
+      newLikedProductIds = likedProductIds.filter((id) => id !== productId);
     } else {
       // add productId to likedProductIds
-      const newLikedProductIds = [...likedProductIds, productId];
-      // spread operator to create a new array
-      setLikedProductIds(newLikedProductIds);
+      newLikedProductIds = [...likedProductIds, productId];
     }
+
+    console.log("OLD: likedProductIds: ", likedProductIds);
+    console.log("NEW: newLikedProductIds: ", newLikedProductIds);
+
+    setLikedProductIds(newLikedProductIds);
+
+    // to save data: 1. call api to save data to server
+    //  2. save data to local storage
+    // => method 2.
+    localStorage.setItem(
+      "key_likeProducts",
+      JSON.stringify(newLikedProductIds)
+    );
+    // [key] = value. value is a string
   };
 
   return (
