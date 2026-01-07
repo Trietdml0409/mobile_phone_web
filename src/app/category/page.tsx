@@ -1,25 +1,11 @@
 "use client";
 
-
 import Header from "@/components/header";
-import {
-  ShoppingCartOutlined,
-  HeartOutlined,
-  EyeOutlined,
-} from "@ant-design/icons";
 import { Button, Flex } from "antd";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { IProduct } from "@/shared/types/common.types";
+import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 
-interface IProduct {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  createdAt: string; // time when the product was created in format: "YYYY-MM-DD HH:MM:SS"
-  isBestSeller: boolean; // true if the product is a best seller, false otherwise
-  brandName: string; // name of the brand of the product -> for filter by brand
-}
 // PRODUCTS: IProduct[]
 // PRODUCTS: Array<IProduct>
 
@@ -33,7 +19,7 @@ const PRODUCTS_INITIALIZE: Array<IProduct> = [
     createdAt: "2026-3-1",
     isBestSeller: true,
     brandName: "NVIDIA",
-    liked: false
+    liked: false,
   },
   {
     id: 2,
@@ -112,7 +98,6 @@ const ProductCard = ({ product }: { product: IProduct }) => {
   //  todo: tạo component ProductCard để hiển thị thông tin sản phẩm
 };
 
-
 export default function Category() {
   // state save total products
   const [totalProducts, setTotalProducts] = useState<number>(
@@ -125,8 +110,8 @@ export default function Category() {
   const [products, setProducts] = useState<IProduct[]>(PRODUCTS_INITIALIZE);
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
-  const router = useRouter();
-  const [likedName, setLikedName] = useState<string|null>(null);
+
+  const [likedName, setLikedName] = useState<string | null>(null);
 
   // TODO: @triet thêm state để lưu danh sách sản phẩm yêu thích (favorites)
   // Hint: sử dụng useState với mảng các product id: number[]
@@ -268,85 +253,13 @@ export default function Category() {
         </Flex>
 
         <Flex wrap gap="middle">
-
-
           {products.map((product: IProduct) => (
-            <Flex
-              key={product.id} // unique key to distinguish each product
-              align="center"
-              justify="start"
-              style={{
-                height: "350px",
-                width: "220px",
-                borderRadius: "6px",
-                boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
-                border: "1px solid rgb(224, 224, 224)",
-              }}
-              vertical
-            >
-              <Flex justify="center" align="center" style={{ height: "240px" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-                <img
-                  style={{
-                    height: "auto",
-                    width: "200px",
-                    borderRadius: "15%",
-                    objectFit: "fill",
-                  }}
-                  src={product.image}
-                />
-              </Flex>
-              {/* TODO: @triet thêm onClick vào tên sản phẩm để navigate đến product-details */}
-              {/* Hint: có thể wrap trong một div hoặc thẻ có thể click được */}
-              <p
-                style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}
-              >
-                {product.name}
-              </p>
-              {/* price */}
-              <p
-                style={{
-                  fontSize: "24px",
-                  fontWeight: "bold",
-                  textAlign: "center",
-                  color: "rosybrown",
-                }}
-              >
-                {product.price.toLocaleString()} VND
-              </p>
-              {/* Action Button */}
-              <Flex
-                justify="center"
-                align="center"
-                style={{ height: "50px" }}
-                gap="small"
-              >
-                <Button
-                  icon={<ShoppingCartOutlined />}
-                  style={{ backgroundColor: "royalblue", color: "white" }}
-                  // TODO: @triet thêm onClick handler để thêm sản phẩm vào cart
-                  // Hint: tạo hàm handleAddToCart(productId) và cập nhật cart state
-                >
-                  Add to Cart
-                </Button>
-                <Button
-                  icon={<HeartOutlined style={{...(product.name === likedName ? {color:"red"}: {})}} />}
-                  onClick = {() => setLikedName(product.name)}
-                  // TODO: @triet thêm onClick handler để toggle favorite
-                  // Hint: tạo hàm handleToggleFavorite(productId)
-                  // Nếu productId đã có trong favorites thì xóa, nếu chưa thì thêm vào
-                  // TODO: @triet thay đổi màu button khi sản phẩm đã được yêu thích
-                  // Hint: kiểm tra product.id có trong favorites state không
-                ></Button>
-                <Button
-                  icon={<EyeOutlined />}
-                  // Hint: sử dụng useRouter từ next/navigation và router.push('/product-details?id=' + product.id)
-                  onClick={() =>
-                    router.push(`/product-details?id=${product.id}`)
-                  }
-                ></Button>
-              </Flex>
-            </Flex>
+            <CatergoryProductCard
+              key={product.id}
+              product={product}
+              likedName={likedName}
+              setLikedName={setLikedName}
+            />
           ))}
         </Flex>
       </Flex>
