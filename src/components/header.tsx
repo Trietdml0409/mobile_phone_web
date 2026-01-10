@@ -4,7 +4,7 @@ import CategoriesButton from "./home/categories_button";
 import SearchBox from "./search_box";
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({totalCartProducts}:{totalCartProducts:number}) {
   return (
     <div
       className="header"
@@ -63,7 +63,9 @@ export default function Header() {
           alignItems: "center",
         }}
       >
+        <p style={{color:'red'}}>{totalCartProducts}</p>
         <Cart />
+        
       </div>
     </div>
   );

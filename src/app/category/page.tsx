@@ -5,9 +5,7 @@ import { Button, Flex } from "antd";
 import { useEffect, useState } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
-
-// PRODUCTS: IProduct[]
-// PRODUCTS: Array<IProduct>
+import BrandName from "@/components/category/brand_name";
 
 const PRODUCTS_INITIALIZE: Array<IProduct> = [
   {
@@ -98,27 +96,52 @@ export default function Category() {
   const [likedProductIds, setLikedProductIds] = useState<number[]>([]);
 
   // state save total products
-  const [totalProducts, setTotalProducts] = useState<number>(
-    PRODUCTS_INITIALIZE.length
-  );
+  const [totalProducts, setTotalProducts] = useState<number>(PRODUCTS_INITIALIZE.length);
+
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
+
 
   // state save Products
   const [products, setProducts] = useState<IProduct[]>(PRODUCTS_INITIALIZE);
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
 
-  // TODO: @triet thêm state để lưu danh sách sản phẩm yêu thích (favorites)
-  // Hint: sử dụng useState với mảng các product id: number[]
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
+  const [cartProductIds, setCartProductIds] = useState<number[]>([]);
+
+  function handleCartProductIds({new_product_id}:{new_product_id:number}):void{
+    let cart: number[] = []
+    if(cartProductIds.includes(new_product_id)){
+      cart = cartProductIds.filter(product => product !== new_product_id )
+    }else {
+      cart = [...cartProductIds,new_product_id]
+    }
+
+    setCartProductIds(cart)
+    localStorage.setItem("key_cartProducts",JSON.stringify(cart));
+  
+  }
+
+  function sortByBrand(brand:string):void{
+    let newProducts: IProduct[];
+    if (brand == "All"){
+      newProducts = [...PRODUCTS_INITIALIZE]
+    }else{
+      newProducts = [...PRODUCTS_INITIALIZE].filter((product:IProduct) => brand === product.brandName);
+    }
+
+    setProducts(newProducts);
+    setTotalProducts(newProducts.length);
+  }
 
   useEffect(() => {
     // only run once when the component is mounted -(render first time)
     const savedLikedProductIds: string | null =
       localStorage.getItem("key_likeProducts");
+    const savedCartProductIds: string | null = localStorage.getItem("key_cartProducts")
 
     if (savedLikedProductIds) {
       // parse string => to array of numbers
@@ -129,8 +152,19 @@ export default function Category() {
       } catch (error) {
         console.error("Error parsing saved liked product ids: ", error);
       }
+
+    if(savedCartProductIds) {
+      try{
+        const values = JSON.parse(savedCartProductIds) as number[];
+        setCartProductIds(values)
+      } catch(error){
+        console.error("Error parsing cart product ids: ", error);
+      }
+    }
     }
   }, []);
+
+
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
@@ -249,7 +283,7 @@ export default function Category() {
         backgroundColor: "white",
       }}
     >
-      <Header />
+      <Header totalCartProducts={cartProductIds.length} />
       <Flex vertical style={{ padding: "15px" }}>
         <p style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
           PC GAMING ({totalProducts} PRODUCTS)
@@ -274,13 +308,6 @@ export default function Category() {
           <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
             Sorted By:
           </p>
-          {/* <Button key="price-increase" >Price: Increase</Button>
-          <Button key="price-decrease" >Price: Decrease</Button>
-          <Button key="name-a-z" >Name: From A-Z</Button>
-          <Button key="name-z-a" >Name: From Z-A</Button>
-          <Button key="newest" >Newest</Button>
-          <Button key="oldest" >Oldest</Button>
-          <Button key="best-seller" >Best seller</Button> */}
           {SORT_BY_OPTIONS.map((option) => (
             <Button
               key={option.value}
@@ -300,6 +327,11 @@ export default function Category() {
           ))}
         </Flex>
 
+        <BrandName sortByBrand={sortByBrand} />
+        
+        
+
+
         <Flex wrap gap="middle">
           {products.map((product: IProduct) => (
             <CatergoryProductCard
@@ -307,6 +339,8 @@ export default function Category() {
               product={product}
               isLiked={likedProductIds.includes(product.id)}
               toggleLike={() => handleToggleLike(product.id)}
+              cartProductIds = {cartProductIds}
+              handleCartProductIds = {handleCartProductIds}
             />
           ))}
         </Flex>
@@ -314,3 +348,5 @@ export default function Category() {
     </div>
   );
 }
+
+

@@ -8,3 +8,8 @@ export interface IProduct {
   brandName: string; // name of the brand of the product -> for filter by brand
   liked?: boolean; // true if the product is liked, false otherwise
 }
+
+export interface Brand{
+  index: number;
+  name: string;
+}
