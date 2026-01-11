@@ -1,11 +1,12 @@
 "use client";
 
 import Header from "@/components/header";
-import { Button, Flex } from "antd";
+import { Button, Flex, message, notification } from "antd";
 import { useEffect, useState } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 import BrandName from "@/components/category/brand_name";
+import { NotificationPlacement } from "antd/es/notification/interface";
 
 const PRODUCTS_INITIALIZE: Array<IProduct> = [
   {
@@ -91,46 +92,61 @@ const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
     value: "best-seller",
   },
 ];
-
+// statge management
 export default function Category() {
   const [likedProductIds, setLikedProductIds] = useState<number[]>([]);
 
   // state save total products
-  const [totalProducts, setTotalProducts] = useState<number>(PRODUCTS_INITIALIZE.length);
+  const [totalProducts, setTotalProducts] = useState<number>(
+    PRODUCTS_INITIALIZE.length
+  );
+
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = (message: string) => {
+    api.info({
+      title: message,
+      type: "info",
+      placement: "topRight",
+    });
+  };
 
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
 
-
   // state save Products
-  const [products, setProducts] = useState<IProduct[]>(PRODUCTS_INITIALIZE);
+  const [products, setProducts] = useState<IProduct[]>([]);
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
-
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
   const [cartProductIds, setCartProductIds] = useState<number[]>([]);
 
-  function handleCartProductIds({new_product_id}:{new_product_id:number}):void{
-    let cart: number[] = []
-    if(cartProductIds.includes(new_product_id)){
-      cart = cartProductIds.filter(product => product !== new_product_id )
-    }else {
-      cart = [...cartProductIds,new_product_id]
+  function handleCartProductIds({
+    new_product_id,
+  }: {
+    new_product_id: number;
+  }): void {
+    let cart: number[] = [];
+    if (cartProductIds.includes(new_product_id)) {
+      cart = cartProductIds.filter((product) => product !== new_product_id);
+    } else {
+      cart = [...cartProductIds, new_product_id];
     }
 
-    setCartProductIds(cart)
-    localStorage.setItem("key_cartProducts",JSON.stringify(cart));
-  
+    setCartProductIds(cart);
+    localStorage.setItem("key_cartProducts", JSON.stringify(cart));
   }
 
-  function sortByBrand(brand:string):void{
+  function sortByBrand(brand: string): void {
     let newProducts: IProduct[];
-    if (brand == "All"){
-      newProducts = [...PRODUCTS_INITIALIZE]
-    }else{
-      newProducts = [...PRODUCTS_INITIALIZE].filter((product:IProduct) => brand === product.brandName);
+    if (brand == "All") {
+      newProducts = [...PRODUCTS_INITIALIZE];
+    } else {
+      newProducts = [...PRODUCTS_INITIALIZE].filter(
+        (product: IProduct) => brand === product.brandName
+      );
     }
 
     setProducts(newProducts);
@@ -141,7 +157,8 @@ export default function Category() {
     // only run once when the component is mounted -(render first time)
     const savedLikedProductIds: string | null =
       localStorage.getItem("key_likeProducts");
-    const savedCartProductIds: string | null = localStorage.getItem("key_cartProducts")
+    const savedCartProductIds: string | null =
+      localStorage.getItem("key_cartProducts");
 
     if (savedLikedProductIds) {
       // parse string => to array of numbers
@@ -153,18 +170,31 @@ export default function Category() {
         console.error("Error parsing saved liked product ids: ", error);
       }
 
-    if(savedCartProductIds) {
-      try{
-        const values = JSON.parse(savedCartProductIds) as number[];
-        setCartProductIds(values)
-      } catch(error){
-        console.error("Error parsing cart product ids: ", error);
+      if (savedCartProductIds) {
+        try {
+          const values = JSON.parse(savedCartProductIds) as number[];
+          setCartProductIds(values);
+        } catch (error) {
+          console.error("Error parsing cart product ids: ", error);
+        }
       }
     }
-    }
+
+    // fetch products from server
+    const fetchProducts = async () => {
+      const response = await fetch("http://localhost:8000/products");
+      const responseData = (await response.json()) as {
+        data: IProduct[];
+        message: string;
+      };
+      console.log("Response data: ", responseData);
+      setProducts(responseData.data);
+      // show toast message
+      // openNotification(responseData.message, "topRight");
+    };
+
+    fetchProducts();
   }, []);
-
-
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
@@ -328,9 +358,6 @@ export default function Category() {
         </Flex>
 
         <BrandName sortByBrand={sortByBrand} />
-        
-        
-
 
         <Flex wrap gap="middle">
           {products.map((product: IProduct) => (
@@ -339,8 +366,8 @@ export default function Category() {
               product={product}
               isLiked={likedProductIds.includes(product.id)}
               toggleLike={() => handleToggleLike(product.id)}
-              cartProductIds = {cartProductIds}
-              handleCartProductIds = {handleCartProductIds}
+              cartProductIds={cartProductIds}
+              handleCartProductIds={handleCartProductIds}
             />
           ))}
         </Flex>
@@ -348,5 +375,3 @@ export default function Category() {
     </div>
   );
 }
-
-
