@@ -2,7 +2,7 @@ import { Button, Flex } from "antd";
 import React from "react";
 import { FormOutlined, InfoOutlined, SafetyOutlined } from "@ant-design/icons";
 
-export default function ImagesProduct() {
+export default function ImagesProduct({image}:{image:string}) {
   return (
     <Flex
       justify="start"
@@ -12,7 +12,7 @@ export default function ImagesProduct() {
     >
       <img
         style={{ height: "70%", width: "90%" }}
-        src="https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png"
+        src={image}
       />
       <Flex
         gap="small"

@@ -43,114 +43,66 @@ const PersonList: Person[] = [
   },
 ];
 
-//THE CORRECT MEANING OF RE-RENDER, EXPLAIN USE STATE BASED ON THIS MEANING
-//DONT UNDERSTAND THE SPREAD OPERATOR FOR THE STYLE
-//HOW CAN I PUT THIS OPERATOR IN A FUNCTION, AND PASS IT TO THE STYLE
-function CardComponent({
-  person,
-  likedPersons,
-  handleClickName,
-  clickedName,
-  handleLikedPersons
-}: {
-  person: Person;
-  likedPersons: string[];
-  handleClickName(name: string): void;
-  clickedName: string | null;
-  handleLikedPersons({person_name,likedPersons}:{person_name:string,likedPersons:string[]}):void;
-}) {
-  return (
-    <Card>
-      <img src={person.image} />
-      <p>{person.name}</p>
-      <p>{person.age}</p>
-      <Button
-        style={{
-          ...(clickedName === person.name
-            ? { background: "blue", color: "white" }
-            : {}),
-        }}
-        onClick={() => {
-          handleClickName(person.name);
-        }}
-      >
-        Click here
-      </Button>
-      <Button icon={
-            likedPersons.includes(person.name)
-            ? <HeartFilled style={{ color: "red" }} />
-            : <HeartOutlined />
-      }
-      onClick = {()=>handleLikedPersons({person_name:person.name,likedPersons})}
-      >
 
-      </Button>
-    </Card>
-  );
+
+
+
+function CardComponent({person,handlePersonClicked,personClicked,handleLikedPerson,likedPersons}:{person:Person; handlePersonClicked(name:string):void;personClicked:string|null,handleLikedPerson(name:string):void,likedPersons:string[]}){
+  return(
+    <>
+      <Card>
+        <img src={person.image}/>
+        <p>Name: {person.name}</p>
+        <p>Age: {person.age}</p>
+        <p>Id: {person.id}</p>
+        <Button onClick={()=>handlePersonClicked(person.name)} style={{...(person.name===personClicked ? {color:"white",background:"blue"}:{} )}}>Clicked Here</Button>
+        <Button onClick={()=>handleLikedPerson(person.name)} >  {likedPersons.includes(person.name) ? <HeartFilled style={{ color: "red" }} /> : <HeartOutlined />} </Button>
+      </Card>
+    </>
+  )
 }
 
-export default function Demo2() {
-  const [clickedName, setClickedName] = useState<string | null>(null);
-  const [persons, setPersons] = useState<Person[]>(PersonList);
-  const [likedPersons, setLikedPersons] = useState<string[]>([]);
+
+
+export default function Demo2(){
+  const [personClicked,setPersonClicked] = useState<string|null>(null);
+  const [likedPersons,setLikedPersons] = useState<string[]>([]);
 
   useEffect(()=>{
-    const saveLikedPersons:string|null = localStorage.getItem("key_likedPersons")
-    if(saveLikedPersons){
-      try{
-        const values = JSON.parse(saveLikedPersons) as string[];
-        setLikedPersons(values);
-      }catch(error){
-         console.error("Error parsing saved liked product ids: ", error);
-      }
+  const likedPersons:string|null = localStorage.getItem("likedPersons")
+  if(likedPersons){
+    try{
+      const values = JSON.parse(likedPersons)
+      setLikedPersons(values)
+    } catch(error){
+      console.error("Error parsing saved liked product ids: ", error);
     }
-  },[])
-
-
-
-
-
-  function handleSortBy() {
-    const sorted = [...persons].sort((a, b) => a.name.localeCompare(b.name));
-    setPersons(sorted); // update state so React re-renders
   }
-  function handleLikedPersons({person_name,likedPersons}:{person_name:string,likedPersons:string[]}):void{
-    let newLikedPersons: string[] = [];
+
+},[])
+  function handleLikedPerson(person_name:string){
+    let newLikedPersons:string[] = [];
     if(likedPersons.includes(person_name)){
-      newLikedPersons = likedPersons.filter(name => name !== person_name);
+      newLikedPersons = likedPersons.filter(person_old_name => person_old_name !== person_name)
     } else {
-      newLikedPersons = [...likedPersons, person_name]
+      newLikedPersons = [...likedPersons,person_name]
     }
+
     setLikedPersons(newLikedPersons)
-
-    localStorage.setItems("key_likedPersons",JSON.stringify(newLikedPersons))
-
-    // [key] = value. value is a string
-    
+    localStorage.setItem("likedPersons",JSON.stringify(newLikedPersons))
   }
 
-  return (
+  return(
     <>
-      <div
-        style={{ backgroundColor: "white", height: "100vh", width: "100vw" }}
-      >
-        <p style={{ color: "black" }}>Clicked Name: {clickedName}</p>
-        <Button onClick={() => handleSortBy()}>Sort by name</Button>
-        <Flex gap="middle">
-          {persons.map((person: Person) => (
-            <CardComponent
-              clickedName={clickedName}
-              handleClickName={setClickedName}
-              key={person.id}
-              person={person}
-              handleLikedPersons = {handleLikedPersons}
-              likedPersons = {likedPersons}
-
-
-            />
-          ))}
+      <div>
+        <p>Chosen Name:{personClicked}</p>
+        <Flex>
+          {PersonList.map((person:Person)=>(<CardComponent likedPersons={likedPersons} handleLikedPerson={handleLikedPerson} personClicked={personClicked} key={person.id} person={person} handlePersonClicked={setPersonClicked}/>))}
         </Flex>
+        
       </div>
+
     </>
-  );
+    
+  )
 }

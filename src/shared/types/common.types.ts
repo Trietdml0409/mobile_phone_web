@@ -1,3 +1,5 @@
+import {useEffect,useState} from "react"
+
 export interface IProduct {
   id: number;
   name: string;
@@ -13,3 +15,27 @@ export interface Brand{
   index: number;
   name: string;
 }
+
+export function useProduct(){
+   const [products, setProducts] = useState<IProduct[]>([]);
+
+    useEffect(() => {
+
+    // fetch products from server
+    const fetchProducts = async () => {
+      const response = await fetch("http://localhost:8000/products");
+      const responseData = (await response.json()) as {
+        data: IProduct[];
+        message: string;
+      };
+      console.log("Response data: ", responseData);
+      setProducts(responseData.data);
+    };
+
+    fetchProducts();
+  }, []);
+
+  return products
+  
+}
+

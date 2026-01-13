@@ -4,6 +4,12 @@ import ImagesProduct from "@/components/category/images_product";
 import Information from "@/components/category/information";
 import Header from "@/components/header";
 import { Flex } from "antd";
+import { useSearchParams } from "next/navigation";
+import {useState, useEffect} from "react";
+import { IProduct } from "@/shared/types/common.types";
+import { useProduct } from "@/shared/types/common.types";
+
+
 // TODO: @triet import useSearchParams từ next/navigation để lấy productId từ URL
 // TODO: @triet import useState và useEffect từ react
 
@@ -11,17 +17,45 @@ import { Flex } from "antd";
 // Hoặc có thể import từ một file chung nếu muốn tái sử dụng
 
 export default function ProductDetails() {
+  const { products, setProducts } = useProduct();
+
+
   // TODO: @triet sử dụng useSearchParams để lấy productId từ query string
+
   // Ví dụ: URL là /product-details?id=1 thì lấy id=1
   // Hint: const searchParams = useSearchParams(); const productId = searchParams.get('id');
+  const searchParams = useSearchParams();
+  const productIdParam = searchParams.get("id")
+  const productId = productIdParam ? Number(productIdParam) : null;
+
+  
+
 
   // TODO: @triet tạo state để lưu thông tin sản phẩm hiện tại
-  // Hint: const [product, setProduct] = useState<IProduct | null>(null);
+
+
+
+
   // TODO: @triet tạo state để lưu số lượng sản phẩm muốn mua
   // Hint: const [quantity, setQuantity] = useState<number>(1);
 
+
+
+
+
+
+
+
+
   // TODO: @triet sử dụng useEffect để fetch thông tin sản phẩm dựa trên productId
   // Hint: useEffect(() => { ... }, [productId])
+  //You want it to re-run whenever products or productId changes.
+
+
+  
+
+
+
   // Trong useEffect, tìm sản phẩm từ PRODUCTS_INITIALIZE (hoặc từ API nếu có)
   // và setProduct với sản phẩm tìm được
 
@@ -40,7 +74,7 @@ export default function ProductDetails() {
       <Flex gap="small" style={{ height: "650px", backgroundColor: "white" }}>
         {/* TODO: @triet truyền product.image vào component ImagesProduct thông qua props */}
         {/* Hint: cần sửa ImagesProduct component để nhận prop image */}
-        <ImagesProduct />
+        <ImagesProduct image={product.image} />
         {/* TODO: @triet truyền product, quantity, và các handler functions vào Information component */}
         {/* Hint: cần sửa Information component để nhận các props: product, quantity, setQuantity, handleBuyNow, handleAddToCart */}
         <Information />
