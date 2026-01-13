@@ -1,16 +1,12 @@
 "use client";
 
 import Header from "@/components/header";
-import { Button, Flex} from "antd";
+import { Button, Flex } from "antd";
 import { useEffect, useState } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 import BrandName from "@/components/category/brand_name";
-import { useProduct } from "@/shared/types/common.types";
-
-
-
-
+import { useProduct } from "@/shared/hooks/useProducts";
 
 const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   {
@@ -44,35 +40,20 @@ const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
 ];
 // statge management
 export default function Category() {
-  const {products: INITIALIZE_PRODUCT} = useProduct()
-  console.log("This is INITIALIZE_PRODUCT"+ INITIALIZE_PRODUCT)
-  
-  //this return {products, setProducts}
-  const [products, setProducts] = useState<IProduct[]>(INITIALIZE_PRODUCT);
-
-  //FROM AI
-  //FETCHING
-  useEffect(() => {
-  if (INITIALIZE_PRODUCT.length > 0) {
-    setProducts(INITIALIZE_PRODUCT);
-    setTotalProducts(INITIALIZE_PRODUCT.length);
-  }
-  }, [INITIALIZE_PRODUCT]);
-
-
-
+  const { products } = useProduct(); // initialize products = 0. 1 call api not response => products = 0.
+  const [localProducts, setLocalProducts] = useState<IProduct[]>([]);
 
   const [likedProductIds, setLikedProductIds] = useState<number[]>([]);
 
   // state save total products
-  const [totalProducts, setTotalProducts] = useState<number>(
-    INITIALIZE_PRODUCT.length
-  );
-
-
+  const [totalProducts, setTotalProducts] = useState<number>(products.length);
 
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
+  useEffect(() => {
+    setLocalProducts(products);
+    setTotalProducts(products.length);
+  }, [products]); // A depends on B => B changes => A changes.
 
   // state save Products
   // state save selected sort by
@@ -99,22 +80,21 @@ export default function Category() {
   }
 
   function sortByBrand(brand: string): void {
-    let newProducts: IProduct[];
-    const all_products: IProduct[] = [...products]
+    let newProducts: IProduct[]; // camelCase, snake_case.
+    const allProducts: IProduct[] = [...products];
     if (brand == "All") {
-      newProducts = all_products;
+      newProducts = allProducts;
     } else {
-      newProducts = [...all_products].filter(
+      newProducts = [...allProducts].filter(
         (product: IProduct) => brand === product.brandName
       );
     }
 
-    setProducts(newProducts);
+    setLocalProducts(newProducts);
     setTotalProducts(newProducts.length);
   }
 
   useEffect(() => {
-
     // only run once when the component is mounted -(render first time)
     const savedLikedProductIds: string | null =
       localStorage.getItem("key_likeProducts");
@@ -140,8 +120,6 @@ export default function Category() {
         }
       }
     }
-
-
   }, []);
 
   // @Triet: filter product:
@@ -156,40 +134,36 @@ export default function Category() {
 
     // TODO: @triet check what is switch statement in JavaScript/TS
 
-    let newProducts: IProduct[] = [...INITIALIZE_PRODUCT];
+    let newProducts: IProduct[] = [...products];
     // Handle sort by options
     switch (newValue) {
       case "price-increase":
         // sort by price increase
-        newProducts = [...INITIALIZE_PRODUCT].sort(
-          (a, b) => a.price - b.price
-        );
+        newProducts = [...products].sort((a, b) => a.price - b.price);
         break;
       case "price-decrease":
         // TODO: @triet sort by price decrease (từ cao xuống thấp)
         // Hint: sử dụng sort() với logic ngược lại so với price-increase
-        newProducts = [...INITIALIZE_PRODUCT].sort(
-          (a, b) => b.price - a.price
-        );
+        newProducts = [...products].sort((a, b) => b.price - a.price);
         break;
       case "name-a-z":
         // TODO: @triet sort by name from A-Z
         // Hint: sử dụng sort() với localeCompare() để so sánh chuỗi
-        newProducts = [...INITIALIZE_PRODUCT].sort((a, b) =>
+        newProducts = [...products].sort((a, b) =>
           a.name.localeCompare(b.name)
         );
         break;
       case "name-z-a":
         // TODO: @triet sort by name from Z-A
         // Hint: tương tự name-a-z nhưng đảo ngược
-        newProducts = [...INITIALIZE_PRODUCT].sort((a, b) =>
+        newProducts = [...products].sort((a, b) =>
           b.name.localeCompare(a.name)
         );
         break;
       case "newest":
         // TODO: @triet sort by newest (mới nhất trước)
         // Hint: cần thêm createdAt vào IProduct interface và sử dụng sort()
-        newProducts = [...INITIALIZE_PRODUCT].sort(
+        newProducts = [...products].sort(
           (a, b) =>
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
         );
@@ -198,7 +172,7 @@ export default function Category() {
       case "oldest":
         // TODO: @triet sort by oldest (cũ nhất trước)
         // Hint: tương tự newest nhưng đảo ngược
-        newProducts = [...INITIALIZE_PRODUCT].sort(
+        newProducts = [...products].sort(
           (a, b) =>
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
         );
@@ -206,7 +180,7 @@ export default function Category() {
       case "best-seller":
         // TODO: @triet sort by best seller
         // Hint: cần thêm isBestSeller vào IProduct interface và filter/sort
-        newProducts = [...INITIALIZE_PRODUCT].filter(
+        newProducts = [...products].filter(
           (product) => product.isBestSeller === true
         );
         break;
@@ -214,7 +188,7 @@ export default function Category() {
         break;
     }
 
-    setProducts(newProducts);
+    setLocalProducts(newProducts);
     setTotalProducts(newProducts.length);
   };
 
@@ -238,9 +212,6 @@ export default function Category() {
       newLikedProductIds = [...likedProductIds, productId];
     }
 
-    console.log("OLD: likedProductIds: ", likedProductIds);
-    console.log("NEW: newLikedProductIds: ", newLikedProductIds);
-
     setLikedProductIds(newLikedProductIds);
 
     // to save data: 1. call api to save data to server
@@ -259,6 +230,7 @@ export default function Category() {
         minHeight: "100vh",
         minWidth: "100vw",
         backgroundColor: "white",
+        padding: "16px",
       }}
     >
       <Header totalCartProducts={cartProductIds.length} />
@@ -308,7 +280,7 @@ export default function Category() {
         <BrandName sortByBrand={sortByBrand} />
 
         <Flex wrap gap="middle">
-          {products.map((product: IProduct) => (
+          {localProducts.map((product: IProduct) => (
             <CatergoryProductCard
               key={product.id}
               product={product}
