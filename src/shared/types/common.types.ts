@@ -35,7 +35,7 @@ export function useProduct(){
     fetchProducts();
   }, []);
 
-  return products
+  return {products}
   
 }
 
