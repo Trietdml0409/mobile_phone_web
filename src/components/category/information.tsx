@@ -1,14 +1,27 @@
 import { Button, Flex } from "antd";
 import { StarOutlined } from "@ant-design/icons";
 import InputNumberBox from "./inputNumberBox";
+import { IProduct } from "@/shared/types/common.types";
 
-export default function Information() {
+export default function ProductInformation({
+  product,
+  quantity,
+  setQuantity,
+  handleBuyNow,
+  handleAddToCart,
+}: {
+  product: IProduct;
+  quantity: number;
+  setQuantity: (quantity: number) => void;
+  handleBuyNow: () => void;
+  handleAddToCart: () => void;
+}) {
   return (
     <Flex gap="10px" vertical style={{ flex: 3 }}>
       <h1 style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
-        PC RTX 3050{" "}
+        {product.name}
       </h1>
-      <p style={{ color: "black" }}>Product Code: XYHANSOGPPJJBBHKKKNKAS</p>
+      <p style={{ color: "black" }}>Product Code: {product.id}</p>
       <Flex gap="10px">
         <div>
           <StarOutlined style={{ fontSize: "24px", color: "gold" }} />
@@ -31,7 +44,7 @@ export default function Information() {
           fontWeight: "bold",
         }}
       >
-        11.000.000 VND
+        {product.price.toLocaleString()} VND
       </p>
       <p
         style={{
@@ -44,7 +57,7 @@ export default function Information() {
           fontSize: "10px",
         }}
       >
-        Check availability
+        {product.isBestSeller ? "Best Seller" : "Not Best Seller"}
       </p>
 
       <div
@@ -85,9 +98,9 @@ export default function Information() {
         Call for order: 1900 0243 (8:30 - 21:00)
       </p>
       <hr style={{ border: "1px solid grey" }} />
-      <Button>BUY NOW</Button>
-      <Button>PAY BY INSTALLMENT</Button>
-      <InputNumberBox />
+      <Button onClick={handleBuyNow}>BUY NOW</Button>
+      <Button onClick={handleAddToCart}>PAY BY INSTALLMENT</Button>
+      <InputNumberBox quantity={quantity} setQuantity={setQuantity} />
     </Flex>
   );
 }

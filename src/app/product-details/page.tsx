@@ -1,12 +1,13 @@
 "use client";
 
-import ImagesProduct from "@/components/category/images_product";
-import Information from "@/components/category/information";
+import ProductImage from "@/components/category/images_product";
+import ProductInformation from "@/components/category/information";
 import Header from "@/components/header";
-import { Flex } from "antd";
+import { Flex, Skeleton } from "antd";
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { IProduct } from "@/shared/types/common.types";
+import { useProductDetail } from "@/shared/hooks/useProductDetail";
 // import { useProduct } from "@/shared/types/common.types";
 
 // TODO: @triet import useSearchParams từ next/navigation để lấy productId từ URL
@@ -16,15 +17,15 @@ import { IProduct } from "@/shared/types/common.types";
 // Hoặc có thể import từ một file chung nếu muốn tái sử dụng
 
 export default function ProductDetails() {
-  // const { products, setProducts } = useProduct();
-
-  // TODO: @triet sử dụng useSearchParams để lấy productId từ query string
-
   // Ví dụ: URL là /product-details?id=1 thì lấy id=1
-  // Hint: const searchParams = useSearchParams(); const productId = searchParams.get('id');
   const searchParams = useSearchParams();
   const productIdParam = searchParams.get("id");
   const productId = productIdParam ? Number(productIdParam) : null;
+
+  // get product detail from api
+  const { product } = useProductDetail({ id: productId });
+
+  // const { products, setProducts } = useProduct();
 
   // TODO: @triet tạo state để lưu thông tin sản phẩm hiện tại
 
@@ -47,17 +48,32 @@ export default function ProductDetails() {
   // TODO: @triet nếu product === null, hiển thị loading hoặc "Product not found"
   // Hint: sử dụng conditional rendering: if (!product) return <div>Loading...</div>
 
+  console.log("product", product);
+
   return (
-    <div>
-      {/* <Header />
+    <div
+      style={{
+        minHeight: "100vh",
+        minWidth: "100vw",
+        backgroundColor: "white",
+        padding: "16px",
+      }}
+    >
+      <Header totalCartProducts={123} />
       <Flex gap="small" style={{ height: "650px", backgroundColor: "white" }}>
-        {/* TODO: @triet truyền product.image vào component ImagesProduct thông qua props */}
-      {/* Hint: cần sửa ImagesProduct component để nhận prop image */}
-      {/* <ImagesProduct image={product.image} /> */}
-      {/* TODO: @triet truyền product, quantity, và các handler functions vào Information component */}
-      {/* Hint: cần sửa Information component để nhận các props: product, quantity, setQuantity, handleBuyNow, handleAddToCart */}
-      {/* <Information /> */}
-      {/* </Flex> */}
+        {product ? <ProductImage image={product.image} /> : <Skeleton active />}
+        {product ? (
+          <ProductInformation
+            product={product}
+            quantity={1}
+            setQuantity={() => {}}
+            handleBuyNow={() => {}}
+            handleAddToCart={() => {}}
+          />
+        ) : (
+          <Skeleton active />
+        )}
+      </Flex>
     </div>
   );
 }

@@ -1,19 +1,28 @@
-import { Button, Flex } from "antd";
+import { Button, Flex, Image } from "antd";
 import React from "react";
 import { FormOutlined, InfoOutlined, SafetyOutlined } from "@ant-design/icons";
 
-export default function ImagesProduct({image}:{image:string}) {
+export default function ProductImage({ image }: { image: string }) {
   return (
     <Flex
       justify="start"
       align="center"
       vertical
-      style={{ backgroundColor: "white", flex: 1 }}
+      style={{ backgroundColor: "white", padding: "10px" }}
     >
-      <img
-        style={{ height: "70%", width: "90%" }}
-        src={image}
-      />
+      <Flex
+        justify="center"
+        align="center"
+        style={{ width: "300px", height: "250px" }}
+      >
+        <Image
+          // width={250}
+          src={image}
+          alt="product image"
+          preview={false}
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        />
+      </Flex>
       <Flex
         gap="small"
         justify="center"
