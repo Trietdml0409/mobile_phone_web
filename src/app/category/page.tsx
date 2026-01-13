@@ -44,10 +44,21 @@ const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
 ];
 // statge management
 export default function Category() {
-  const INITIALIZE_PRODUCT: IProduct[] = useProduct()
+  const {products: INITIALIZE_PRODUCT} = useProduct()
+  console.log("This is INITIALIZE_PRODUCT"+ INITIALIZE_PRODUCT)
   
   //this return {products, setProducts}
   const [products, setProducts] = useState<IProduct[]>(INITIALIZE_PRODUCT);
+
+  //FROM AI
+  //FETCHING
+  useEffect(() => {
+  if (INITIALIZE_PRODUCT.length > 0) {
+    setProducts(INITIALIZE_PRODUCT);
+    setTotalProducts(INITIALIZE_PRODUCT.length);
+  }
+  }, [INITIALIZE_PRODUCT]);
+
 
 
 
