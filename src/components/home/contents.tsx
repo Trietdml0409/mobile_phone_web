@@ -1,45 +1,22 @@
-import { Card } from "antd";
-import { Flex } from "antd";
 
-export default function Contents() {
+import { IProduct } from "@/shared/types/common.types";
+import { Button, Card } from "antd";
+import { Flex } from "antd";
+import { EyeOutlined } from '@ant-design/icons';
+import { useRouter } from "next/navigation";
+
+
+
+
+export default function Contents({product}:{product:IProduct}) {
+  const router = useRouter();
   return (
-    <Flex wrap gap="small" style={{ height: "auto", backgroundColor: "white" }}>
-      <Card style={{ height: "200px", width: "300px", overflow: "hidden" }}>
-        <img
-          src="https://i5.walmartimages.com/seo/Restored-Gaming-Dell-Computer-Desktop-Tower-PC-Intel-Core-i5-Processor-16GB-Ram-1TB-SSD-NVIDIA-GT-1030-DDR5-22-LCD-Monitor-Bto-KB-Mouse-Wifi-Adapter_368bcf28-8374-4ab8-9482-0a21bac4d048.ec55cdde2a5cdaad42dc7bf6e4366cbe.png"
-          style={{ width: "100%", objectFit: "cover" }}
-        />
+    <>
+      <Card hoverable onClick={() => router.push(`/product-details?id=${product.id}`)} style={{flex:1,height:"350px",width:"290px",display:"flex",    flexDirection: "column",alignItems: "center",justifyContent: "center"}}>
+        <img src={product.image} style={{maxWidth: "250px",maxHeight: "300px",  objectFit: "contain", marginBottom: "15px"}}/>
+        <p style={{fontWeight: "bold", fontSize: "20px", textAlign: "center"}}>{product.name}</p>
       </Card>
-      <Card style={{ height: "200px", width: "300px", overflow: "hidden" }}>
-        <img
-          src="https://i5.walmartimages.com/seo/Restored-Gaming-Dell-Computer-Desktop-Tower-PC-Intel-Core-i5-Processor-16GB-Ram-1TB-SSD-NVIDIA-GT-1030-DDR5-22-LCD-Monitor-Bto-KB-Mouse-Wifi-Adapter_368bcf28-8374-4ab8-9482-0a21bac4d048.ec55cdde2a5cdaad42dc7bf6e4366cbe.png"
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
-        />
-      </Card>
-      <Card style={{ height: "200px", width: "300px", overflow: "hidden" }}>
-        <img
-          src="https://i5.walmartimages.com/seo/Restored-Gaming-Dell-Computer-Desktop-Tower-PC-Intel-Core-i5-Processor-16GB-Ram-1TB-SSD-NVIDIA-GT-1030-DDR5-22-LCD-Monitor-Bto-KB-Mouse-Wifi-Adapter_368bcf28-8374-4ab8-9482-0a21bac4d048.ec55cdde2a5cdaad42dc7bf6e4366cbe.png"
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
-        />
-      </Card>
-      <Card style={{ height: "200px", width: "300px", overflow: "hidden" }}>
-        <img
-          src="https://i5.walmartimages.com/seo/Restored-Gaming-Dell-Computer-Desktop-Tower-PC-Intel-Core-i5-Processor-16GB-Ram-1TB-SSD-NVIDIA-GT-1030-DDR5-22-LCD-Monitor-Bto-KB-Mouse-Wifi-Adapter_368bcf28-8374-4ab8-9482-0a21bac4d048.ec55cdde2a5cdaad42dc7bf6e4366cbe.png"
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
-        />
-      </Card>
-      <Card style={{ height: "200px", width: "300px", overflow: "hidden" }}>
-        <img
-          src="https://i5.walmartimages.com/seo/Restored-Gaming-Dell-Computer-Desktop-Tower-PC-Intel-Core-i5-Processor-16GB-Ram-1TB-SSD-NVIDIA-GT-1030-DDR5-22-LCD-Monitor-Bto-KB-Mouse-Wifi-Adapter_368bcf28-8374-4ab8-9482-0a21bac4d048.ec55cdde2a5cdaad42dc7bf6e4366cbe.png"
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
-        />
-      </Card>
-      <Card style={{ height: "200px", width: "300px", overflow: "hidden" }}>
-        <img
-          src="https://i5.walmartimages.com/seo/Restored-Gaming-Dell-Computer-Desktop-Tower-PC-Intel-Core-i5-Processor-16GB-Ram-1TB-SSD-NVIDIA-GT-1030-DDR5-22-LCD-Monitor-Bto-KB-Mouse-Wifi-Adapter_368bcf28-8374-4ab8-9482-0a21bac4d048.ec55cdde2a5cdaad42dc7bf6e4366cbe.png"
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
-        />
-      </Card>
-    </Flex>
+    </>
+
   );
 }

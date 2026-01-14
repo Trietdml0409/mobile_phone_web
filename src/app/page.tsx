@@ -5,15 +5,27 @@ import Header from "@/components/header";
 import Contents from "@/components/home/contents";
 import { useEffect, useState } from "react";
 import MessageBanner from "@/components/MessageBanner";
+import {useProduct} from "@/shared/hooks/useProducts"
+import { Flex } from "antd";
+import { IProduct } from "@/shared/types/common.types";
 // TODO: @triet import useState và useEffect từ react
 // TODO: @triet import Button và Input từ antd để sử dụng trong các bài tập
 
 export default function Home() {
   // TODO: @triet tạo state để đếm số lượt truy cập trang (visitCount)
   const [visitCount, setVisitCount] = useState<number>(0);
+  const [localProducts, setLocalProducts]=useState<IProduct[]>([])
+  //get the information from useProduct hook
+  const { products } = useProduct();
+
+  useEffect(()=>{
+    setLocalProducts(products);
+  },[products]) //dependency is products
+  console.log("localProducts"+localProducts)
 
   // TODO: @triet tạo state để hiển thị/ẩn một thông báo chào mừng (showWelcome)
   // Hint: const [showWelcome, setShowWelcome] = useState<boolean>(true);
+
 
   // TODO: @triet tạo state để lưu tên người dùng (userName)
   // Hint: const [userName, setUserName] = useState<string>("");
@@ -66,7 +78,27 @@ export default function Home() {
       {/* Hint: sử dụng conditional rendering */}
 
       <Banner />
-      <Contents />
+
+
+
+      <p style={{
+        fontWeight: "bold",
+        fontSize: "22px",
+        color: "black",          // strong red tone
+        textAlign: "center",
+        backgroundColor: "#fff2e8", // light background highlight
+        padding: "8px 12px",
+        borderRadius: "6px"
+      }}>
+        Best Seller
+      </p>
+
+      <Flex wrap gap="small" style={{ height: "auto", backgroundColor: "white" }}>
+        {localProducts.filter((product:IProduct)=>product.isBestSeller).map((product:IProduct)=>(
+          <Contents key={product.id} product={product}/>
+        ))}
+      </Flex>
+      
 
       {/* TODO: @triet thêm một section hiển thị danh sách các tính năng nổi bật */}
       {/* Tạo mảng features: ["Free Shipping", "24/7 Support", "Best Price"] */}

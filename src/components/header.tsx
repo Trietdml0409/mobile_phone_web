@@ -1,14 +1,23 @@
+import { useState,useEffect } from "react";
 import Account from "./home/account";
 import Cart from "./home/cart";
 import CategoriesButton from "./home/categories_button";
 import SearchBox from "./search_box";
 import Link from "next/link";
+import { useCart } from "@/shared/hooks/useCart";
 
-export default function Header({
-  totalCartProducts,
-}: {
-  totalCartProducts: number;
-}) {
+export default function Header() {
+  //Importing the cartProductIds
+  const {cartProductIds} = useCart()
+  const [cartLocalProductIds, setLocalCartProductIds] = useState<number[]>([]);
+
+  useEffect(()=>{
+    setLocalCartProductIds(cartProductIds)
+    console.log(cartProductIds)
+  },[cartProductIds])
+
+
+
   return (
     <div
       className="header"
@@ -67,7 +76,7 @@ export default function Header({
           alignItems: "center",
         }}
       >
-        <p style={{ color: "red" }}>{totalCartProducts}</p>
+        <p style={{ color: "red" }}>{cartLocalProductIds.length}</p>
         <Cart />
       </div>
     </div>

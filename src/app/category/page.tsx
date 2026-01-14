@@ -7,6 +7,7 @@ import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 import BrandName from "@/components/category/brand_name";
 import { useProduct } from "@/shared/hooks/useProducts";
+import { useCart } from "@/shared/hooks/useCart";
 
 const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   {
@@ -61,23 +62,15 @@ export default function Category() {
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
-  const [cartProductIds, setCartProductIds] = useState<number[]>([]);
+  const {cartProductIds,handleCartProductIds} = useCart()
+  const [cartLocalProductIds, setLocalCartProductIds] = useState<number[]>([]);
 
-  function handleCartProductIds({
-    new_product_id,
-  }: {
-    new_product_id: number;
-  }): void {
-    let cart: number[] = [];
-    if (cartProductIds.includes(new_product_id)) {
-      cart = cartProductIds.filter((product) => product !== new_product_id);
-    } else {
-      cart = [...cartProductIds, new_product_id];
-    }
+  useEffect(()=>{
+    setLocalCartProductIds(cartProductIds)
+    console.log(cartProductIds)
+  },[cartProductIds])
 
-    setCartProductIds(cart);
-    localStorage.setItem("key_cartProducts", JSON.stringify(cart));
-  }
+
 
   function sortByBrand(brand: string): void {
     let newProducts: IProduct[]; // camelCase, snake_case.
@@ -98,8 +91,6 @@ export default function Category() {
     // only run once when the component is mounted -(render first time)
     const savedLikedProductIds: string | null =
       localStorage.getItem("key_likeProducts");
-    const savedCartProductIds: string | null =
-      localStorage.getItem("key_cartProducts");
 
     if (savedLikedProductIds) {
       // parse string => to array of numbers
@@ -109,18 +100,7 @@ export default function Category() {
         setLikedProductIds(values);
       } catch (error) {
         console.error("Error parsing saved liked product ids: ", error);
-      }
-
-      if (savedCartProductIds) {
-        try {
-          const values = JSON.parse(savedCartProductIds) as number[];
-          setCartProductIds(values);
-        } catch (error) {
-          console.error("Error parsing cart product ids: ", error);
-        }
-      }
-    }
-  }, []);
+      }}}, []);
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
@@ -217,10 +197,7 @@ export default function Category() {
     // to save data: 1. call api to save data to server
     //  2. save data to local storage
     // => method 2.
-    localStorage.setItem(
-      "key_likeProducts",
-      JSON.stringify(newLikedProductIds)
-    );
+    localStorage.setItem("key_likeProducts",JSON.stringify(newLikedProductIds));
     // [key] = value. value is a string
   };
 
@@ -233,7 +210,7 @@ export default function Category() {
         padding: "16px",
       }}
     >
-      <Header totalCartProducts={cartProductIds.length} />
+      <Header/>
       <Flex vertical style={{ padding: "15px" }}>
         <p style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
           PC GAMING ({totalProducts} PRODUCTS)

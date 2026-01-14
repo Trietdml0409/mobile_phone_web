@@ -8,7 +8,7 @@ import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import { useProductDetail } from "@/shared/hooks/useProductDetail";
-// import { useProduct } from "@/shared/types/common.types";
+
 
 // TODO: @triet import useSearchParams từ next/navigation để lấy productId từ URL
 // TODO: @triet import useState và useEffect từ react
@@ -25,7 +25,7 @@ export default function ProductDetails() {
   // get product detail from api
   const { product } = useProductDetail({ id: productId });
 
-  // const { products, setProducts } = useProduct();
+
 
   // TODO: @triet tạo state để lưu thông tin sản phẩm hiện tại
 
