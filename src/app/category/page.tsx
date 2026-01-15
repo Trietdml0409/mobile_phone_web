@@ -211,7 +211,6 @@ export default function Category() {
     <div
       style={{
         minHeight: "100vh",
-        minWidth: "100vw",
         backgroundColor: "white",
         padding: "16px",
       }}

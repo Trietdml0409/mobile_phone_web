@@ -65,10 +65,21 @@ export default function Header() {
           flex: "1",
           display: "flex",
           alignItems: "center",
+          justifyContent: "flex-end",
+          position: "relative",
         }}
       >
-        <p style={{ color: "red" }}>{cartProductIds.length}</p>
-        <Cart />
+        <Link
+          href="/cart"
+          className="relative flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+        >
+          <Cart />
+          {cartProductIds.length > 0 && (
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center min-w-[20px]">
+              {cartProductIds.length > 99 ? "99+" : cartProductIds.length}
+            </span>
+          )}
+        </Link>
       </div>
     </div>
   );
