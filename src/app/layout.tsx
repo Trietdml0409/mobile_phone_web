@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import React from "react";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "./globals.css";
+import { CartProvider } from "@/shared/providers/CartProvider";
+import { AppProvider } from "@/shared/providers/AppProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AntdRegistry>{children}</AntdRegistry>
+        <AntdRegistry>
+          <AppProvider>{children}</AppProvider>
+        </AntdRegistry>
       </body>
     </html>
   );

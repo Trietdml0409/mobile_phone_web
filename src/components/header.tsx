@@ -1,20 +1,13 @@
-import { useState,useEffect } from "react";
+import { useContext } from "react";
 import Account from "./home/account";
 import Cart from "./home/cart";
 import CategoriesButton from "./home/categories_button";
 import SearchBox from "./search_box";
 import Link from "next/link";
-import { useCart } from "@/shared/hooks/useCart";
+import { CartContext } from "@/shared/context/cartContext";
 
 export default function Header() {
-  //Importing the cartProductIds
-  const {cartProductIds} = useCart()
-  console.log("This is the header ", {cartProductIds})
-  // const [cartLocalProductIds, setLocalCartProductIds] = useState<number[]>([]);
-  useEffect(()=>{
-    // setLocalCartProductIds(cartProductIds)
-    console.log("xxx",cartProductIds)
-  },[cartProductIds])
+  const { productIds: cartProductIds } = useContext(CartContext);
 
   return (
     <div

@@ -1,3 +1,4 @@
+import { CartContext } from "@/shared/context/cartContext";
 import { IProduct } from "@/shared/types/common.types";
 import {
   ShoppingCartOutlined,
@@ -6,24 +7,24 @@ import {
 } from "@ant-design/icons";
 import { Flex, Button } from "antd";
 import { useRouter } from "next/navigation";
-
+import { useContext } from "react";
 
 interface CatergoryProductCardProps {
   product: IProduct;
   isLiked: boolean;
   toggleLike: () => void;
-  handleCartProductIds({new_product_id}:{new_product_id:number}):void;
-  cartProductIds: number[]
 }
 
 export default function CatergoryProductCard({
   product,
   isLiked,
   toggleLike,
-  handleCartProductIds,
-  cartProductIds
 }: CatergoryProductCardProps) {
   const router = useRouter();
+
+  const { productIds, addProductId, removeProductId } = useContext(CartContext);
+
+  const isProductInCart = productIds.includes(product.id);
 
   return (
     <Flex
@@ -76,11 +77,18 @@ export default function CatergoryProductCard({
       >
         <Button
           icon={<ShoppingCartOutlined />}
-          style={ cartProductIds.includes(product.id) ? {backgroundColor: "royalblue", color: "white"}:{ backgroundColor: "white", color: "black"}}
-          // TODO: @triet thêm onClick handler để thêm sản phẩm vào cart
-          // Hint: tạo hàm handleAddToCart(productId) và cập nhật cart state
-          onClick = {()=>handleCartProductIds({new_product_id:product.id })}>
-          Add to Cart
+          style={
+            !isProductInCart
+              ? { backgroundColor: "royalblue", color: "white" }
+              : { backgroundColor: "red", color: "white" }
+          }
+          onClick={() =>
+            isProductInCart
+              ? removeProductId(product.id)
+              : addProductId(product.id)
+          }
+        >
+          {isProductInCart ? "Remove" : "Add"}
         </Button>
         <Button
           icon={

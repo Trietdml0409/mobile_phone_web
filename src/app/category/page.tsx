@@ -2,12 +2,13 @@
 
 import Header from "@/components/header";
 import { Button, Flex } from "antd";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 import BrandName from "@/components/category/brand_name";
 import { useProduct } from "@/shared/hooks/useProducts";
 import { useCart } from "@/shared/hooks/useCart";
+import { CartContext } from "@/shared/context/cartContext";
 
 const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   {
@@ -49,6 +50,9 @@ export default function Category() {
   // state save total products
   const [totalProducts, setTotalProducts] = useState<number>(products.length);
 
+  // use context to get productIds, addProductId, removeProductId, clearCart
+  const { productIds } = useContext(CartContext);
+
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
   useEffect(() => {
@@ -62,15 +66,12 @@ export default function Category() {
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
-  const {cartProductIds,handleCartProductIds} = useCart()
   const [cartLocalProductIds, setLocalCartProductIds] = useState<number[]>([]);
 
-  useEffect(()=>{
-    setLocalCartProductIds(cartProductIds)
-    console.log(cartProductIds)
-  },[cartProductIds])
-
-
+  // update cartLocalProductIds when productIds changes
+  useEffect(() => {
+    setLocalCartProductIds(productIds);
+  }, [productIds]); // dependency is productIds
 
   function sortByBrand(brand: string): void {
     let newProducts: IProduct[]; // camelCase, snake_case.
@@ -100,7 +101,9 @@ export default function Category() {
         setLikedProductIds(values);
       } catch (error) {
         console.error("Error parsing saved liked product ids: ", error);
-      }}}, []);
+      }
+    }
+  }, []);
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
@@ -197,7 +200,10 @@ export default function Category() {
     // to save data: 1. call api to save data to server
     //  2. save data to local storage
     // => method 2.
-    localStorage.setItem("key_likeProducts",JSON.stringify(newLikedProductIds));
+    localStorage.setItem(
+      "key_likeProducts",
+      JSON.stringify(newLikedProductIds)
+    );
     // [key] = value. value is a string
   };
 
@@ -210,7 +216,7 @@ export default function Category() {
         padding: "16px",
       }}
     >
-      <Header/>
+      <Header />
       <Flex vertical style={{ padding: "15px" }}>
         <p style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
           PC GAMING ({totalProducts} PRODUCTS)
@@ -263,8 +269,6 @@ export default function Category() {
               product={product}
               isLiked={likedProductIds.includes(product.id)}
               toggleLike={() => handleToggleLike(product.id)}
-              cartProductIds={cartProductIds}
-              handleCartProductIds={handleCartProductIds}
             />
           ))}
         </Flex>
