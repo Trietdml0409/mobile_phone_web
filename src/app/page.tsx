@@ -98,7 +98,7 @@ export default function Home() {
           <Contents key={product.id} product={product}/>
         ))}
       </Flex>
-      
+
 
       {/* TODO: @triet thêm một section hiển thị danh sách các tính năng nổi bật */}
       {/* Tạo mảng features: ["Free Shipping", "24/7 Support", "Best Price"] */}

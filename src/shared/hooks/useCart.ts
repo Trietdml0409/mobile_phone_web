@@ -2,9 +2,10 @@ import { useState,useEffect } from "react";
 import { IProduct } from "../types/common.types";
 
 // custom hook to get cart products
-export function useCart() {
+export function useCart(){
   const [cartProductIds,setCartProductIds] = useState<number[]>([])
 
+  //Loading file
   useEffect(() => {
     console.log("to UseCart")
     // only run once when the component is mounted -(render first time)
@@ -20,7 +21,7 @@ export function useCart() {
     }
   }, []);
 
-
+  //Handle updating cart list function 
   function handleCartProductIds({
     new_product_id,
   }: {
@@ -37,11 +38,7 @@ export function useCart() {
     localStorage.setItem("key_cartProducts", JSON.stringify(cart));
 
   }
-
-
-
-
-
+  console.log("localStorage",{cartProductIds})
   return {cartProductIds,handleCartProductIds}
 
 }

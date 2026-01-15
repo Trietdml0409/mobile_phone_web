@@ -9,14 +9,12 @@ import { useCart } from "@/shared/hooks/useCart";
 export default function Header() {
   //Importing the cartProductIds
   const {cartProductIds} = useCart()
-  const [cartLocalProductIds, setLocalCartProductIds] = useState<number[]>([]);
-
+  console.log("This is the header ", {cartProductIds})
+  // const [cartLocalProductIds, setLocalCartProductIds] = useState<number[]>([]);
   useEffect(()=>{
-    setLocalCartProductIds(cartProductIds)
-    console.log(cartProductIds)
+    // setLocalCartProductIds(cartProductIds)
+    console.log("xxx",cartProductIds)
   },[cartProductIds])
-
-
 
   return (
     <div
@@ -76,7 +74,7 @@ export default function Header() {
           alignItems: "center",
         }}
       >
-        <p style={{ color: "red" }}>{cartLocalProductIds.length}</p>
+        <p style={{ color: "red" }}>{cartProductIds.length}</p>
         <Cart />
       </div>
     </div>
