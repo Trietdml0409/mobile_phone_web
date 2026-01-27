@@ -266,8 +266,6 @@ export default function Category() {
             <CatergoryProductCard
               key={product.id}
               product={product}
-              isLiked={likedProductIds.includes(product.id)}
-              toggleLike={() => handleToggleLike(product.id)}
             />
           ))}
         </Flex>

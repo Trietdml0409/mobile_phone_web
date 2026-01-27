@@ -4,7 +4,7 @@ interface HeartContextType {
     likedProductIds: number[];
     addLikedProductIds: (productId: number)=>void
     removeLikedProductIds: (productId: number)=>void
-    clearCart:()=>void
+    clearAll:()=>void
 }
 
 
@@ -14,5 +14,5 @@ export const LikedContext = createContext<HeartContextType>({
     likedProductIds: [],
     addLikedProductIds: ()=> {},
     removeLikedProductIds: ()=>{},
-    clearCart:()=>{}
+    clearAll:()=>{}
 })

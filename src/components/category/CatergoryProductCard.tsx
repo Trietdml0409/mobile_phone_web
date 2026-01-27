@@ -1,4 +1,5 @@
 import { CartContext } from "@/shared/context/cartContext";
+import { LikedContext } from "@/shared/context/likedContext";
 import { IProduct } from "@/shared/types/common.types";
 import {
   ShoppingCartOutlined,
@@ -11,20 +12,18 @@ import { useContext } from "react";
 
 interface CatergoryProductCardProps {
   product: IProduct;
-  isLiked: boolean;
-  toggleLike: () => void;
 }
 
 export default function CatergoryProductCard({
   product,
-  isLiked,
-  toggleLike,
 }: CatergoryProductCardProps) {
   const router = useRouter();
 
   const { productIds, addProductId, removeProductId } = useContext(CartContext);
+  const {likedProductIds, addLikedProductIds,removeLikedProductIds} = useContext(LikedContext)
 
   const isProductInCart = productIds.includes(product.id);
+  const isProductInLiked = likedProductIds.includes(product.id);
 
   return (
     <Flex
@@ -95,7 +94,7 @@ export default function CatergoryProductCard({
           icon={
             <HeartOutlined
               style={{
-                ...(isLiked
+                ...(isProductInLiked
                   ? {
                       color: "red",
                       transform: "scale(1.5)",
@@ -105,7 +104,12 @@ export default function CatergoryProductCard({
               }}
             />
           }
-          onClick={toggleLike}
+          onClick={
+            ()=>
+              isProductInLiked
+              ? removeLikedProductIds(product.id)
+              : addLikedProductIds(product.id)
+          }
           // TODO: @triet thêm onClick handler để toggle favorite
           // Hint: tạo hàm handleToggleFavorite(productId)
           // Nếu productId đã có trong favorites thì xóa, nếu chưa thì thêm vào
