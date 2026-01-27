@@ -18,6 +18,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     );
   };
 
+
   const clearCart = () => {
     console.log("clearCart");
     setProductIds([]);
@@ -30,3 +31,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     </CartContext.Provider>
   );
 }
+
+
+

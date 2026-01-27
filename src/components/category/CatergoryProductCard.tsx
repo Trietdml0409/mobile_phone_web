@@ -66,6 +66,7 @@ export default function CatergoryProductCard({
           color: "rosybrown",
         }}
       >
+        {/*Changing the currency to local string */}
         {product.price.toLocaleString()} VND
       </p>
       {/* Action Button */}

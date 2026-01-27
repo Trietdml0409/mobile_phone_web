@@ -11,6 +11,7 @@ import { IProduct } from "@/shared/types/common.types";
 // TODO: @triet import useState và useEffect từ react
 // TODO: @triet import Button và Input từ antd để sử dụng trong các bài tập
 
+
 export default function Home() {
   // TODO: @triet tạo state để đếm số lượt truy cập trang (visitCount)
   const [visitCount, setVisitCount] = useState<number>(0);
@@ -109,3 +110,5 @@ export default function Home() {
     </div>
   );
 }
+
+

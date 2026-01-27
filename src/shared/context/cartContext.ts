@@ -6,9 +6,16 @@ interface CartContextType {
   removeProductId: (productId: number) => void;
   clearCart: () => void;
 }
+
 export const CartContext = createContext<CartContextType>({
   productIds: [],
   addProductId: () => {},
   removeProductId: () => {},
   clearCart: () => {},
 });
+
+
+
+
+
+
