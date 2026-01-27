@@ -1,5 +1,6 @@
 import { UserOutlined } from '@ant-design/icons';
 import { Button, Dropdown, Flex } from 'antd';
+import { useRouter } from 'next/navigation';
 
 const items = [
     {
@@ -17,11 +18,14 @@ const items = [
 ]
 
 export default function Account() {
+    const router = useRouter();
     return(
         <Flex gap="1px" >
             <UserOutlined />
             <Flex vertical>
-                <Button type="link" style = {{padding:0}}>Log In/Sign up</Button>
+                <Button type="link" style = {{padding:0}} 
+                onClick={() => router.push('/auth')}
+                >Log In/Sign up</Button>
                 <Dropdown menu={{ items }}>
                     <Button type="text" style = {{padding:0}}>Account</Button>
                 </Dropdown>
