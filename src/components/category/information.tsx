@@ -3,6 +3,7 @@ import { StarOutlined } from "@ant-design/icons";
 import InputNumberBox from "./inputNumberBox";
 import { IProduct } from "@/shared/types/common.types";
 
+
 export default function ProductInformation({
   product,
   quantity,
@@ -16,6 +17,10 @@ export default function ProductInformation({
   handleBuyNow: () => void;
   handleAddToCart: () => void;
 }) {
+
+
+  
+
   return (
     <Flex gap="10px" vertical style={{ flex: 3 }}>
       <h1 style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
@@ -100,7 +105,7 @@ export default function ProductInformation({
       <hr style={{ border: "1px solid grey" }} />
       <Button onClick={handleBuyNow}>BUY NOW</Button>
       <Button onClick={handleAddToCart}>PAY BY INSTALLMENT</Button>
-      <InputNumberBox quantity={quantity} setQuantity={setQuantity} />
+      <InputNumberBox product = {product} quantity={quantity} setQuantity={setQuantity} />
     </Flex>
   );
 }

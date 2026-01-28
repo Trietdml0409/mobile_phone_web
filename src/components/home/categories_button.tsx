@@ -3,7 +3,7 @@ import type { MenuProps } from "antd";
 import { Dropdown } from "antd";
 import { Button } from "antd";
 import Link from "next/link";
-import { CarOutlined, MenuOutlined, ShopOutlined } from "@ant-design/icons";
+import { HeartOutlined, CarOutlined, MenuOutlined, ShopOutlined } from "@ant-design/icons";
 
 const CategoriesButton = () => {
   const items: MenuProps["items"] = [
@@ -23,6 +23,14 @@ const CategoriesButton = () => {
         </Link>
       ),
     },
+    {
+      key: "3",
+      label: (
+        <Link href="/liked" className="cursor-pointer">
+          <HeartOutlined /> Liked Products
+        </Link>
+      )
+    }
   ];
 
   return (

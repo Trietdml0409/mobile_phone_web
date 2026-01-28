@@ -107,12 +107,7 @@ export default function Category() {
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
-    console.log(
-      "sort by value. 1. old value: ",
-      selectedSortBy,
-      "2. new value: ",
-      newValue
-    );
+
     setSelectedSortBy(newValue); // selectedSortBy = newValue
 
     // TODO: @triet check what is switch statement in JavaScript/TS

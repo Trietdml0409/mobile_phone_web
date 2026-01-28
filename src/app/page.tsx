@@ -22,7 +22,7 @@ export default function Home() {
   useEffect(()=>{
     setLocalProducts(products);
   },[products]) //dependency is products
-  console.log("localProducts"+localProducts)
+
 
   // TODO: @triet tạo state để hiển thị/ẩn một thông báo chào mừng (showWelcome)
   // Hint: const [showWelcome, setShowWelcome] = useState<boolean>(true);
@@ -52,7 +52,6 @@ export default function Home() {
 
   // visitCount: 5 => show message: "Xin chào, bạn đã truy cập trang này 5 lần"
 
-  console.log("visitCount: ", visitCount);
   return (
     <div
       className="app"

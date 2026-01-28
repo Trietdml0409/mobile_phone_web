@@ -8,7 +8,7 @@ import { CartContext } from "@/shared/context/cartContext";
 
 export default function Header() {
   const { productIds: cartProductIds } = useContext(CartContext);
-
+  
   return (
     <div
       className="header"

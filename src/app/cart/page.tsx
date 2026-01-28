@@ -5,6 +5,7 @@ import { CartContext } from "@/shared/context/cartContext";
 import { useProduct } from "@/shared/hooks/useProducts";
 import { IProduct } from "@/shared/types/common.types";
 import Link from "next/link";
+import Header from "@/components/header"
 import {
   Button,
   message,
@@ -20,74 +21,10 @@ import {
   ClearOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
+import CartProductCard from "@/components/cart/cartProductCard"
 
 const { Title, Text } = Typography;
 
-interface CartProductCardProps {
-  product: IProduct;
-  onRemove: (productId: number) => void;
-}
-
-function CartProductCard({ product, onRemove }: CartProductCardProps) {
-  return (
-    <Card
-      hoverable
-      style={{ marginBottom: 16 }}
-      actions={[
-        <Button
-          key="remove"
-          type="text"
-          danger
-          icon={<DeleteOutlined />}
-          onClick={() => onRemove(product.id)}
-        >
-          Remove
-        </Button>,
-      ]}
-    >
-      <div style={{ display: "flex", gap: "16px" }}>
-        <img
-          src={product.image}
-          alt={product.name}
-          style={{
-            width: "100px",
-            height: "100px",
-            objectFit: "cover",
-            borderRadius: "8px",
-          }}
-        />
-        <div style={{ flex: 1 }}>
-          <Title level={4} style={{ marginBottom: 8 }}>
-            {product.name}
-          </Title>
-          <Text
-            style={{ fontSize: "16px", fontWeight: "bold", color: "#1890ff" }}
-          >
-            ${product.price}
-          </Text>
-          <br />
-          <Text type="secondary">{product.brandName}</Text>
-          {product.isBestSeller && (
-            <div style={{ marginTop: 4 }}>
-              <span
-                style={{
-                  backgroundColor: "#f6ffed",
-                  color: "#52c41a",
-                  padding: "2px 8px",
-                  borderRadius: "4px",
-                  fontSize: "12px",
-                  fontWeight: "bold",
-                }}
-              >
-                Best Seller
-              </span>
-            </div>
-          )}
-        </div>
-      </div>
-    </Card>
-  );
-}
 
 export default function CartPage() {
   const {
@@ -110,6 +47,7 @@ export default function CartPage() {
     setCartProducts(filteredProducts);
   }, [cartProductIds, allProducts]);
 
+  //Remove the Product from the Cart
   const handleRemoveProduct = (productId: number) => {
     removeProductId(productId);
     message.success("Product removed from cart");
@@ -124,9 +62,10 @@ export default function CartPage() {
     (sum, product) => sum + product.price,
     0
   );
-
+  //IF THE CARTPRODUCTS ARE 0
   if (cartProducts.length === 0) {
     return (
+      
       <div
         style={{
           minHeight: "100vh",
@@ -135,6 +74,7 @@ export default function CartPage() {
           textAlign: "center",
         }}
       >
+        <Header />
         <Empty
           image={Empty.PRESENTED_IMAGE_SIMPLE}
           description={
@@ -163,6 +103,7 @@ export default function CartPage() {
         margin: "0 auto",
       }}
     >
+      <Header />
       <div
         style={{
           marginBottom: "24px",
@@ -171,6 +112,7 @@ export default function CartPage() {
           alignItems: "center",
         }}
       >
+
         <Title level={2}>Shopping Cart ({cartProducts.length} items)</Title>
         <Space>
           <Button
@@ -190,6 +132,7 @@ export default function CartPage() {
       <Row gutter={[16, 16]}>
         <Col xs={24} lg={16}>
           {cartProducts.map((product) => (
+            //Passing handleRemoveProduct to the card
             <CartProductCard
               key={product.id}
               product={product}
@@ -242,6 +185,7 @@ export default function CartPage() {
                   justifyContent: "space-between",
                 }}
               >
+                {/*The total price*/}
                 <Text strong style={{ fontSize: "16px" }}>
                   Total:
                 </Text>
@@ -250,6 +194,7 @@ export default function CartPage() {
                 </Text>
               </div>
             </div>
+            {/*Button for processing to checkout*/}
             <Button
               type="primary"
               size="large"

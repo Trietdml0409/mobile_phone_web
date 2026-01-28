@@ -4,9 +4,12 @@ import React from "react";
 import type { InputNumberProps } from "antd";
 import { Button, Flex, InputNumber } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import {useContext} from "react";
+import {CartContext} from "@/shared/context/cartContext"
+import {IProduct} from "@/shared/types/common.types"
+
 
 const onChange: InputNumberProps["onChange"] = (value) => {
-  console.log("changed", value);
 };
 
 const sharedProps = {
@@ -19,12 +22,17 @@ const sharedProps = {
 };
 
 const InputNumberBox = ({
+  product,
   quantity,
   setQuantity,
 }: {
+  product: IProduct;
   quantity: number;
   setQuantity: (quantity: number) => void;
 }) => {
+  const {productIds: cartProductIds,addProductId: addCartProductId,removeProductId:removeCartProductId,clearCart:clearCart} = useContext(CartContext)
+  const isProductAddToCart: boolean = cartProductIds.includes(product.id)
+
   return (
     <Flex gap="small">
       <InputNumber
@@ -35,12 +43,21 @@ const InputNumberBox = ({
       />
       <Button
         icon={<ShoppingCartOutlined />}
-        onClick={() => setQuantity(quantity + 1)}
+        style={{
+          backgroundColor: isProductAddToCart ? "red" : "royalblue",
+          color: "white", // ensure text is visible
+        }}
+        onClick={()=>
+          isProductAddToCart 
+          ? removeCartProductId(product.id)
+          : addCartProductId(product.id)
+        }
       >
-        ADD TO CART
+        {isProductAddToCart ? "Remove" : "Add"}
       </Button>
     </Flex>
   );
 };
+
 
 export default InputNumberBox;

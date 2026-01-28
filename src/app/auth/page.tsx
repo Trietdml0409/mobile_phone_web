@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+//Including importing Form
 import {
   Card,
   Form,
@@ -20,7 +21,11 @@ import {
 
 const { Title, Text } = Typography;
 
+
+
 export default function AuthPage() {
+  //Form.useForm return an Array
+  //Right now it only return form  instancem wrapped in an array for consistency
   const [form] = Form.useForm();
 
   return (
@@ -34,6 +39,7 @@ export default function AuthPage() {
         padding: "20px",
       }}
     >
+      {/*This form is in a type of card */}
       <Card
         style={{
           width: "100%",
@@ -45,6 +51,7 @@ export default function AuthPage() {
           padding: "40px",
         }}
       >
+        {/*TITLE*/}
         <div style={{ textAlign: "center", marginBottom: "32px" }}>
           <Title level={2} style={{ marginBottom: "8px" }}>
             Welcome Back
@@ -54,21 +61,31 @@ export default function AuthPage() {
           </Text>
         </div>
 
+
+        {/*Form begin here */}
         <Form
+          //- Passing form={form} into <Form> tells Ant Design: “Use this specific form instance to control the form.
           form={form}
           layout="vertical"
           size="large"
           autoComplete="off"
-          scrollToFirstError={true}
-          variant="underlined"
+          scrollToFirstError={true} 
+          variant="underlined" 
         >
+          {/*Item is a sub component of Form that represents a single fields
+          connect input component to the form instance and handle labels, validation, layout
+          
+          We can pass Rules for 
+          */}
           <Form.Item
             name="email"
+            //Label
             label={
-              <Text strong style={{ fontSize: "14px" , backgroundColor: '#f0f0f0', padding: '10px 12px'}}>
+              <Text strong style={{ fontSize: "14px" , padding: '10px 12px'}}>
                 Email Address
               </Text>
             }
+            //Some rules
             rules={[
               {
                 required: true,
@@ -80,7 +97,9 @@ export default function AuthPage() {
               },
             ]}
           >
+            {/*Input inside the form*/}
             <Input
+              //Prefic and suffix
               prefix={<MailOutlined style={{ color: "#bfbfbf" }} />}
               suffix={<InfoCircleOutlined style={{ color: "#bfbfbf" , cursor: 'pointer'}} />}
               allowClear={true}
@@ -91,7 +110,8 @@ export default function AuthPage() {
               }}
             />
           </Form.Item>
-
+          
+          {/*Second form item*/}
           <Form.Item
             name="password"
             label={
@@ -114,6 +134,7 @@ export default function AuthPage() {
               prefix={<LockOutlined style={{ color: "#bfbfbf" }} />}
               placeholder="Enter your password"
               iconRender={(visible) =>
+                //Visible or Invisible
                 visible ? (
                   <EyeTwoTone style={{ color: "#bfbfbf" }} />
                 ) : (

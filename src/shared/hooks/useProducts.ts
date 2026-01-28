@@ -12,7 +12,6 @@ export function useProduct() {
         data: IProduct[];
         message: string;
       };
-      console.log("Response data: ", responseData);
       setProducts(responseData.data);
     };
 

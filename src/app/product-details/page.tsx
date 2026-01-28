@@ -9,15 +9,16 @@ import { useState, useEffect } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import { useProductDetail } from "@/shared/hooks/useProductDetail";
 
-
 // TODO: @triet import useSearchParams từ next/navigation để lấy productId từ URL
 // TODO: @triet import useState và useEffect từ react
 
 // TODO: @triet tạo interface IProduct tương tự như trong category/page.tsx
 // Hoặc có thể import từ một file chung nếu muốn tái sử dụng
 
+
+
 export default function ProductDetails() {
-  // Ví dụ: URL là /product-details?id=1 thì lấy id=1
+  //URL là /product-details?id=1 thì lấy id=1
   const searchParams = useSearchParams();
   const productIdParam = searchParams.get("id");
   const productId = productIdParam ? Number(productIdParam) : null;
@@ -48,8 +49,6 @@ export default function ProductDetails() {
   // TODO: @triet nếu product === null, hiển thị loading hoặc "Product not found"
   // Hint: sử dụng conditional rendering: if (!product) return <div>Loading...</div>
 
-  console.log("product", product);
-
   return (
     <div
       style={{
@@ -59,7 +58,7 @@ export default function ProductDetails() {
         padding: "16px",
       }}
     >
-      <Header totalCartProducts={123} />
+      <Header/>
       <Flex gap="small" style={{ height: "650px", backgroundColor: "white" }}>
         {product ? <ProductImage image={product.image} /> : <Skeleton active />}
         {product ? (
