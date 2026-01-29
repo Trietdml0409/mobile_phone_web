@@ -39,7 +39,7 @@ export default function Favourite() {
                 image={Empty.PRESENTED_IMAGE_SIMPLE}
                 description={
                     <div>
-                    <Title level={3}>Your cart is empty</Title>
+                    <Title level={3}>No favourite products</Title>
                     <Text type="secondary">Add some products to get started!</Text>
                     </div>
                 }
