@@ -1,10 +1,12 @@
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import { Flex } from "antd";
 
 export default function Cart() {
   return (
-    <div className="flex items-center gap-1">
-      <ShoppingCartOutlined style={{ fontSize: "24px", color: "#374151" }} />
-      <span className="text-sm font-medium text-gray-700">Cart</span>
-    </div>
+    <Flex gap={6} justify="center" align="center">
+      <ShoppingCartOutlined style={{ fontSize: "24px", color: "white" }} />
+      <span style={{fontSize: "12px", color: "white",fontWeight:500 }}>Cart</span>
+    </Flex>
+    
   );
 }

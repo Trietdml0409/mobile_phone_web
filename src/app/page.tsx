@@ -6,8 +6,9 @@ import Contents from "@/components/home/contents";
 import { useEffect, useState } from "react";
 import MessageBanner from "@/components/MessageBanner";
 import {useProduct} from "@/shared/hooks/useProducts"
-import { Flex } from "antd";
+import { Card, Col, Flex, Row } from "antd";
 import { IProduct } from "@/shared/types/common.types";
+import SegmentDiscount from "@/components/home/segmentedDiscount/segmentDiscount";
 // TODO: @triet import useState và useEffect từ react
 // TODO: @triet import Button và Input từ antd để sử dụng trong các bài tập
 
@@ -58,10 +59,11 @@ export default function Home() {
       style={{
         position: "relative",
         minHeight: "100vh",
-        minWidth: "100vw",
+        width: "100%",
         backgroundColor: "white",
         padding: "10px",
         paddingBottom: "50px",
+
       }}
     >
       <Header />
@@ -77,27 +79,67 @@ export default function Home() {
       {/* TODO: @triet hiển thị "Xin chào, {userName}!" nếu userName không rỗng */}
       {/* Hint: sử dụng conditional rendering */}
 
-      <Banner />
+      <Row>
+        <Col span={24}>
+          <Banner />
+        </Col>
+      </Row>
 
 
-
-      <p style={{
-        fontWeight: "bold",
-        fontSize: "22px",
-        color: "black",          // strong red tone
-        textAlign: "center",
-        backgroundColor: "#fff2e8", // light background highlight
-        padding: "8px 12px",
-        borderRadius: "6px"
-      }}>
-        Best Seller
-      </p>
-
-      <Flex wrap gap="small" style={{ height: "auto", backgroundColor: "white" }}>
-        {localProducts.filter((product:IProduct)=>product.isBestSeller).map((product:IProduct)=>(
-          <Contents key={product.id} product={product}/>
+      <Row gutter={16}>
+        {["https://theme.hstatic.net/200000420363/1001333448/14/banner_home_1_master.jpg?v=6221",
+        "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_2_master.jpg?v=6221",
+        "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_3_master.jpg?v=6221",
+        "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_4_master.jpg?v=6221"
+      ].map((source,index) => (
+          <Col span={6} key={index}>
+            <Card
+              styles={{ body: { padding: 0 } }}
+              style={{ border: "none" }}
+              hoverable
+            >
+              <img 
+                  style={{
+                    width: "100%",
+                    display: "block",
+                    borderRadius: "8px",
+                  }}
+                  src={source}/>
+            </Card>
+          </Col>
         ))}
-      </Flex>
+
+
+      </Row>
+      
+
+      {/*Discount title*/}
+      <Row gutter={16}>
+        <p style={{fontWeight:"bold", fontSize:"20px",color:"royalblue"}}>Discount</p>
+      </Row>
+
+
+      {/*Discount */}
+      <Row>
+        <SegmentDiscount/>
+      </Row>
+
+
+      {/*Best seller title*/}
+      <Row gutter={16}>
+        <p style={{fontWeight:"bold", fontSize:"20px",color:"royalblue"}}>Best Seller</p>
+      </Row>
+
+
+      {/*Best seller */}
+      <Row gutter={8}>
+        {localProducts.filter((product:IProduct)=>product.isBestSeller).map((product:IProduct)=>(
+          <Col key={product.id}  span={3}>
+            <Contents  product={product}/>
+          </Col>
+        ))}
+      </Row>
+
 
 
       {/* TODO: @triet thêm một section hiển thị danh sách các tính năng nổi bật */}

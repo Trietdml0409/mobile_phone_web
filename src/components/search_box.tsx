@@ -15,7 +15,7 @@ const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?
 
 
 const SearchBox: React.FC = () => (
-  <Space vertical style = {{width:"100%"}}>
+
     <Search
       placeholder="input search text"
       enterButton="Search"
@@ -23,7 +23,6 @@ const SearchBox: React.FC = () => (
       suffix={suffix}
       onSearch={onSearch}
     />
-  </Space>
 );
 
 export default SearchBox;

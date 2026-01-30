@@ -20,15 +20,15 @@ const items = [
 export default function Account() {
     const router = useRouter();
     return(
-        <Flex gap="1px" >
-            <UserOutlined />
+        <Flex  justify={"center"} align="center" style={{ width: "200px" }}>
+            <UserOutlined style={{ fontSize: "30px", marginRight: "8px", color:"royalblue" }}/>
             <Flex vertical>
-                <Button type="link" style = {{padding:0}} 
-                onClick={() => router.push('/auth')}
-                >Log In/Sign up</Button>
-                <Dropdown menu={{ items }}>
-                    <Button type="text" style = {{padding:0}}>Account</Button>
-                </Dropdown>
+            <Button type="link" style = {{padding:0,color:"royalblue"}} 
+            onClick={() => router.push('/auth')}
+            >Log In/Sign up</Button>
+            <Dropdown menu={{ items }}>
+                <Button type="text" style = {{padding:0,fontSize: "14px"}}>Account</Button>
+            </Dropdown>
             </Flex>
         </Flex>
 

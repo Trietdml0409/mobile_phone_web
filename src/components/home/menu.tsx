@@ -34,11 +34,27 @@ const CategoriesButton = () => {
   ];
 
   return (
-    <Dropdown menu={{ items }}>
-      <Button type="text">
-        <MenuOutlined /> Menu
-      </Button>
-    </Dropdown>
+
+      <Dropdown  trigger={["click"]} menu={{ items }}>
+        <div style={{width:"100%"}}>
+        <Button 
+        style={{
+          border: "1.5px solid royalblue",
+          height: "38px",
+          width: "100%", 
+          color:"royalblue",
+          display:"flex",
+          justifyContent:"center",
+          fontWeight: 600,
+          background:"royalblue",
+          color:"white",
+        }}>
+          <MenuOutlined /><span style={{color:"white"}}>Menu</span> 
+        </Button>
+        </div>
+      </Dropdown>
+      
+    
   );
 };
 

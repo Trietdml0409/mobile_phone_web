@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import Account from "./home/account";
 import Cart from "./home/cart";
-import CategoriesButton from "./home/categories_button";
+import CategoriesButton from "./home/menu";
 import SearchBox from "./search_box";
 import Link from "next/link";
 import { CartContext } from "@/shared/context/cartContext";
+import { Row,Col, Flex, Button } from "antd";
 
 export default function Header() {
   const { productIds: cartProductIds } = useContext(CartContext);
@@ -14,73 +15,109 @@ export default function Header() {
       className="header"
       style={{
         backgroundColor: "white",
-        height: "64px",
-        display: "flex",
+        height: "67px",
       }}
     >
-      <div
-        style={{
-          flex: "1",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Link href="/" className="cursor-pointer">
-          <img
-            style={{ width: "90px" }}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWQSpo-QHOmMpJ1go7HJjuPedQf4YP-BppRQ&s"
-          />
-        </Link>
-      </div>
-      <div
-        style={{
-          flex: "1",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <CategoriesButton />
-      </div>
-      <div
-        style={{
-          flex: "3",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <SearchBox />
-      </div>
-      <div
-        style={{
-          flex: "1",
-          display: "flex",
-          alignItems: "center",
-          paddingLeft: "10px",
-        }}
-      >
-        <Account />
-      </div>
-      <div
-        style={{
-          flex: "1",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "flex-end",
-          position: "relative",
-        }}
-      >
-        <Link
-          href="/cart"
-          className="relative flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
-        >
-          <Cart />
-          {cartProductIds.length > 0 && (
-            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center min-w-[20px]">
-              {cartProductIds.length > 99 ? "99+" : cartProductIds.length}
-            </span>
-          )}
-        </Link>
-      </div>
+      <Row gutter={16}>
+        {/*Logo*/}
+        <Col span={2}>
+          <div
+            style={{
+              height: "100%",
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Link href="/" className="cursor-pointer">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWQSpo-QHOmMpJ1go7HJjuPedQf4YP-BppRQ&s"
+                style={{ width: "85%", height: "auto" }}
+              />
+            </Link>
+          </div>
+        </Col>
+
+
+
+        {/*Menu*/}
+        <Col span={4} >
+            <div
+            style={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center",
+            width: "100%",   // ensure full width of the Col
+            height: "100%"}}>
+              <CategoriesButton />
+            </div>
+        </Col>
+
+        {/*Search box*/}
+        <Col span={10}>
+          <div style={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center",
+            width: "100%",   // ensure full width of the Col
+            height: "100%",
+          }}>
+            <SearchBox />
+          </div>
+        </Col>
+
+        {/*Log In/ Sign up*/}
+        <Col span={4} >
+          <div style={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+          }}>
+            <Account />
+          </div>
+        </Col>
+
+        {/*Cart*/}
+        <Col span={4} >
+        <div 
+          style={{
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center",
+          width: "100%",   // ensure full width of the Col
+          height: "100%"}}>
+            <div style={{width:"700%", display:"flex", justifyContent:"flex-start"}}>
+              <Link
+              
+                style={{ display: "block", width: "100%" }}
+                href="/cart"
+                className="relative flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
+              >
+                <Button 
+                  style={{
+                  border: "1.5px solid royalblue",
+                  height: "38px",
+                  width: "100%", 
+                  color:"white",
+                  background:"royalblue",
+                  display:"flex",
+                  justifyContent:"center",
+                  fontWeight: 600,
+                }}>
+                  <Cart />
+                  {cartProductIds.length > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center min-w-[20px]">
+                      {cartProductIds.length > 99 ? "99+" : cartProductIds.length}
+                    </span>
+                  )}
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </Col>
+      </Row>
     </div>
+      
   );
 }

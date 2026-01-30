@@ -1,6 +1,6 @@
 "use client";
-import ProductInformation from "@/components/payment/productInformation"
-import DiscountCode from "@/components/payment/discountCode"
+import ProductInformation from "@/components/checkouts/productInformation"
+import DiscountCode from "@/components/checkouts/discountCode"
 import {Flex,Divider} from "antd"
 import {useState,useEffect} from "react";
 import {FormProps} from "antd";
@@ -80,6 +80,49 @@ const ward = (
 )
 
 
+//Responsive Box
+function ResponsiveBox({ isSmallScreen }:{isSmallScreen:boolean}){
+    return  (
+        
+        <div style={{
+            backgroundColor: "rgba(128,128,128,0.1)",
+            width: isSmallScreen ? "100%" : "50%",
+            height: "auto",
+            order: isSmallScreen ? 0 : 0,
+            marginLeft: isSmallScreen ? 0 : "auto"
+        }}>
+            <ProductInformation/>
+            <DiscountCode/>
+            <div style={{padding:"10px",
+            borderLeft: "2px solid rgba(128, 128, 128, 0.3)",
+            borderRight: "2px solid rgba(128, 128, 128, 0.3)",
+            borderBottom: "2px solid rgba(128, 128, 128, 0.3)"
+            }}>
+                <p style={{fontSize:"20px",color:"royalblue"}}>Delivery Fee</p>
+                <p style={{color:"black"}}>
+                    The Delivery fee will be charged after the delivery complete
+                    <br/>
+                    Shipping inside Vietnam
+                </p>
+            </div>
+            <div style={{padding:"10px",
+            borderLeft: "2px solid rgba(128, 128, 128, 0.3)",
+            borderRight: "2px solid rgba(128, 128, 128, 0.3)",
+            borderBottom: "2px solid rgba(128, 128, 128, 0.3)"
+            }}>
+                <Flex justify="space-between" align="center" style={{gap:"40px"}}>
+                    <p style={{fontSize:"20px",color:"royalblue",fontWeight:"bold"}}>Total Amount:</p>
+                    <p style={{color:"black",fontWeight:"bold", fontSize:"20px"}}>Price</p>
+                </Flex>
+                
+
+            </div>
+        </div>
+    )
+}
+
+
+
 export default function Payment(){
     const router= useRouter();
     //checks if the screen width is less than 800px to decide if it’s a small screen.
@@ -92,45 +135,7 @@ export default function Payment(){
         return () => window.removeEventListener("resize", handleResize)
     },[])
 
-    function ResponsiveBox({ isSmallScreen }:{isSmallScreen:boolean}){
-        return  (
-            
-            <div style={{
-                backgroundColor: "rgba(128,128,128,0.1)",
-                width: isSmallScreen ? "100%" : "50%",
-                height: "auto",
-                order: isSmallScreen ? 0 : 0,
-                marginLeft: isSmallScreen ? 0 : "auto"
-            }}>
-                <ProductInformation/>
-                <DiscountCode/>
-                <div style={{padding:"10px",
-                borderLeft: "2px solid rgba(128, 128, 128, 0.3)",
-                borderRight: "2px solid rgba(128, 128, 128, 0.3)",
-                borderBottom: "2px solid rgba(128, 128, 128, 0.3)"
-                }}>
-                    <p style={{fontSize:"20px",color:"royalblue"}}>Delivery Fee</p>
-                    <p style={{color:"black"}}>
-                        The Delivery fee will be charged after the delivery complete
-                        <br/>
-                        Shipping inside Vietnam
-                    </p>
-                </div>
-                <div style={{padding:"10px",
-                borderLeft: "2px solid rgba(128, 128, 128, 0.3)",
-                borderRight: "2px solid rgba(128, 128, 128, 0.3)",
-                borderBottom: "2px solid rgba(128, 128, 128, 0.3)"
-                }}>
-                    <Flex justify="space-between" align="center" style={{gap:"40px"}}>
-                        <p style={{fontSize:"20px",color:"royalblue",fontWeight:"bold"}}>Total Amount:</p>
-                        <p style={{color:"black",fontWeight:"bold", fontSize:"20px"}}>Price</p>
-                    </Flex>
-                    
 
-                </div>
-            </div>
-        )
-    }
 
     return(
         <>
@@ -150,7 +155,7 @@ export default function Payment(){
                                 onFinish={onFinish}
                                 onFinishFailed={onFinishFailed}
                                 autoComplete="off"
-                            >
+                            >                               
                                 <p style={{color:"black"}}>
                                     <p style={{fontSize:"20px",color:"royalblue"}}>Delivery information</p>
                                 </p>
