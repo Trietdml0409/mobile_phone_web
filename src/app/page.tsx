@@ -66,89 +66,103 @@ export default function Home() {
 
       }}
     >
-      <Header />
+      <Row gutter={[0,10]}>
 
-      {/* TODO: @triet hiển thị thông báo chào mừng nếu showWelcome === true */}
-      {/* Hint: sử dụng conditional rendering với {showWelcome && <div>...</div>} */}
-      {/* TODO: @triet thêm Button để đóng thông báo chào mừng (gọi handleToggleWelcome) */}
-
-      {/* TODO: @triet hiển thị visitCount ở đâu đó trên trang */}
-      {/* Ví dụ: <p>Bạn đã truy cập trang này {visitCount} lần</p> */}
-
-      {/* TODO: @triet thêm một input field để nhập userName */}
-      {/* TODO: @triet hiển thị "Xin chào, {userName}!" nếu userName không rỗng */}
-      {/* Hint: sử dụng conditional rendering */}
-
-      <Row>
         <Col span={24}>
-          <Banner />
+          <Header />
         </Col>
-      </Row>
+
+        {/* TODO: @triet hiển thị thông báo chào mừng nếu showWelcome === true */}
+        {/* Hint: sử dụng conditional rendering với {showWelcome && <div>...</div>} */}
+        {/* TODO: @triet thêm Button để đóng thông báo chào mừng (gọi handleToggleWelcome) */}
+
+        {/* TODO: @triet hiển thị visitCount ở đâu đó trên trang */}
+        {/* Ví dụ: <p>Bạn đã truy cập trang này {visitCount} lần</p> */}
+
+        {/* TODO: @triet thêm một input field để nhập userName */}
+        {/* TODO: @triet hiển thị "Xin chào, {userName}!" nếu userName không rỗng */}
+        {/* Hint: sử dụng conditional rendering */}
+        <Col span={24}>
+          <Row>
+            <Col span={24}>
+              <Banner />
+            </Col>
+          </Row>
+        </Col>
+
+        <Col span={24}>
+          <Row gutter={16}>
+            {["https://theme.hstatic.net/200000420363/1001333448/14/banner_home_1_master.jpg?v=6221",
+            "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_2_master.jpg?v=6221",
+            "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_3_master.jpg?v=6221",
+            "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_4_master.jpg?v=6221"
+          ].map((source,index) => (
+              <Col span={6} key={index}>
+                <Card
+                  styles={{ body: { padding: 0 } }}
+                  style={{ border: "none" }}
+                  hoverable
+                >
+                  <img 
+                      style={{
+                        width: "100%",
+                        display: "block",
+                        borderRadius: "8px",
+                      }}
+                      src={source}/>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Col>
+        
+
+        <Col span={24}>
+          {/*Discount title*/}
+          <Row>
+            <p style={{fontWeight:"bold", fontSize:"20px",color:"royalblue"}}>Discount</p>
+          </Row>
+        </Col>
 
 
-      <Row gutter={16}>
-        {["https://theme.hstatic.net/200000420363/1001333448/14/banner_home_1_master.jpg?v=6221",
-        "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_2_master.jpg?v=6221",
-        "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_3_master.jpg?v=6221",
-        "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_4_master.jpg?v=6221"
-      ].map((source,index) => (
-          <Col span={6} key={index}>
-            <Card
-              styles={{ body: { padding: 0 } }}
-              style={{ border: "none" }}
-              hoverable
-            >
-              <img 
-                  style={{
-                    width: "100%",
-                    display: "block",
-                    borderRadius: "8px",
-                  }}
-                  src={source}/>
-            </Card>
-          </Col>
-        ))}
+        <Col span={24}>
+          {/*Discount */}
+          <Row>
+            <SegmentDiscount/>
+          </Row>
+        </Col>
 
 
-      </Row>
-      
-
-      {/*Discount title*/}
-      <Row gutter={16}>
-        <p style={{fontWeight:"bold", fontSize:"20px",color:"royalblue"}}>Discount</p>
-      </Row>
-
-
-      {/*Discount */}
-      <Row>
-        <SegmentDiscount/>
-      </Row>
+        <Col span={24}>
+          {/*Best seller title*/}
+          <Row>
+            <p style={{fontWeight:"bold", fontSize:"20px",color:"royalblue"}}>Best Seller</p>
+          </Row>
+        </Col>
 
 
-      {/*Best seller title*/}
-      <Row gutter={16}>
-        <p style={{fontWeight:"bold", fontSize:"20px",color:"royalblue"}}>Best Seller</p>
-      </Row>
-
-
-      {/*Best seller */}
-      <Row gutter={8}>
-        {localProducts.filter((product:IProduct)=>product.isBestSeller).map((product:IProduct)=>(
-          <Col key={product.id}  span={3}>
-            <Contents  product={product}/>
-          </Col>
-        ))}
-      </Row>
+        <Col span={24}>
+          {/*Best seller */}
+          <Row gutter={8}>
+            {localProducts.filter((product:IProduct)=>product.isBestSeller).map((product:IProduct)=>(
+              <Col key={product.id}  span={3}>
+                <Contents  product={product}/>
+              </Col>
+            ))}
+          </Row>
+        </Col>
 
 
 
-      {/* TODO: @triet thêm một section hiển thị danh sách các tính năng nổi bật */}
-      {/* Tạo mảng features: ["Free Shipping", "24/7 Support", "Best Price"] */}
-      {/* Sử dụng map() để render danh sách này */}
-      {/* Hint: features.map((feature, index) => <div key={index}>...</div>) */}
+        {/* TODO: @triet thêm một section hiển thị danh sách các tính năng nổi bật */}
+        {/* Tạo mảng features: ["Free Shipping", "24/7 Support", "Best Price"] */}
+        {/* Sử dụng map() để render danh sách này */}
+        {/* Hint: features.map((feature, index) => <div key={index}>...</div>) */}
 
-      <MessageBanner visitCount={visitCount} />
+        <MessageBanner visitCount={visitCount} />
+        </Row>
     </div>
+
   );
 }
 

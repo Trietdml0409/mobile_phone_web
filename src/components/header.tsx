@@ -5,17 +5,21 @@ import CategoriesButton from "./home/menu";
 import SearchBox from "./search_box";
 import Link from "next/link";
 import { CartContext } from "@/shared/context/cartContext";
-import { Row,Col, Flex, Button } from "antd";
+import { Row,Col, Flex, Button,Grid } from "antd";
+
+
+const {useBreakpoint} = Grid;
+
 
 export default function Header() {
   const { productIds: cartProductIds } = useContext(CartContext);
-  
+  const screens = useBreakpoint();
   return (
     <div
       className="header"
       style={{
         backgroundColor: "white",
-        height: "67px",
+        height: "70px",
       }}
     >
       <Row gutter={16}>
@@ -72,7 +76,9 @@ export default function Header() {
           <div style={{
             display:"flex",
             justifyContent:"center",
-            alignItems:"center"
+            alignItems:"center",
+            width: "100%",   // ensure full width of the Col
+            height: "100%",
           }}>
             <Account />
           </div>
@@ -87,17 +93,17 @@ export default function Header() {
           alignItems:"center",
           width: "100%",   // ensure full width of the Col
           height: "100%"}}>
-            <div style={{width:"700%", display:"flex", justifyContent:"flex-start"}}>
+            <div style={{width:"700%", height:"100%", display:"flex", justifyContent:"flex-start"}}>
               <Link
               
-                style={{ display: "block", width: "100%" }}
+                style={{ display: "block", width: "100%", height:"100%" }}
                 href="/cart"
                 className="relative flex items-center gap-2 p-2 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
               >
                 <Button 
                   style={{
                   border: "1.5px solid royalblue",
-                  height: "38px",
+                  height: "90%",
                   width: "100%", 
                   color:"white",
                   background:"royalblue",
@@ -107,7 +113,7 @@ export default function Header() {
                 }}>
                   <Cart />
                   {cartProductIds.length > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center min-w-[20px]">
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center min-w-[30%] min-h-[50%]">
                       {cartProductIds.length > 99 ? "99+" : cartProductIds.length}
                     </span>
                   )}

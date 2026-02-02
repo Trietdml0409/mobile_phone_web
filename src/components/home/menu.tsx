@@ -36,20 +36,20 @@ const CategoriesButton = () => {
   return (
 
       <Dropdown  trigger={["click"]} menu={{ items }}>
-        <div style={{width:"100%"}}>
+        <div style={{width:"100%",height:"60%"}}>
         <Button 
         style={{
           border: "1.5px solid royalblue",
-          height: "38px",
+          height: "100%",
           width: "100%", 
-          color:"royalblue",
+          color:"white",
           display:"flex",
           justifyContent:"center",
           fontWeight: 600,
           background:"royalblue",
-          color:"white",
+          fontSize:"90%"
         }}>
-          <MenuOutlined /><span style={{color:"white"}}>Menu</span> 
+          <MenuOutlined />Menu
         </Button>
         </div>
       </Dropdown>

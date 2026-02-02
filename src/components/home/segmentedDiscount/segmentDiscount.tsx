@@ -1,4 +1,4 @@
-import {Segmented} from "antd";
+import {Col, Row, Segmented} from "antd";
 import Decreased51Percent from "./decreased51Percent";
 import Buy1Get1 from "./buy1Get1";
 import {useState} from "react"
@@ -17,7 +17,7 @@ const discountsTypes:discountsType[] =[
         component: <Decreased51Percent/>
     },
     {
-        id: 1,
+        id: 2,
         img: "https://cdn.hstatic.net/files/200000420363/file/nut-banner-cho-nh_m-hot-promotion-7_a201b1d4b9d949f2a9d224d38b0bbb70.png",
         component: <Buy1Get1 />
     }
@@ -27,25 +27,40 @@ const discountsTypes:discountsType[] =[
 
 export default function SegmentDiscount(){
     const [value, setValue] = useState<number>(discountsTypes[0].id);
-    const options = ['Daily', 'Weekly', 'Monthly']
+    const selected = discountsTypes.find(d => d.id === value);
     return(
-    <Segmented<number>
-        value={value}
-        onChange ={setValue}
-        options={
-        discountsTypes.map((d) => ({
-          value: d.id,
-          label: (
-            <div style={{ textAlign: "center" }}>
-              <img
-                src={d.img}
-                style={{ width: 150, display: "block", margin: "0 auto" }}
-              />
-            </div>
-          ),
-        }))
+    <>
+      <Row gutter={[16,10]}>
+        <Col span={24}>
+          <Segmented<number>
+              value={value}
+              onChange ={setValue}
+              options={
+              discountsTypes.map((d) => ({
+                value: d.id,
+                label: (
+                  <div style={{ textAlign: "center" }}>
+                    <img
+                      src={d.img}
+                      style={{ width: "30%", display: "block", margin: "0 auto" }}
+                    />
+                  </div>
+                ),
+              }))
 
-        }
-    />
+              }
+          />
+        </Col>
+            
+        <Col span={24}>
+          <div>
+            {selected?.component}
+          </div>
+        </Col>
+
+      </Row>
+
+
+    </>
     )
 }
