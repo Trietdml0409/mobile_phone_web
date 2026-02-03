@@ -5,7 +5,7 @@ import { CartContext } from "@/shared/context/cartContext";
 import { useProduct } from "@/shared/hooks/useProducts";
 import { IProduct } from "@/shared/types/common.types";
 import Link from "next/link";
-import Header from "@/components/header"
+import Header from "@/components/header";
 import {
   Button,
   message,
@@ -21,10 +21,10 @@ import {
   ClearOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
-import CartProductCard from "@/components/cart/cartProductCard"
+import CartProductCard from "@/components/cart/cartProductCard";
+import { useRouter } from "next/navigation";
 
 const { Title, Text } = Typography;
-
 
 export default function CartPage() {
   const {
@@ -32,6 +32,7 @@ export default function CartPage() {
     removeProductId,
     clearCart,
   } = useContext(CartContext);
+  const router = useRouter();
 
   // get all products from API
   const { products: allProducts } = useProduct();
@@ -65,7 +66,6 @@ export default function CartPage() {
   //IF THE CARTPRODUCTS ARE 0
   if (cartProducts.length === 0) {
     return (
-      
       <div
         style={{
           minHeight: "100vh",
@@ -112,7 +112,6 @@ export default function CartPage() {
           alignItems: "center",
         }}
       >
-
         <Title level={2}>Shopping Cart ({cartProducts.length} items)</Title>
         <Space>
           <Button
@@ -200,8 +199,9 @@ export default function CartPage() {
               size="large"
               block
               style={{ marginTop: "16px" }}
-              onClick={() =>
-                message.info("Checkout functionality would be implemented here")
+              onClick={
+                () => router.push("/checkouts")
+                // message.info("Checkout functionality would be implemented here")
               }
             >
               Proceed to Checkout
