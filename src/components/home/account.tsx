@@ -5,15 +5,15 @@ import { useRouter } from 'next/navigation';
 const items = [
     {
         key: '0',
-        label: 'profile',
+        label: 'LDMT0406',
     },
     {
         key: '2',
-        label: 'profile',
+        label: 'Tim2225',
     },
     {
         key: '3',
-        label: 'profile',
+        label: 'Arg219',
     }
 ]
 
@@ -26,6 +26,7 @@ export default function Account() {
                 <Button type="link" style = {{padding:0,color:"royalblue",fontSize: "100%"}} 
                 onClick={() => router.push('/auth')}
                 >Log In/Sign up</Button>
+
                 <Dropdown menu={{ items }}>
                     <Button type="text" style = {{padding:0,fontSize: "100%"}}>Account</Button>
                 </Dropdown>

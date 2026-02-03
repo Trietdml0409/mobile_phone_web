@@ -1,4 +1,4 @@
-import { Button, Flex } from "antd";
+import { Button, Col, Flex, Row } from "antd";
 import { StarOutlined } from "@ant-design/icons";
 import InputNumberBox from "./inputNumberBox";
 import { IProduct } from "@/shared/types/common.types";
@@ -22,12 +22,18 @@ export default function ProductInformation({
   
 
   return (
-    <Flex gap="10px" vertical style={{ flex: 3 }}>
-      <h1 style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
-        {product.name}
-      </h1>
+    <Row style={{padding:"16px"}}>
+      <Col span={24}>
+        <h1 style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
+          {product.name}
+        </h1>
+      </Col>
+      
+      <Col span={24 }>
       <p style={{ color: "black" }}>Product Code: {product.id}</p>
-      <Flex gap="10px">
+      </Col>
+
+      <Col span={24}>
         <div>
           <StarOutlined style={{ fontSize: "24px", color: "gold" }} />
           <StarOutlined style={{ fontSize: "24px", color: "gold" }} />
@@ -36,7 +42,9 @@ export default function ProductInformation({
           <StarOutlined style={{ fontSize: "24px", color: "gold" }} />
         </div>
         <p style={{ color: "black" }}>0 comment</p>
-      </Flex>
+      </Col>
+
+      <Col span={24}>
       <p
         style={{
           alignSelf: "flex-start",
@@ -51,6 +59,9 @@ export default function ProductInformation({
       >
         {product.price.toLocaleString()} VND
       </p>
+      </Col>
+
+      <Col span={24}>
       <p
         style={{
           alignSelf: "flex-start",
@@ -64,7 +75,9 @@ export default function ProductInformation({
       >
         {product.isBestSeller ? "Best Seller" : "Not Best Seller"}
       </p>
-
+      </Col>
+      
+      <Col span={24}>
       <div
         style={{
           position: "relative",
@@ -99,13 +112,24 @@ export default function ProductInformation({
           4: FREE DELIVERY <a>HERE</a>
         </p>
       </div>
+      </Col>
+
+      <Col span={24}>
       <p style={{ color: "black", fontSize: "10px", fontWeight: "bold" }}>
         Call for order: 1900 0243 (8:30 - 21:00)
       </p>
+      </Col>
+      
       <hr style={{ border: "1px solid grey" }} />
+      <Col span={24}>
       <Button onClick={handleBuyNow}>BUY NOW</Button>
+      </Col>
+      <Col span={24}>
       <Button onClick={handleAddToCart}>PAY BY INSTALLMENT</Button>
+      </Col>
+      <Col span={24}>
       <InputNumberBox product = {product} quantity={quantity} setQuantity={setQuantity} />
-    </Flex>
+      </Col>
+    </Row>
   );
 }

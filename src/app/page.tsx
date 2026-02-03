@@ -31,10 +31,8 @@ export default function Home() {
 
   // TODO: @triet tạo state để lưu tên người dùng (userName)
   // Hint: const [userName, setUserName] = useState<string>("");
+  const [userName, setUserName] = useState<string>("");
 
-  // TODO: @triet sử dụng useEffect để tăng visitCount mỗi khi component mount
-  // Hint: useEffect(() => { setVisitCount(prev => prev + 1); }, []);
-  // Đây là bài tập về useEffect với dependency array rỗng (chạy 1 lần khi mount)
 
   // TODO: @triet tạo hàm handleToggleWelcome để toggle showWelcome state
   // Hint: const handleToggleWelcome = () => { setShowWelcome(!showWelcome); };
@@ -42,7 +40,9 @@ export default function Home() {
   // TODO: @triet tạo hàm handleChangeUserName để cập nhật userName
   // Hint: const handleChangeUserName = (name: string) => { setUserName(name); };
 
-  // -----------
+
+  
+  //Use effect to audit the visit times
   useEffect(() => {
     // function to increase visitCount
     // const newVisitCount = visitCount + 1;

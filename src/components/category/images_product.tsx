@@ -8,7 +8,7 @@ export default function ProductImage({ image }: { image: string }) {
       justify="start"
       align="center"
       vertical
-      style={{ backgroundColor: "white", padding: "10px" }}
+      style={{ height:"100%",backgroundColor: "white", padding: "10px" }}
     >
       <Flex
         justify="center"

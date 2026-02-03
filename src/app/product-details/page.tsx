@@ -59,7 +59,8 @@ export default function ProductDetails() {
       }}
     >
       <Header/>
-      <Flex gap="small" style={{ height: "650px", backgroundColor: "white" }}>
+
+      <Flex gap="small" style={{ paddingTop:"16px",height: "650px", backgroundColor: "white" }}>
         {product ? <ProductImage image={product.image} /> : <Skeleton active />}
         {product ? (
           <ProductInformation
