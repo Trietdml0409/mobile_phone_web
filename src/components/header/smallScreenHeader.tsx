@@ -1,15 +1,12 @@
-"use client"
+"use client";
 import { Button, Col, Row } from "antd";
 import SearchBox from "./search_box";
 import Cart from "./cart";
 import CategoriesButton from "./menu";
 import { useRouter } from "next/navigation"; //
 
-
-
-
 export default function SmallScreenHeader() {
-const router = useRouter();
+  const router = useRouter();
   return (
     <Row style={{ height: 50, backgroundColor: "lightblue" }}>
       <Col
@@ -21,7 +18,7 @@ const router = useRouter();
         }}
       >
         <img
-         onClick={() => router.push("/")}
+          onClick={() => router.push("/")}
           src="https://upload.wikimedia.org/wikipedia/vi/f/f6/Emblem_of_Da_Nang_City.png"
           style={{ height: "40px", objectFit: "contain" }}
         />
