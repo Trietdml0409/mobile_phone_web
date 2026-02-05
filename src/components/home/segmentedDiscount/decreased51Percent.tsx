@@ -1,4 +1,4 @@
-import {Col, Row,Card} from "antd"
+import {Col, Row,Card,Grid} from "antd"
 import { useRouter } from "next/navigation"; // for App Router
 import Contents from "../contents";
 
@@ -25,15 +25,19 @@ const decrease51PercentProducts = [
     },
 ]
 
+const { useBreakpoint } = Grid
+
 
 
 export default function Decrease51Percent(){
+    const screens = useBreakpoint()
+    const isSmallScreen = screens.xs || (screens.sm && !screens.md);
     const router = useRouter();
     return(
         <div style={{width:"100%",height:"100%"}}>
             <Row gutter={8}>
                 {decrease51PercentProducts.map((product)=>(
-                    <Col key={product.id} span={4}>
+                    <Col key={product.id} span={isSmallScreen ? 8 : 4}>
                         <Contents product= {product} />
 
                     </Col>

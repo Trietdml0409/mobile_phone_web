@@ -1,11 +1,17 @@
 import React from "react";
 import type { MenuProps } from "antd";
-import { Dropdown } from "antd";
+import { Dropdown,Grid,Flex } from "antd";
 import { Button } from "antd";
 import Link from "next/link";
 import { HeartOutlined, CarOutlined, MenuOutlined, ShopOutlined } from "@ant-design/icons";
 
+const { useBreakpoint } = Grid
+
+
 const CategoriesButton = () => {
+  const screens = useBreakpoint()
+  const isSmallScreen = screens.xs || (screens.sm && !screens.md);
+
   const items: MenuProps["items"] = [
     {
       key: "1",
@@ -38,18 +44,28 @@ const CategoriesButton = () => {
       <Dropdown  trigger={["click"]} menu={{ items }}>
         <div style={{width:"100%",height:"60%"}}>
         <Button 
+        type={"text"}
         style={{
-          border: "1.5px solid royalblue",
           height: "100%",
           width: "100%", 
           color:"white",
           display:"flex",
           justifyContent:"center",
           fontWeight: 600,
-          background:"royalblue",
           fontSize:"90%"
         }}>
-          <MenuOutlined />Menu
+          {isSmallScreen && (
+            <Flex vertical justify={"center"} align="center">
+              <MenuOutlined style={{fontSize:"30px"}} />
+            </Flex>
+            )}
+            {!isSmallScreen && (
+            <Flex gap={"small"} justify={"center"} align={"center"}>
+              <MenuOutlined style={{fontSize:"20px"}} />
+              <p style={{fontSize:"15px"}}>Menu</p>
+            </Flex>
+            )}
+
         </Button>
         </div>
       </Dropdown>

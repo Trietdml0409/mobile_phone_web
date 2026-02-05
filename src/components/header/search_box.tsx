@@ -4,6 +4,7 @@ import { AudioOutlined } from '@ant-design/icons';
 import { Input, Space } from 'antd';
 import type { GetProps } from 'antd';
 
+
 type SearchProps = GetProps<typeof Input.Search>;
 
 const { Search } = Input;
@@ -17,7 +18,7 @@ const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?
 const SearchBox: React.FC = () => (
 
     <Search
-      placeholder="input search text"
+      placeholder="Search"
       enterButton="Search"
       size="large"
       suffix={suffix}

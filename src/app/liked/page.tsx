@@ -2,7 +2,7 @@
 import Header from "@/components/header";
 import { useContext } from "react";
 import { LikedContext } from "@/shared/context/likedContext";
-import { Flex, Button, Empty, Typography } from "antd";
+import { Flex, Button, Empty, Typography,Row,Col} from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import { IProduct } from "@/shared/types/common.types";
 import { useProduct } from "@/shared/hooks/useProducts";
@@ -86,11 +86,17 @@ export default function Favourite() {
                 </Button>
               </Flex>
             </Flex>
-            <Flex>
-              {likedProducts.map((product: IProduct) => {
-                return <LikedProductCard key={product.id} product={product} />;
-              })}
-            </Flex>
+            
+              <Row gutter={4}>     
+                {likedProducts.map((product: IProduct) => (
+                  <Col key={product.id}  xs={12} sm={8} md={6} lg={4}>
+                    <LikedProductCard product={product} />
+                  </Col>
+                ))}
+
+                
+              </Row>
+            
           </>
         )}
       </div>

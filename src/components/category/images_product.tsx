@@ -10,53 +10,80 @@ export default function ProductImage({ image }: { image: string }) {
       vertical
       style={{ height:"100%",backgroundColor: "white", padding: "10px" }}
     >
-      <Flex
-        justify="center"
-        align="center"
-        style={{ width: "300px", height: "250px" }}
-      >
-        <Image
-          // width={250}
-          src={image}
-          alt="product image"
-          preview={false}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+
+      <div
+        style={{
+        width: "100%",        // size khung
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        overflow: "hidden",
+      }}>
+        <img src={image}
+            style={{
+          maxWidth: "100%",
+          maxHeight: "100%",
+          objectFit: "contain"}}/>
+      </div>
+      <Flex style={{width:"100%"}} align="center" justify={"space-evenly"}>
+        {/* Noticeable */}
+        <Button 
+          style={{
+            width: 50,
+            height: 50,
+            padding: 0,
+          }}
+        >
+        <img
+          src="https://theme.hstatic.net/200000420363/1001333448/14/diemnoibat.png?v=6283"
+          alt="Noticeable"
+          style={{
+            maxWidth: "70%",
+            maxHeight: "70%",
+            objectFit: "contain",
+          }}
         />
+      </Button>
+      {/* Scale */}
+      <Button 
+          style={{
+            width: 50,
+            height: 50,
+            padding: 0,
+          }}
+        >
+        <img
+          src="https://theme.hstatic.net/200000420363/1001333448/14/thongso.png?v=6283"
+          alt="Noticeable"
+          style={{
+            maxWidth: "70%",
+            maxHeight: "70%",
+            objectFit: "contain",
+          }}
+        />
+      </Button>
+      {/* Comment */}
+      <Button 
+          style={{
+            width: 50,
+            height: 50,
+            padding: 0,
+          }}
+        >
+        <img
+          src="https://theme.hstatic.net/200000420363/1001333448/14/iconarticle.png?v=6283"
+          alt="Noticeable"
+          style={{
+            maxWidth: "70%",
+            maxHeight: "70%",
+            objectFit: "contain",
+          }}
+        />
+      </Button>
+
       </Flex>
-      <Flex
-        gap="small"
-        justify="center"
-        align="center"
-        style={{ height: "20%", width: "90%", backgroundColor: "white" }}
-      >
-        <Flex
-          justify="start"
-          align="center"
-          style={{ flex: 1, color: "black" }}
-          vertical
-        >
-          <Button shape="default" icon={<FormOutlined />} />
-          Comment
-        </Flex>
-        <Flex
-          justify="start"
-          align="center"
-          style={{ flex: 1, color: "black" }}
-          vertical
-        >
-          <Button shape="default" icon={<SafetyOutlined />} />
-          Noticeable
-        </Flex>
-        <Flex
-          justify="start"
-          align="center"
-          style={{ flex: 1, color: "black" }}
-          vertical
-        >
-          <Button shape="default" icon={<InfoOutlined />} />
-          Information
-        </Flex>
-      </Flex>
+
     </Flex>
   );
 }

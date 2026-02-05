@@ -6,14 +6,18 @@ import Contents from "@/components/home/contents";
 import { useEffect, useState } from "react";
 import MessageBanner from "@/components/MessageBanner";
 import {useProduct} from "@/shared/hooks/useProducts"
-import { Card, Col, Flex, Row } from "antd";
+import { Card, Col, Flex, Row,Grid } from "antd";
 import { IProduct } from "@/shared/types/common.types";
 import SegmentDiscount from "@/components/home/segmentedDiscount/segmentDiscount";
 // TODO: @triet import useState và useEffect từ react
 // TODO: @triet import Button và Input từ antd để sử dụng trong các bài tập
 
+const { useBreakpoint } = Grid
 
 export default function Home() {
+  const screens = useBreakpoint()
+  const isSmallScreen = screens.xs || (screens.sm && !screens.md);
+
   // TODO: @triet tạo state để đếm số lượt truy cập trang (visitCount)
   const [visitCount, setVisitCount] = useState<number>(0);
   const [localProducts, setLocalProducts]=useState<IProduct[]>([])
@@ -82,7 +86,7 @@ export default function Home() {
         {/* TODO: @triet thêm một input field để nhập userName */}
         {/* TODO: @triet hiển thị "Xin chào, {userName}!" nếu userName không rỗng */}
         {/* Hint: sử dụng conditional rendering */}
-        <Col span={24}>
+        <Col  span={24}>
           <Row>
             <Col span={24}>
               <Banner />
@@ -97,19 +101,20 @@ export default function Home() {
             "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_3_master.jpg?v=6221",
             "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_4_master.jpg?v=6221"
           ].map((source,index) => (
-              <Col span={6} key={index}>
+              <Col span={isSmallScreen ? 12 : 6} key={index}>
                 <Card
                   styles={{ body: { padding: 0 } }}
-                  style={{ border: "none" }}
+                  style={{ border: "none", overflow:"hidden"}}
                   hoverable
                 >
-                  <img 
-                      style={{
-                        width: "100%",
-                        display: "block",
-                        borderRadius: "8px",
-                      }}
-                      src={source}/>
+                  <div>
+                    <img 
+                        style={{
+                          width: "100%",
+                          display: "block",
+                        }}
+                        src={source}/>
+                  </div>
                 </Card>
               </Col>
             ))}
@@ -128,6 +133,10 @@ export default function Home() {
         <Col span={24}>
           {/*Discount */}
           <Row>
+            <div style={{padding:"10px"}}>
+              <img src="https://file.hstatic.net/200000420363/file/flash-sale-banner-cho-nh_m-hot-promotion-copy.png"/>
+            </div>
+
             <SegmentDiscount/>
           </Row>
         </Col>
@@ -145,7 +154,7 @@ export default function Home() {
           {/*Best seller */}
           <Row gutter={8}>
             {localProducts.filter((product:IProduct)=>product.isBestSeller).map((product:IProduct)=>(
-              <Col key={product.id}  span={3}>
+              <Col key={product.id}  span={isSmallScreen ? 8:4}>
                 <Contents  product={product}/>
               </Col>
             ))}

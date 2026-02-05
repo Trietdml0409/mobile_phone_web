@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/header";
-import { Button, Flex } from "antd";
+import { Button, Col, Flex, Row } from "antd";
 import { useContext, useEffect, useState } from "react";
 import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
@@ -218,19 +218,7 @@ export default function Category() {
       </Flex>
 
       <Flex vertical gap="10px" style={{ padding: "15px" }}>
-        <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
-          Filter by: Brand [Intel, AMD, Ryzen,]
-          {/* TODO: @triet add filter Button -> when click -> filter by brand */}
-        </p>
-        {/* TODO: @triet tạo state để lưu selectedBrand (string | null) */}
-        {/* TODO: @triet tạo mảng BRANDS với các brand có sẵn */}
-        {/* TODO: @triet render các Button cho từng brand, khi click -> setSelectedBrand */}
-        {/* TODO: @triet tạo hàm handleFilterByBrand để filter products theo brand */}
-        {/* TODO: @triet cần thêm brandName vào IProduct interface trước */}
-        <Flex gap="small">
-          <Button>OFFICE PC</Button>
-          <Button>MINI PC</Button>
-        </Flex>
+
         <Flex wrap gap="small" align="center">
           <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
             Sorted By:
@@ -255,15 +243,18 @@ export default function Category() {
         </Flex>
 
         <BrandName sortByBrand={sortByBrand} />
-
-        <Flex wrap gap="middle">
+  
+        <div>
+        <Row gutter={6}>
           {localProducts.map((product: IProduct) => (
+            <Col xs={ 12 } sm={8} md={6} lg={4} key={product.id}>
             <CatergoryProductCard
-              key={product.id}
-              product={product}
+              product={product} 
             />
+            </Col>
           ))}
-        </Flex>
+        </Row>
+        </div>
       </Flex>
     </div>
   );

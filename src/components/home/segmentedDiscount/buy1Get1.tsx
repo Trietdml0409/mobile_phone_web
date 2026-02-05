@@ -1,6 +1,7 @@
-import {Col, Row,Card} from "antd"
+import {Col, Row,Card,Grid} from "antd"
 import { useRouter } from "next/navigation"; // for App Router
 import Contents from "../contents";
+const { useBreakpoint } = Grid
 
 const buy1Get1Products = [
   {
@@ -27,11 +28,13 @@ const buy1Get1Products = [
 
 export default function Buy1Get1(){
     const router = useRouter();
+    const screens = useBreakpoint()
+    const isSmallScreen = screens.xs || (screens.sm && !screens.md);
     return(
         <div style={{width:"100%",height:"100%"}}>
             <Row gutter={8}>
                 {buy1Get1Products.map((product)=>(
-                    <Col key={product.id} span={4}>
+                    <Col key={product.id} span={isSmallScreen ? 8:4}>
                         <Contents product= {product} />
                     </Col>
                 ))}

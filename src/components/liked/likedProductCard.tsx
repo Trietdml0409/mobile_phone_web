@@ -12,7 +12,7 @@ export default function LikedProductCard({product}:{product:IProduct}) {
         justify="start"
         style={{
             height: "400px",
-            width: "220px",
+            width: "100%",
             borderRadius: "6px",
             boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
             border: "1px solid rgb(224, 224, 224)",
@@ -30,9 +30,9 @@ export default function LikedProductCard({product}:{product:IProduct}) {
             src={product.image}
             />
         </Flex>
-            <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>{product.name}</p>
-            <p style={{fontSize: "24px",fontWeight: "bold",textAlign: "center",color: "rosybrown",}}>{product.price.toLocaleString()} VND</p>
-            <p style={{fontSize: "15px",fontWeight: "bold",textAlign: "center", color:"grey"}}>{product.brandName}</p>
+            <p style={{ color: "black", fontSize: "100%", fontWeight: "bold" }}>{product.name}</p>
+            <p style={{fontSize: "100%",fontWeight: "bold",textAlign: "center",color: "rosybrown",}}>{product.price.toLocaleString()} VND</p>
+            <p style={{fontSize: "100%",fontWeight: "bold",textAlign: "center", color:"grey"}}>{product.brandName}</p>
             <div style={{paddingTop:"10px"}}>
                 <Button  size="middle"  onClick = {()=> removeLikedProductIds(product.id)} icon={<DeleteOutlined style={{ color: "red" }} />} style={{ color: "red", borderColor: "red", fontWeight: "bold" }}>Remove</Button>
             </div>

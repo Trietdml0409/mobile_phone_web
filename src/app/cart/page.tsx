@@ -15,6 +15,7 @@ import {
   Typography,
   Space,
   Empty,
+  Flex,
 } from "antd";
 import {
   DeleteOutlined,
@@ -112,8 +113,8 @@ export default function CartPage() {
           alignItems: "center",
         }}
       >
-        <Title level={2}>Shopping Cart ({cartProducts.length} items)</Title>
-        <Space>
+
+        <Flex style={{padding:"10px"}} align={"center"} justify={"center"}>
           <Button
             danger
             icon={<ClearOutlined />}
@@ -125,7 +126,7 @@ export default function CartPage() {
           <Link href="/">
             <Button icon={<ShoppingOutlined />}>Continue Shopping</Button>
           </Link>
-        </Space>
+        </Flex>
       </div>
 
       <Row gutter={[16, 16]}>

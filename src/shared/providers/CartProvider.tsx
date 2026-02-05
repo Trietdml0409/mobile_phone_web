@@ -27,7 +27,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("cartProductIds",JSON.stringify(productIds))},[productIds])
   //Dependency is productIds
 
-  const addProductId = (productId: number) => {
+  const addProductId = (productId: number, numberOfProduct: number) => {
     // setProductIds((prev) => [...prev, productId]);
     const newProductIds = [...productIds, productId];
     setProductIds(newProductIds);

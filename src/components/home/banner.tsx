@@ -1,8 +1,11 @@
 import React from "react";
-import { Flex, Radio } from "antd";
+import { Flex, Radio,Grid } from "antd";
 import { Card, Carousel} from "antd";
 
 
+
+const { useBreakpoint } = Grid
+  
 
 
 type Banner = {
@@ -33,15 +36,17 @@ const banners:Banner[]  = [
 //Modifying the banner/carousel
 const bannerStyle: React.CSSProperties = {
   width: "100%",
-  height: "450px",
+  height: "100%",
   objectFit: "cover",      // fit banner
   objectPosition: "center" // luôn ở giữa
 };
 
 
 
-export default function Banner(){
 
+export default function Banner(){
+  const screens = useBreakpoint()
+  const isSmallScreen = screens.xs || (screens.sm && !screens.md);
 
   return(
     <div style={{ maxWidth: "100%", margin: "0 auto" }}>
@@ -52,9 +57,9 @@ export default function Banner(){
               <div
                 style={{
                 position: "relative",
-                height: "450px",
+                height: isSmallScreen ? "200px":"450px",
               }}>
-                <img  src={banner.img} style={bannerStyle}/>
+                <img  src={banner.img} style= {bannerStyle}/>
                 <p
                     style={{
                     position: "absolute",
@@ -62,7 +67,7 @@ export default function Banner(){
                     left: "50%",
                     transform: "translateX(-50%)",
                     color: "white",
-                    fontSize: "40px",
+                    fontSize: isSmallScreen ? "20px":"40px",
                     fontWeight: 700,
                     margin: 0,
                     textAlign: "center",

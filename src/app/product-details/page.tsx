@@ -3,7 +3,7 @@
 import ProductImage from "@/components/category/images_product";
 import ProductInformation from "@/components/category/information";
 import Header from "@/components/header";
-import { Flex, Skeleton } from "antd";
+import { Flex, Skeleton, Grid,Row,Col } from "antd";
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { IProduct } from "@/shared/types/common.types";
@@ -15,6 +15,8 @@ import { useProductDetail } from "@/shared/hooks/useProductDetail";
 // TODO: @triet tạo interface IProduct tương tự như trong category/page.tsx
 // Hoặc có thể import từ một file chung nếu muốn tái sử dụng
 
+const { useBreakpoint } = Grid
+
 
 
 export default function ProductDetails() {
@@ -22,16 +24,20 @@ export default function ProductDetails() {
   const searchParams = useSearchParams();
   const productIdParam = searchParams.get("id");
   const productId = productIdParam ? Number(productIdParam) : null;
+  const screens = useBreakpoint()
+  const isSmallScreen = screens.xs || (screens.sm && !screens.md);
 
   // get product detail from api
+  // TODO: @triet sử dụng useEffect để fetch thông tin sản phẩm dựa trên productId
   const { product } = useProductDetail({ id: productId });
 
 
 
   // TODO: @triet tạo state để lưu thông tin sản phẩm hiện tại
 
+
   // TODO: @triet tạo state để lưu số lượng sản phẩm muốn mua
-  // Hint: const [quantity, setQuantity] = useState<number>(1);
+  const [quantity, setQuantity] = useState<number>(1);
 
   // TODO: @triet sử dụng useEffect để fetch thông tin sản phẩm dựa trên productId
   // Hint: useEffect(() => { ... }, [productId])
@@ -60,20 +66,26 @@ export default function ProductDetails() {
     >
       <Header/>
 
-      <Flex gap="small" style={{ paddingTop:"16px",height: "650px", backgroundColor: "white" }}>
-        {product ? <ProductImage image={product.image} /> : <Skeleton active />}
-        {product ? (
-          <ProductInformation
-            product={product}
-            quantity={1}
-            setQuantity={() => {}}
-            handleBuyNow={() => {}}
-            handleAddToCart={() => {}}
-          />
-        ) : (
-          <Skeleton active />
-        )}
-      </Flex>
+      <Row>
+        <Col span={isSmallScreen ? 24:8}>
+          {product ? <ProductImage image={product.image} /> : <Skeleton active />}
+        </Col>
+        <Col span={isSmallScreen ? 24:16}>
+          {product ? (
+            <ProductInformation
+              product={product}
+              quantity={1}
+              setQuantity={() => {}}
+              handleBuyNow={() => {}}
+              handleAddToCart={() => {}}
+            />
+          ) : (
+            <Skeleton active />
+          )}
+        </Col>
+      </Row>
     </div>
   );
 }
+
+

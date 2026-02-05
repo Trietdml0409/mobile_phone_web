@@ -21,16 +21,15 @@ export default function Account() {
     const router = useRouter();
     return(
         <Flex  justify={"center"} align="center" style={{ width: "100%", height:"100%" }}>
-            <UserOutlined style={{ fontSize: "200%", marginRight: "4%", color:"royalblue" }}/>
-            <Flex vertical gap={0} justify={"center"} style={{ height: "100%",fontSize:"100%",color:"royalblue"}}>
-                <Button type="link" style = {{padding:0,color:"royalblue",fontSize: "100%"}} 
+            <UserOutlined style={{ fontSize: "20px", marginRight: "4%", color:"royalblue" }}/>
+            <div>
+                <p type="link" style = {{color:"royalblue",fontSize: "12px"}} 
                 onClick={() => router.push('/auth')}
-                >Log In/Sign up</Button>
-
+                >Log In/Sign up</p>
                 <Dropdown menu={{ items }}>
-                    <Button type="text" style = {{padding:0,fontSize: "100%"}}>Account</Button>
+                    <p type="text" style = {{fontSize: "12px"}}>Account</p>
                 </Dropdown>
-            </Flex>
+            </div>
         </Flex>
     )
 }

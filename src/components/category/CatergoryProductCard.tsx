@@ -31,35 +31,44 @@ export default function CatergoryProductCard({
       align="center"
       justify="start"
       style={{
-        height: "350px",
-        width: "220px",
+        height: "100%",
+        width: "100%",
         borderRadius: "6px",
         boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
         border: "1px solid rgb(224, 224, 224)",
       }}
       vertical
     >
-      <Flex justify="center" align="center" style={{ height: "240px" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text */}
-        <img
-          style={{
-            height: "auto",
-            width: "200px",
-            borderRadius: "15%",
-            objectFit: "fill",
-          }}
-          src={product.image}
-        />
+      <Flex justify="center" align="center" >
+        <div style={{              
+          height: "160px",
+          width: "80%",
+          padding:"3px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          overflow: "hidden",}}>
+          <img
+            style={{
+              maxWidth: "100%",
+              maxHeight: "100%",
+              borderRadius: "15%",
+              objectFit: "contain",
+            }}
+            src={product.image}
+          />
+
+        </div>
+
       </Flex>
-      {/* TODO: @triet thêm onClick vào tên sản phẩm để navigate đến product-details */}
-      {/* Hint: có thể wrap trong một div hoặc thẻ có thể click được */}
-      <p style={{ color: "black", fontSize: "15px", fontWeight: "bold" }}>
+
+      <p style={{ color: "black", fontSize: "100%", fontWeight: "bold" }}>
         {product.name}
       </p>
       {/* price */}
       <p
         style={{
-          fontSize: "24px",
+          fontSize: "100%",
           fontWeight: "bold",
           textAlign: "center",
           color: "rosybrown",
@@ -72,15 +81,17 @@ export default function CatergoryProductCard({
       <Flex
         justify="center"
         align="center"
-        style={{ height: "50px" }}
+        style={{ padding: "10px"}}
         gap="small"
       >
         <Button
+          size="small"
           icon={<ShoppingCartOutlined />}
           style={
             !isProductInCart
               ? { backgroundColor: "royalblue", color: "white" }
               : { backgroundColor: "red", color: "white" }
+            
           }
           onClick={() =>
             isProductInCart
@@ -91,6 +102,7 @@ export default function CatergoryProductCard({
           {isProductInCart ? "Remove" : "Add"}
         </Button>
         <Button
+        size="small"
           icon={
             <HeartOutlined
               style={{
@@ -110,13 +122,10 @@ export default function CatergoryProductCard({
               ? removeLikedProductIds(product.id)
               : addLikedProductIds(product.id)
           }
-          // TODO: @triet thêm onClick handler để toggle favorite
-          // Hint: tạo hàm handleToggleFavorite(productId)
-          // Nếu productId đã có trong favorites thì xóa, nếu chưa thì thêm vào
-          // TODO: @triet thay đổi màu button khi sản phẩm đã được yêu thích
-          // Hint: kiểm tra product.id có trong favorites state không
+
         ></Button>
         <Button
+        size="small"
           icon={<EyeOutlined />}
           // Hint: sử dụng useRouter từ next/navigation và router.push('/product-details?id=' + product.id)
           onClick={() => router.push(`/product-details?id=${product.id}`)}
