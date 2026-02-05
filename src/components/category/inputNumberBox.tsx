@@ -1,16 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import type { InputNumberProps } from "antd";
 import { Button, Flex, InputNumber } from "antd";
 import { ShoppingCartOutlined } from "@ant-design/icons";
-import {useContext} from "react";
-import {CartContext} from "@/shared/context/cartContext"
-import {IProduct} from "@/shared/types/common.types"
+import { useContext } from "react";
+import { CartContext } from "@/shared/context/cartContext";
+import { IProduct } from "@/shared/types/common.types";
 
-
-const onChange: InputNumberProps["onChange"] = (value) => {
-};
+const onChange: InputNumberProps["onChange"] = (value) => {};
 
 const sharedProps = {
   mode: "spinner" as const,
@@ -21,43 +19,34 @@ const sharedProps = {
   style: { width: 150 },
 };
 
-const InputNumberBox = ({
-  product,
-  quantity,
-  setQuantity,
-}: {
-  product: IProduct;
-  quantity: number;
-  setQuantity: (quantity: number) => void;
-}) => {
-  const {productIds: cartProductIds,addProductId: addCartProductId,removeProductId:removeCartProductId,clearCart:clearCart} = useContext(CartContext)
-  const isProductAddToCart: boolean = cartProductIds.includes(product.id)
+const InputNumberBox = ({ product }: { product: IProduct }) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const { addProductToCart } = useContext(CartContext);
 
   return (
     <Flex gap="small">
       <InputNumber
         {...sharedProps}
-        placeholder="Outlined"
+        placeholder="Quantity"
+        min={1}
+        max={10}
         value={quantity}
-        onChange={(value) => setQuantity(Number(value))}
+        onChange={(value) => setQuantity(Number(value) || 1)}
       />
+
       <Button
         icon={<ShoppingCartOutlined />}
         style={{
-          backgroundColor: isProductAddToCart ? "red" : "royalblue",
+          backgroundColor: "royalblue",
           color: "white", // ensure text is visible
         }}
-        onClick={()=>
-          isProductAddToCart 
-          ? removeCartProductId(product.id)
-          : addCartProductId(product.id)
-        }
+        onClick={() => addProductToCart(product, quantity)}
       >
-        {isProductAddToCart ? "Remove" : "Add"}
+        Add to Cart
       </Button>
     </Flex>
   );
 };
-
 
 export default InputNumberBox;

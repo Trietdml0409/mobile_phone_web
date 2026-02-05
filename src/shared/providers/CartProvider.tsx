@@ -139,6 +139,29 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const clearCart = () => {
     setProductIds([]);
   };
+
+  const getTotalQuantityInCart = () => {
+    let totalQuantity = 0;
+    const products = Object.values(cartProducts);
+    for (let i = 0; i < products.length; i++) {
+      const product = products[i];
+
+      totalQuantity += product.quantity;
+    }
+    return totalQuantity;
+  };
+
+  const getTotalPriceInCart = () => {
+    let totalPrice = 0;
+    const products = Object.values(cartProducts);
+    for (let i = 0; i < products.length; i++) {
+      const product = products[i];
+
+      totalPrice += product.totalPrice;
+    }
+    return totalPrice;
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -151,6 +174,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         addProductToCart,
         removeProductFromCart,
         removeProductByeOneFromCart,
+
+        getTotalQuantityInCart,
+        getTotalPriceInCart,
       }}
     >
       {children}

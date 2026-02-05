@@ -3,7 +3,7 @@
 import ProductImage from "@/components/category/images_product";
 import ProductInformation from "@/components/category/information";
 import Header from "@/components/header";
-import { Flex, Skeleton, Grid,Row,Col } from "antd";
+import { Flex, Skeleton, Grid, Row, Col } from "antd";
 import { useSearchParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { IProduct } from "@/shared/types/common.types";
@@ -15,26 +15,21 @@ import { useProductDetail } from "@/shared/hooks/useProductDetail";
 // TODO: @triet tạo interface IProduct tương tự như trong category/page.tsx
 // Hoặc có thể import từ một file chung nếu muốn tái sử dụng
 
-const { useBreakpoint } = Grid
-
-
+const { useBreakpoint } = Grid;
 
 export default function ProductDetails() {
   //URL là /product-details?id=1 thì lấy id=1
   const searchParams = useSearchParams();
   const productIdParam = searchParams.get("id");
   const productId = productIdParam ? Number(productIdParam) : null;
-  const screens = useBreakpoint()
+  const screens = useBreakpoint();
   const isSmallScreen = screens.xs || (screens.sm && !screens.md);
 
   // get product detail from api
   // TODO: @triet sử dụng useEffect để fetch thông tin sản phẩm dựa trên productId
   const { product } = useProductDetail({ id: productId });
 
-
-
   // TODO: @triet tạo state để lưu thông tin sản phẩm hiện tại
-
 
   // TODO: @triet tạo state để lưu số lượng sản phẩm muốn mua
   const [quantity, setQuantity] = useState<number>(1);
@@ -64,13 +59,17 @@ export default function ProductDetails() {
         padding: "16px",
       }}
     >
-      <Header/>
+      <Header />
 
       <Row>
-        <Col span={isSmallScreen ? 24:8}>
-          {product ? <ProductImage image={product.image} /> : <Skeleton active />}
+        <Col span={isSmallScreen ? 24 : 8}>
+          {product ? (
+            <ProductImage image={product.image} />
+          ) : (
+            <Skeleton active />
+          )}
         </Col>
-        <Col span={isSmallScreen ? 24:16}>
+        <Col span={isSmallScreen ? 24 : 16}>
           {product ? (
             <ProductInformation
               product={product}
@@ -87,5 +86,3 @@ export default function ProductDetails() {
     </div>
   );
 }
-
-
