@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 
 export interface IProduct {
   id: number;
@@ -14,4 +13,18 @@ export interface IProduct {
 export interface Brand {
   index: number;
   name: string;
+}
+
+
+
+export interface CartProduct {
+  productId: number;
+  quantity: number;
+  price: number;
+  totalPrice: number;
+  addedAt: string;
+}
+
+export interface CartProductState {
+  [key: string]: CartProduct;
 }

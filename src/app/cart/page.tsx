@@ -43,7 +43,7 @@ export default function CartPage() {
   useEffect(() => {
     // Filter products that are in the cart
     const filteredProducts = allProducts.filter((product) =>
-      cartProductIds.includes(product.id)
+      cartProductIds.includes(product.id),
     );
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setCartProducts(filteredProducts);
@@ -62,7 +62,7 @@ export default function CartPage() {
 
   const totalPrice = cartProducts.reduce(
     (sum, product) => sum + product.price,
-    0
+    0,
   );
   //IF THE CARTPRODUCTS ARE 0
   if (cartProducts.length === 0) {
@@ -71,7 +71,6 @@ export default function CartPage() {
         style={{
           minHeight: "100vh",
           backgroundColor: "white",
-          padding: "40px 20px",
           textAlign: "center",
         }}
       >
@@ -113,8 +112,7 @@ export default function CartPage() {
           alignItems: "center",
         }}
       >
-
-        <Flex style={{padding:"10px"}} align={"center"} justify={"center"}>
+        <Flex style={{ padding: "10px" }} align={"center"} justify={"center"}>
           <Button
             danger
             icon={<ClearOutlined />}

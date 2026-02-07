@@ -21,8 +21,6 @@ import {
   ShoppingOutlined,
 } from "@ant-design/icons";
 
-
-
 const { Title, Text } = Typography;
 
 interface CartProductCardProps {
@@ -31,7 +29,10 @@ interface CartProductCardProps {
 }
 
 ///Cart Product Carts
-export default function CartProductCard({ product, onRemove }: CartProductCardProps) {
+export default function CartProductCard({
+  product,
+  onRemove,
+}: CartProductCardProps) {
   return (
     <Card
       hoverable
