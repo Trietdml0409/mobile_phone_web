@@ -3,28 +3,10 @@ import { CartContext } from "../context/cartContext";
 import { CartProductState, IProduct } from "../types/common.types";
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [productIds, setProductIds] = useState<number[]>([]);
+
   const [cartProducts, setCartProducts] = useState<CartProductState>({});
 
   /*
-  {
-    productId: number;
-    quantity: number;
-    price:
-    addToCartAt: //
-  }[] : list of products in the cart
-
-  product: { id:123, name: "ComputuerI7", price: 150}
-
-  => [
-    { productId: 123, quantity: 4, price: 150x4, addToCartAt: "2026-02-05 10:00:00" },
-  ]
-
-  => O(n) time complexity
-  => disadvantage: unique productId
-
-
-  --------------------
 
   {
      [productId]: {
@@ -41,11 +23,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       addToCartAt: "2026-02-05 10:00:00"
     }
   }
-
   => O(1) time complexity
-
   */
 
+
+  // Load the file from the local storage
   useEffect(() => {
     //Get the data in JSON form by the ID using getItems
     const saveCart: string | null = localStorage.getItem("cartProductIds");
@@ -53,11 +35,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     if (saveCart) {
       try {
         //transform the data into list of object
-        const values = JSON.parse(saveCart) as number[];
+        const values = JSON.parse(saveCart) as CartProductState;
 
         //set data
         // eslint-disable-next-line react-hooks/set-state-in-effect
-        setProductIds(values);
+        setCartProducts(values);
       } catch (error) {
         console.error("Error parsing saved liked product ids: ", error);
       }
@@ -66,21 +48,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   //When the productIds change, the local storage update the value
   useEffect(() => {
-    localStorage.setItem("cartProductIds", JSON.stringify(productIds));
-  }, [productIds]);
+    localStorage.setItem("cartProductIds", JSON.stringify(cartProducts));
+  }, [cartProducts]);
   //Dependency is productIds
 
-  const addProductId = (productId: number) => {
-    // setProductIds((prev) => [...prev, productId]);
-    const newProductIds = [...productIds, productId];
-    setProductIds(newProductIds);
-  };
-
-  const removeProductId = (productId: number) => {
-    setProductIds((prev: number[]) =>
-      prev.filter((id: number) => id !== productId),
-    );
-  };
 
   const addProductToCart = (product: IProduct, quantity: number = 1) => {
     const productKey = product.id.toString();
@@ -137,7 +108,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const clearCart = () => {
-    setProductIds([]);
+    setCartProducts({})
   };
 
   const getTotalQuantityInCart = () => {
@@ -165,11 +136,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   return (
     <CartContext.Provider
       value={{
-        productIds,
-        addProductId,
-        removeProductId,
         clearCart,
-
         cartProducts,
         addProductToCart,
         removeProductFromCart,

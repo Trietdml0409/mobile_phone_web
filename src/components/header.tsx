@@ -13,7 +13,7 @@ import LargeScreenHeader from "./header/largeScreenHeader";
 const { useBreakpoint } = Grid
 
 export default function Header() {
-  const { productIds: cartProductIds } = useContext(CartContext);
+
   const screens = useBreakpoint();
 
   const isSmallScreen = screens.xs || (screens.sm && !screens.md);

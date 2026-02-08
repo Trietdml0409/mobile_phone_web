@@ -7,9 +7,8 @@ import { IProduct } from "@/shared/types/common.types";
 import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 import BrandName from "@/components/category/brand_name";
 import { useProduct } from "@/shared/hooks/useProducts";
-import { useCart } from "@/shared/hooks/useCart";
 import { CartContext } from "@/shared/context/cartContext";
-
+import { CartProductState } from "@/shared/types/common.types";
 const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   {
     label: "Price: Increase",
@@ -45,13 +44,11 @@ export default function Category() {
   const { products } = useProduct(); // initialize products = 0. 1 call api not response => products = 0.
   const [localProducts, setLocalProducts] = useState<IProduct[]>([]);
 
-  const [likedProductIds, setLikedProductIds] = useState<number[]>([]);
-
   // state save total products
   const [totalProducts, setTotalProducts] = useState<number>(products.length);
 
   // use context to get productIds, addProductId, removeProductId, clearCart
-  const { productIds } = useContext(CartContext);
+  const { cartProducts } = useContext(CartContext);
 
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
@@ -66,12 +63,12 @@ export default function Category() {
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
-  const [cartLocalProductIds, setLocalCartProductIds] = useState<number[]>([]);
+  const [cartLocalProductIds, setLocalCartProductIds] = useState<CartProductState>({});
 
   // update cartLocalProductIds when productIds changes
   useEffect(() => {
-    setLocalCartProductIds(productIds);
-  }, [productIds]); // dependency is productIds
+    setLocalCartProductIds(cartProducts);
+  }, [cartProducts]); // dependency is productIds
 
   function sortByBrand(brand: string): void {
     let newProducts: IProduct[]; // camelCase, snake_case.
@@ -88,22 +85,7 @@ export default function Category() {
     setTotalProducts(newProducts.length);
   }
 
-  useEffect(() => {
-    // only run once when the component is mounted -(render first time)
-    const savedLikedProductIds: string | null =
-      localStorage.getItem("key_likeProducts");
 
-    if (savedLikedProductIds) {
-      // parse string => to array of numbers
-      try {
-        const values = JSON.parse(savedLikedProductIds) as number[];
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        setLikedProductIds(values);
-      } catch (error) {
-        console.error("Error parsing saved liked product ids: ", error);
-      }
-    }
-  }, []);
 
   // @Triet: filter product:
   const handleSortBy = (newValue: string) => {
@@ -170,37 +152,7 @@ export default function Category() {
     setTotalProducts(newProducts.length);
   };
 
-  const handleToggleLike = (productId: number) => {
-    /*
-       likedProductIds: [1, 2, 3]
-      Case1: productId is already in likedProductIds
-       => HandleToggleLike(1) => [2,3] -remove 1 from likedProductIds
 
-      Case2: productId is not in likedProductIds
-      => HandleToggleLike(6) => [1,2,3,6] -add 6 to likedProductIds
-
-      => pseudo code
-    */
-    let newLikedProductIds: number[] = []; // empty array
-    if (likedProductIds.includes(productId)) {
-      // remove productId from likedProductIds
-      newLikedProductIds = likedProductIds.filter((id) => id !== productId);
-    } else {
-      // add productId to likedProductIds
-      newLikedProductIds = [...likedProductIds, productId];
-    }
-
-    setLikedProductIds(newLikedProductIds);
-
-    // to save data: 1. call api to save data to server
-    //  2. save data to local storage
-    // => method 2.
-    localStorage.setItem(
-      "key_likeProducts",
-      JSON.stringify(newLikedProductIds)
-    );
-    // [key] = value. value is a string
-  };
 
   return (
     <div

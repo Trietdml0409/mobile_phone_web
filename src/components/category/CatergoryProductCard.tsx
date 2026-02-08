@@ -19,10 +19,10 @@ export default function CatergoryProductCard({
 }: CatergoryProductCardProps) {
   const router = useRouter();
 
-  const { productIds, addProductId, removeProductId } = useContext(CartContext);
+  const { cartProducts, addProductToCart, removeProductFromCart } = useContext(CartContext);
   const {likedProductIds, addLikedProductIds,removeLikedProductIds} = useContext(LikedContext)
 
-  const isProductInCart = productIds.includes(product.id);
+  const isProductInCart = product.id in cartProducts;
   const isProductInLiked = likedProductIds.includes(product.id);
 
   return (
@@ -95,8 +95,8 @@ export default function CatergoryProductCard({
           }
           onClick={() =>
             isProductInCart
-              ? removeProductId(product.id)
-              : addProductId(product.id)
+              ? removeProductFromCart(product.id)
+              : addProductToCart(product,1 )
           }
         >
           {isProductInCart ? "Remove" : "Add"}

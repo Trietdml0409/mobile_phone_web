@@ -29,9 +29,11 @@ const { Title, Text } = Typography;
 
 export default function CartPage() {
   const {
-    productIds: cartProductIds,
-    removeProductId,
+    cartProducts: cartProductIds,
+    removeProductFromCart,
     clearCart,
+    getTotalPriceInCart,
+    getTotalQuantityInCart
   } = useContext(CartContext);
   const router = useRouter();
 
@@ -43,7 +45,8 @@ export default function CartPage() {
   useEffect(() => {
     // Filter products that are in the cart
     const filteredProducts = allProducts.filter((product) =>
-      cartProductIds.includes(product.id),
+      product.id in cartProductIds
+,
     );
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setCartProducts(filteredProducts);
@@ -51,7 +54,7 @@ export default function CartPage() {
 
   //Remove the Product from the Cart
   const handleRemoveProduct = (productId: number) => {
-    removeProductId(productId);
+    removeProductFromCart(productId);
     message.success("Product removed from cart");
   };
 
@@ -60,10 +63,7 @@ export default function CartPage() {
     message.success("Cart cleared");
   };
 
-  const totalPrice = cartProducts.reduce(
-    (sum, product) => sum + product.price,
-    0,
-  );
+  const totalPrice = getTotalPriceInCart()
   //IF THE CARTPRODUCTS ARE 0
   if (cartProducts.length === 0) {
     return (
@@ -152,8 +152,8 @@ export default function CartPage() {
                   marginBottom: "8px",
                 }}
               >
-                <Text>Subtotal ({cartProducts.length} items):</Text>
-                <Text strong>${totalPrice.toFixed(2)}</Text>
+                <Text>Subtotal ({getTotalQuantityInCart()}):</Text>
+                <Text strong>${totalPrice}</Text>
               </div>
               <div
                 style={{

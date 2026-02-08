@@ -7,13 +7,11 @@ import { IProduct } from "@/shared/types/common.types";
 import Link from "next/link";
 import {
   Button,
-  message,
+  InputNumber,
   Card,
-  Row,
-  Col,
+  InputNumberProps,
   Typography,
-  Space,
-  Empty,
+
 } from "antd";
 import {
   DeleteOutlined,
@@ -23,17 +21,28 @@ import {
 
 const { Title, Text } = Typography;
 
+
 interface CartProductCardProps {
   product: IProduct;
   onRemove: (productId: number) => void;
 }
+
+const onChange: InputNumberProps['onChange'] = (value) => {
+  console.log('changed', value);
+};
+
+
+
 
 ///Cart Product Carts
 export default function CartProductCard({
   product,
   onRemove,
 }: CartProductCardProps) {
+  const {removeProductByeOneFromCart, cartProducts} = useContext(CartContext)
   return (
+    
+
     <Card
       hoverable
       style={{ marginBottom: 16 }}
@@ -72,6 +81,12 @@ export default function CartProductCard({
           >
             ${product.price}
           </Text>
+
+          <br/>
+
+          {/* cartProducts[product.id].quantity */}
+          <InputNumber size="small" min={1} max={100000} defaultValue={ 3} onChange={onChange} />
+
           <br />
           {/*This is to know if it is Best seller*/}
           <Text type="secondary">{product.brandName}</Text>
