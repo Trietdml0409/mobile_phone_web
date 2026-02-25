@@ -1,6 +1,6 @@
 import { Button, Col, Flex, Row, Rate, Grid } from "antd";
 import { StarOutlined } from "@ant-design/icons";
-import InputNumberBox from "./inputNumberBox";
+import InputNumberBox from "../common/inputNumberBox";
 import { IProduct } from "@/shared/types/common.types";
 
 const { useBreakpoint } = Grid;

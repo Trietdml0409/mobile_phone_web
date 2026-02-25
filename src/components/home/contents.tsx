@@ -7,6 +7,7 @@ import { EyeOutlined, SearchOutlined, ZoomInOutlined } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
 import { ConfigProvider, Popover, Modal } from "antd";
 import { useState } from "react";
+import InputNumberBox from "../common/inputNumberBox";
 
 const { useBreakpoint } = Grid;
 
@@ -144,6 +145,15 @@ export default function Contents({ product }: { product: IProduct }) {
             <p style={{color: "black",fontWeight:"bold",fontSize:"20px"}}>{product.name}</p>
             <p style={{color: "rosybrown",fontWeight:"bold",fontSize:"15px"}}>Price: {product.price}</p>
             <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+            <p><span style={{ color: "black", fontWeight: "bold", fontSize: "15px" }}>Brand:</span> {product.brandName}</p> 
+            <p><span style={{ color: "black", fontWeight: "bold", fontSize: "15px" }}>ID:</span> {product.id}</p> 
+
+            <span style={{margin:"10px"}}>
+              <InputNumberBox product = {product}/>
+            </span>
+            
+
+
             </Flex>
 
         </Flex>

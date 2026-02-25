@@ -85,7 +85,7 @@ export default function CartProductCard({
           <br/>
 
           {/* cartProducts[product.id].quantity */}
-          <InputNumber size="small" min={1} max={100000} defaultValue={ 3} onChange={onChange} />
+          <InputNumber size="small" min={1} max={100000} defaultValue={3} onChange={onChange} />
 
           <br />
           {/*This is to know if it is Best seller*/}
