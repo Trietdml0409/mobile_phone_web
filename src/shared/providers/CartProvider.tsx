@@ -52,7 +52,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [cartProducts]);
   //Dependency is productIds
 
-
+  
   const addProductToCart = (product: IProduct, quantity: number = 1) => {
     const productKey = product.id.toString();
     console.log("xxxx productKey", productKey, product);
