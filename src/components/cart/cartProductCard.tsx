@@ -1,48 +1,44 @@
 "use client";
 
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import { CartContext } from "@/shared/context/cartContext";
-import { useProduct } from "@/shared/hooks/useProducts";
 import { IProduct } from "@/shared/types/common.types";
-import Link from "next/link";
-import {
-  Button,
-  InputNumber,
-  Card,
-  InputNumberProps,
-  Typography,
-
-} from "antd";
-import {
-  DeleteOutlined,
-  ClearOutlined,
-  ShoppingOutlined,
-} from "@ant-design/icons";
+import { Button, InputNumber, Card, Typography } from "antd";
+import { DeleteOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
 
-
 interface CartProductCardProps {
   product: IProduct;
-  onRemove: (productId: number) => void;
 }
 
-const onChange: InputNumberProps['onChange'] = (value) => {
-  console.log('changed', value);
-};
-
-
-
-
 ///Cart Product Carts
-export default function CartProductCard({
-  product,
-  onRemove,
-}: CartProductCardProps) {
-  const {removeProductByeOneFromCart, cartProducts} = useContext(CartContext)
-  return (
-    
+export default function CartProductCard({ product }: CartProductCardProps) {
+  const {
+    removeProductByOneFromCart,
+    addProductToCart,
+    removeProductFromCart,
+    cartProducts,
+  } = useContext(CartContext);
+  const productQuantity = cartProducts[product.id]?.quantity || 0;
 
+  const onChange = (value: number | null) => {
+    console.log("xxx001 changed", value);
+    // value > current quantity => add product to cart
+    if (value && value > productQuantity) {
+      addProductToCart(product, 1);
+    }
+    // value < current quantity => remove product from cart
+    if (value && value < productQuantity) {
+      removeProductByOneFromCart(product.id);
+    }
+  };
+
+  const onRemove = (productId: number) => {
+    removeProductFromCart(productId);
+  };
+
+  return (
     <Card
       hoverable
       style={{ marginBottom: 16 }}
@@ -79,13 +75,19 @@ export default function CartProductCard({
           <Text
             style={{ fontSize: "16px", fontWeight: "bold", color: "#1890ff" }}
           >
-            ${product.price}
+            {product.price.toLocaleString()} VND
           </Text>
 
-          <br/>
+          <br />
 
           {/* cartProducts[product.id].quantity */}
-          <InputNumber size="small" min={1} max={100000} defaultValue={3} onChange={onChange} />
+          <InputNumber
+            size="small"
+            min={1}
+            max={100000}
+            defaultValue={productQuantity}
+            onChange={onChange}
+          />
 
           <br />
           {/*This is to know if it is Best seller*/}
