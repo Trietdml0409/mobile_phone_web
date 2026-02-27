@@ -1,8 +1,8 @@
 "use client";
 import Header from "@/components/header";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LikedContext } from "@/shared/context/likedContext";
-import { Flex, Button, Empty, Typography,Row,Col} from "antd";
+import { Flex, Button, Empty, Typography, Row, Col } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import { IProduct } from "@/shared/types/common.types";
 import { useProduct } from "@/shared/hooks/useProducts";
@@ -12,14 +12,78 @@ import Link from "next/link";
 import { ShoppingOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
+
+const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
+  { label: "Price: Increase", value: "price-increase" },
+  { label: "Price: Decrease", value: "price-decrease" },
+  { label: "Name: From A-Z", value: "name-a-z" },
+  { label: "Name: From Z-A", value: "name-z-a" },
+  { label: "Newest", value: "newest" },
+  { label: "Oldest", value: "oldest" },
+  { label: "Best seller", value: "best-seller" },
+];
 export default function Favourite() {
   const { likedProductIds, clearAll } = useContext(LikedContext);
   const router = useRouter();
 
   const { products } = useProduct();
   const likedProducts = products.filter((product) =>
-    likedProductIds.includes(product.id)
+    likedProductIds.includes(product.id),
   );
+
+  const [localLikedProducts, setLocalLikedProducts] = useState<IProduct[]>([]);
+  const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLocalLikedProducts(likedProducts);
+    setSelectedSortBy(null);
+  }, [likedProducts]);
+
+  const handleSortBy = (newValue: string) => {
+    setSelectedSortBy(newValue);
+
+    let newProducts: IProduct[] = [...likedProducts];
+
+    switch (newValue) {
+      case "price-increase":
+        newProducts = [...likedProducts].sort((a, b) => a.price - b.price);
+        break;
+      case "price-decrease":
+        newProducts = [...likedProducts].sort((a, b) => b.price - a.price);
+        break;
+      case "name-a-z":
+        newProducts = [...likedProducts].sort((a, b) =>
+          a.name.localeCompare(b.name),
+        );
+        break;
+      case "name-z-a":
+        newProducts = [...likedProducts].sort((a, b) =>
+          b.name.localeCompare(a.name),
+        );
+        break;
+      case "newest":
+        newProducts = [...likedProducts].sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+        );
+        break;
+      case "oldest":
+        newProducts = [...likedProducts].sort(
+          (a, b) =>
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+        );
+        break;
+      case "best-seller":
+        newProducts = [...likedProducts].filter(
+          (product) => product.isBestSeller === true,
+        );
+        break;
+      default:
+        break;
+    }
+
+    setLocalLikedProducts(newProducts);
+  };
 
   return (
     <>
@@ -86,17 +150,42 @@ export default function Favourite() {
                 </Button>
               </Flex>
             </Flex>
-            
-              <Row gutter={4}>     
-                {likedProducts.map((product: IProduct) => (
-                  <Col key={product.id}  xs={12} sm={8} md={6} lg={4}>
-                    <LikedProductCard product={product} />
-                  </Col>
-                ))}
+            <Flex wrap gap="small" style={{ paddingTop: 12 }}>
+              <p
+                style={{
+                  color: "black",
+                  fontSize: 16,
+                  fontWeight: "bold",
+                  marginRight: 8,
+                }}
+              >
+                Sorted By:
+              </p>
+              {SORT_BY_OPTIONS.map((option) => (
+                <Button
+                  key={option.value}
+                  onClick={() => handleSortBy(option.value)}
+                  style={{
+                    backgroundColor:
+                      selectedSortBy === option.value ? "royalblue" : "white",
+                    color: selectedSortBy === option.value ? "white" : "black",
+                    border: "1px solid rgb(224, 224, 224)",
+                    borderRadius: "6px",
+                    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+                  }}
+                >
+                  {option.label}
+                </Button>
+              ))}
+            </Flex>
 
-                
-              </Row>
-            
+            <Row gutter={4} style={{ paddingTop: 12 }}>
+              {localLikedProducts.map((product: IProduct) => (
+                <Col key={product.id} xs={12} sm={8} md={6} lg={4}>
+                  <LikedProductCard product={product} />
+                </Col>
+              ))}
+            </Row>
           </>
         )}
       </div>
