@@ -6,22 +6,8 @@ import { useProduct } from "@/shared/hooks/useProducts";
 import { IProduct } from "@/shared/types/common.types";
 import Link from "next/link";
 import Header from "@/components/header";
-import {
-  Button,
-  message,
-  Card,
-  Row,
-  Col,
-  Typography,
-  Space,
-  Empty,
-  Flex,
-} from "antd";
-import {
-  DeleteOutlined,
-  ClearOutlined,
-  ShoppingOutlined,
-} from "@ant-design/icons";
+import { Button, message, Card, Row, Col, Typography, Empty, Flex } from "antd";
+import { ClearOutlined, ShoppingOutlined } from "@ant-design/icons";
 import CartProductCard from "@/components/cart/cartProductCard";
 import { useRouter } from "next/navigation";
 
@@ -33,7 +19,7 @@ export default function CartPage() {
     removeProductFromCart,
     clearCart,
     getTotalPriceInCart,
-    getTotalQuantityInCart
+    getTotalQuantityInCart,
   } = useContext(CartContext);
   const router = useRouter();
 
@@ -44,26 +30,19 @@ export default function CartPage() {
 
   useEffect(() => {
     // Filter products that are in the cart
-    const filteredProducts = allProducts.filter((product) =>
-      product.id in cartProductIds
-,
+    const filteredProducts = allProducts.filter(
+      (product) => product.id in cartProductIds,
     );
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setCartProducts(filteredProducts);
   }, [cartProductIds, allProducts]);
-
-  //Remove the Product from the Cart
-  const handleRemoveProduct = (productId: number) => {
-    removeProductFromCart(productId);
-    message.success("Product removed from cart");
-  };
 
   const handleClearCart = () => {
     clearCart();
     message.success("Cart cleared");
   };
 
-  const totalPrice = getTotalPriceInCart()
+  const totalPrice = getTotalPriceInCart();
   //IF THE CARTPRODUCTS ARE 0
   if (cartProducts.length === 0) {
     return (
@@ -131,11 +110,7 @@ export default function CartPage() {
         <Col xs={24} lg={16}>
           {cartProducts.map((product) => (
             //Passing handleRemoveProduct to the card
-            <CartProductCard
-              key={product.id}
-              product={product}
-              onRemove={handleRemoveProduct}
-            />
+            <CartProductCard key={product.id} product={product} />
           ))}
         </Col>
 
@@ -153,7 +128,7 @@ export default function CartPage() {
                 }}
               >
                 <Text>Subtotal ({getTotalQuantityInCart()}):</Text>
-                <Text strong>${totalPrice}</Text>
+                <Text strong>{totalPrice.toLocaleString()} VND</Text>
               </div>
               <div
                 style={{
@@ -173,7 +148,7 @@ export default function CartPage() {
                 }}
               >
                 <Text>Tax:</Text>
-                <Text>${(totalPrice * 0.1).toFixed(2)}</Text>
+                <Text>{(totalPrice * 0.1).toLocaleString()} VND</Text>
               </div>
               <div
                 style={{
@@ -188,7 +163,7 @@ export default function CartPage() {
                   Total:
                 </Text>
                 <Text strong style={{ fontSize: "18px", color: "#1890ff" }}>
-                  ${(totalPrice * 1.1).toFixed(2)}
+                  {(totalPrice * 1.1).toLocaleString()} VND
                 </Text>
               </div>
             </div>

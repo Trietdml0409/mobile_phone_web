@@ -23,58 +23,73 @@ const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   { label: "Best seller", value: "best-seller" },
 ];
 export default function Favourite() {
-  const { likedProductIds, clearAll } = useContext(LikedContext);
+  const { likedProductIds, clearAll } = useContext(LikedContext); // [product2_id]
   const router = useRouter();
 
-  const { products } = useProduct();
-  const likedProducts = products.filter((product) =>
-    likedProductIds.includes(product.id),
-  );
+  const { products } = useProduct(); // [product1, product2, product3]
+  // const likedProducts = products.filter((product) =>
+  //   likedProductIds.includes(product.id),
+  // ); // [product2]
 
-  const [localLikedProducts, setLocalLikedProducts] = useState<IProduct[]>([]);
+  const [localLikedProducts, setLocalLikedProducts] = useState<IProduct[]>([]); // change 1: [] => change 2: [product2]
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
 
+  // useEffect(() => {
+  //   setLocalLikedProducts(likedProducts);
+
+  //   setSelectedSortBy(null);
+  // }, [likedProducts]); // change 1: [] => change 2: [product2]
+
   useEffect(() => {
-    setLocalLikedProducts(likedProducts);
+    const newLikedProducts = products.filter((product) =>
+      likedProductIds.includes(product.id),
+    );
+    console.log("xxx001 newLikedProducts", {
+      newLikedProducts,
+      likedProductIds,
+      products,
+    });
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setLocalLikedProducts(newLikedProducts);
     setSelectedSortBy(null);
-  }, [likedProducts]);
+  }, [likedProductIds, products]);
 
   const handleSortBy = (newValue: string) => {
     setSelectedSortBy(newValue);
 
-    let newProducts: IProduct[] = [...likedProducts];
+    let newProducts: IProduct[] = [...localLikedProducts];
 
     switch (newValue) {
       case "price-increase":
-        newProducts = [...likedProducts].sort((a, b) => a.price - b.price);
+        newProducts = [...localLikedProducts].sort((a, b) => a.price - b.price);
         break;
       case "price-decrease":
-        newProducts = [...likedProducts].sort((a, b) => b.price - a.price);
+        newProducts = [...localLikedProducts].sort((a, b) => b.price - a.price);
         break;
       case "name-a-z":
-        newProducts = [...likedProducts].sort((a, b) =>
+        newProducts = [...localLikedProducts].sort((a, b) =>
           a.name.localeCompare(b.name),
         );
         break;
       case "name-z-a":
-        newProducts = [...likedProducts].sort((a, b) =>
+        newProducts = [...localLikedProducts].sort((a, b) =>
           b.name.localeCompare(a.name),
         );
         break;
       case "newest":
-        newProducts = [...likedProducts].sort(
+        newProducts = [...localLikedProducts].sort(
           (a, b) =>
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
         );
         break;
       case "oldest":
-        newProducts = [...likedProducts].sort(
+        newProducts = [...localLikedProducts].sort(
           (a, b) =>
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
         );
         break;
       case "best-seller":
-        newProducts = [...likedProducts].filter(
+        newProducts = [...localLikedProducts].filter(
           (product) => product.isBestSeller === true,
         );
         break;

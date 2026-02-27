@@ -3,7 +3,6 @@ import { CartContext } from "../context/cartContext";
 import { CartProductState, IProduct } from "../types/common.types";
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-
   const [cartProducts, setCartProducts] = useState<CartProductState>({});
 
   /*
@@ -52,7 +51,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [cartProducts]);
   //Dependency is productIds
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> 5cf9d9e8d777c906050b0b43c258021d90ee8ff5
   const addProductToCart = (product: IProduct, quantity: number = 1) => {
     const productKey = product.id.toString();
     console.log("xxxx productKey", productKey, product);
@@ -87,7 +89,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setCartProducts({ ...newCartProducts });
   };
 
-  const removeProductByeOneFromCart = (productId: number) => {
+  const removeProductByOneFromCart = (productId: number) => {
     const productKey = productId.toString();
 
     // logic:
@@ -108,7 +110,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const clearCart = () => {
-    setCartProducts({})
+    setCartProducts({});
   };
 
   const getTotalQuantityInCart = () => {
@@ -140,7 +142,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         cartProducts,
         addProductToCart,
         removeProductFromCart,
-        removeProductByeOneFromCart,
+        removeProductByOneFromCart,
 
         getTotalQuantityInCart,
         getTotalPriceInCart,

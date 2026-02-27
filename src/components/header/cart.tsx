@@ -12,7 +12,7 @@ export default function Cart() {
   const { getTotalQuantityInCart } = useContext(CartContext);
   const isSmallScreen = screens.xs || (screens.sm && !screens.md);
   const totalQuantityInCart = getTotalQuantityInCart();
-  
+
   return (
     <Flex
       className="relative"

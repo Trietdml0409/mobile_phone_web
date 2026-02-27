@@ -5,9 +5,9 @@ interface CartContextType {
 
   clearCart: () => void;
   cartProducts: CartProductState;
-  addProductToCart: (product: IProduct, quantity: number) => void;
+  addProductToCart: (product: IProduct, quantity?: number) => void;
   removeProductFromCart: (productId: number) => void;
-  removeProductByeOneFromCart: (productId: number) => void;
+  removeProductByOneFromCart: (productId: number) => void;
 
   getTotalQuantityInCart: () => number;
   getTotalPriceInCart: () => number;
@@ -19,7 +19,7 @@ export const CartContext = createContext<CartContextType>({
   cartProducts: {},
   addProductToCart: () => {},
   removeProductFromCart: () => {},
-  removeProductByeOneFromCart: () => {},
+  removeProductByOneFromCart: () => {},
   getTotalQuantityInCart: () => 0,
   getTotalPriceInCart: () => 0,
 });
