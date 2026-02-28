@@ -6,6 +6,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "./globals.css";
 import { CartProvider } from "@/shared/providers/CartProvider";
 import { AppProvider } from "@/shared/providers/AppProvider";
+import { BreadcrumbProvider } from "@/shared/providers/BreadcrumbProvider";
 import LayoutWrapper from "@/components/layout-wrapper";
 
 const geistSans = Geist({
@@ -34,9 +35,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AntdRegistry>
-          <AppProvider>
-            <LayoutWrapper>{children}</LayoutWrapper>
-          </AppProvider>
+          <BreadcrumbProvider>
+            <AppProvider>
+              <LayoutWrapper>{children}</LayoutWrapper>
+            </AppProvider>
+          </BreadcrumbProvider>
         </AntdRegistry>
       </body>
     </html>

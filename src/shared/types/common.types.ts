@@ -1,4 +1,12 @@
 
+interface comments {
+  id: number;
+  content: string;
+  createdAt: string;
+  author: string;
+  authorAvatar: string;
+}
+
 export interface IProduct {
   id: number;
   name: string;
@@ -8,6 +16,7 @@ export interface IProduct {
   isBestSeller: boolean; // true if the product is a best seller, false otherwise
   brandName: string; // name of the brand of the product -> for filter by brand
   liked?: boolean; // true if the product is liked, false otherwise
+  comments: comments[];
 }
 
 export interface Brand {

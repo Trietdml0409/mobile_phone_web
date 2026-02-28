@@ -9,6 +9,7 @@ import { CartContext } from "@/shared/context/cartContext";
 import { Row, Col, Flex, Button, Grid } from "antd";
 import SmallScreenHeader from "./header/smallScreenHeader";
 import LargeScreenHeader from "./header/largeScreenHeader";
+import AppBreadcrumb from "./breadcrumb";
 
 const { useBreakpoint } = Grid
 
@@ -18,9 +19,19 @@ export default function Header() {
 
   const isSmallScreen = screens.xs || (screens.sm && !screens.md);
   if (isSmallScreen) {
-    return <SmallScreenHeader />;
+    return (
+      <>
+        <SmallScreenHeader />
+        <AppBreadcrumb />
+      </>
+    );
   } else {
-    return <LargeScreenHeader />;
+    return (
+      <>
+        <LargeScreenHeader />
+        <AppBreadcrumb />
+      </>
+    );
   }
 
 }

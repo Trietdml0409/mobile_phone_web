@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation"; //
 export default function SmallScreenHeader() {
   const router = useRouter();
   return (
-    <Row style={{ height: 50, backgroundColor: "lightblue" }}>
+    <Row style={{ height: 50, backgroundColor: "lightblue", width: "100%" }}>
       <Col
         span={4}
         style={{

@@ -65,16 +65,14 @@ export default function Home() {
         minHeight: "100vh",
         width: "100%",
         backgroundColor: "white",
-        padding: "10px",
+        /* remove general padding so header can span full width */
+        padding: "0",
         paddingBottom: "50px",
-
-      }}
-    >
-      <Row gutter={[0,10]}>
-
-        <Col span={24}>
-          <Header />
-        </Col>
+      }}>
+      {/* header is outside the padded content block so it can touch the edges */}
+      <Header />
+      <div style={{ padding: "10px" }}>
+        <Row gutter={[0,10]}>
 
         {/* TODO: @triet hiển thị thông báo chào mừng nếu showWelcome === true */}
         {/* Hint: sử dụng conditional rendering với {showWelcome && <div>...</div>} */}
@@ -170,9 +168,8 @@ export default function Home() {
 
         <MessageBanner visitCount={visitCount} />
         </Row>
+      </div>
     </div>
-
   );
 }
-
 

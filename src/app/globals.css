@@ -20,6 +20,8 @@
 }
 
 body {
+  margin: 0; /* remove default gap around page */
+  padding: 0;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
