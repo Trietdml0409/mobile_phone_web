@@ -20,7 +20,8 @@ export default function SmallScreenHeader() {
         <img
           onClick={() => router.push("/")}
           src="https://upload.wikimedia.org/wikipedia/vi/f/f6/Emblem_of_Da_Nang_City.png"
-          style={{ height: "40px", objectFit: "contain" }}
+          style={{ height: "40px", objectFit: "contain", cursor: "pointer"}}
+          
         />
       </Col>
       <Col

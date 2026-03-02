@@ -42,7 +42,7 @@ export default function SegmentDiscount(){
                   <div style={{ textAlign: "center" }}>
                     <img
                       src={d.img}
-                      style={{ width: "30%", display: "block", margin: "0 auto" }}
+                      style={{ width: "50%", display: "block", margin: "0 auto" }}
                     />
                   </div>
                 ),

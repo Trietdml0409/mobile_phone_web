@@ -20,6 +20,7 @@ export default function Cart() {
       justify={"center"}
       align={"center"}
       onClick={() => router.push("/cart")}
+      style={{cursor:"pointer"}}
     >
       <ShoppingCartOutlined style={{ fontSize: 30, color: "white" }} />
       {isSmallScreen && totalQuantityInCart > 0 && (

@@ -1,10 +1,6 @@
 import { IProduct } from "@/shared/types/common.types";
-import { Button, Flex } from "antd";
-import {
-  ShoppingCartOutlined,
-  HeartOutlined,
-  EyeOutlined,
-} from "@ant-design/icons";
+import { Button, Flex ,Card} from "antd";
+import { ShoppingCartOutlined, HeartOutlined } from "@ant-design/icons";
 import { useContext } from "react";
 import { LikedContext } from "@/shared/context/likedContext";
 import { CartContext } from "@/shared/context/cartContext";
@@ -21,19 +17,21 @@ export default function LikedProductCard({ product }: { product: IProduct }) {
   const isProductInLiked = likedProductIds.includes(product.id);
 
   return (
-    <Flex
-      key={product.id}
-      align="center"
-      justify="start"
-      style={{
-        height: "100%",
-        width: "100%",
-        borderRadius: "6px",
-        boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
-        border: "1px solid rgb(224, 224, 224)",
-      }}
-      vertical
-    >
+    <Card
+    hoverable
+    key={product.id}
+    style={{
+    height: "100%",
+    width: "100%",
+    borderRadius: "6px",
+    cursor: "pointer",
+    display:"flex",
+    alignItems: "center",
+    justifyContent:"start",
+    flexDirection: "column"
+    }}
+    onClick={() => router.push(`/product-details?id=${product.id}`)}>
+
       <Flex justify="center" align="center">
         <div
           style={{
@@ -60,7 +58,7 @@ export default function LikedProductCard({ product }: { product: IProduct }) {
         </div>
       </Flex>
 
-      <p style={{ color: "black", fontSize: "100%", fontWeight: "bold" }}>
+      <p style={{ color: "black", fontSize: "100%", fontWeight: "bold",textAlign:"center" }}>
         {product.name}
       </p>
       <p
@@ -98,11 +96,12 @@ export default function LikedProductCard({ product }: { product: IProduct }) {
               ? { backgroundColor: "royalblue", color: "white" }
               : { backgroundColor: "red", color: "white" }
           }
-          onClick={() =>
+          onClick={(e) => {
+            e.stopPropagation();
             isProductInCart
               ? removeProductFromCart(product.id)
-              : addProductToCart(product, 1)
-          }
+              : addProductToCart(product, 1);
+          }}
         >
           {isProductInCart ? "Remove" : "Add"}
         </Button>
@@ -122,15 +121,12 @@ export default function LikedProductCard({ product }: { product: IProduct }) {
               }
             />
           }
-          onClick={() => removeLikedProductIds(product.id)}
-        ></Button>
-
-        <Button
-          size="small"
-          icon={<EyeOutlined />}
-          onClick={() => router.push(`/product-details?id=${product.id}`)}
+          onClick={(e) => {
+            e.stopPropagation();
+            removeLikedProductIds(product.id);
+          }}
         ></Button>
       </Flex>
-    </Flex>
+    </Card>
   );
 }

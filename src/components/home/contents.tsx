@@ -8,12 +8,14 @@ import {
   SearchOutlined,
   ZoomInOutlined,
   HeartOutlined,
+  ShoppingCartOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
-import { ConfigProvider, Popover, Modal } from "antd";
+import { Popover, Modal } from "antd";
 import { useState, useContext } from "react";
 import InputNumberBox from "../common/inputNumberBox";
 import { LikedContext } from "@/shared/context/likedContext";
+import { CartContext } from "@/shared/context/cartContext";
 
 const { useBreakpoint } = Grid;
 
@@ -39,6 +41,10 @@ export default function Contents({ product }: { product: IProduct }) {
   const { likedProductIds, addLikedProductIds, removeLikedProductIds } =
     useContext(LikedContext);
   const isProductInLiked = likedProductIds.includes(product.id);
+
+  const { cartProducts, addProductToCart, removeProductFromCart } =
+    useContext(CartContext);
+  const isProductInCart = product.id in cartProducts;
 
   const popoverContent = (
     <Flex gap="small">
@@ -90,9 +96,11 @@ export default function Contents({ product }: { product: IProduct }) {
         }}
         onClick={(e) => {
           e.stopPropagation();
-          isProductInLiked
-            ? removeLikedProductIds(product.id)
-            : addLikedProductIds(product.id);
+          if (isProductInLiked) {
+            removeLikedProductIds(product.id);
+          } else {
+            addLikedProductIds(product.id);
+          }
         }}
       >
         <HeartOutlined
@@ -116,15 +124,22 @@ export default function Contents({ product }: { product: IProduct }) {
         <Card
           hoverable
           onClick={() => router.push(`/product-details?id=${product.id}`)}
-          style={{ display: "flex", justifyContent: "center" }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "10px",
+            minHeight: "260px",
+          }}
         >
           <img
             src={product.image}
+            alt={product.name}
             style={{
               maxWidth: "100%",
               maxHeight: "200px",
               objectFit: "contain",
-              marginBottom: "15px",
+              marginBottom: "10px",
             }}
           />
           <p
@@ -132,10 +147,54 @@ export default function Contents({ product }: { product: IProduct }) {
               fontWeight: "bold",
               fontSize: "12px",
               textAlign: "center",
+              margin: 0,
             }}
           >
             {product.name}
           </p>
+          <p
+            style={{
+              fontSize: "11px",
+              textAlign: "center",
+              color: "gray",
+              margin: "2px 0",
+            }}
+          >
+            {product.brandName}
+          </p>
+          <p
+            style={{
+              fontSize: "12px",
+              textAlign: "center",
+              color: "rosybrown",
+              fontWeight: "bold",
+              margin: "2px 0 8px",
+            }}
+          >
+            {product.price.toLocaleString()} VND
+          </p>
+          <Button
+            size="small"
+            icon={<ShoppingCartOutlined />}
+            style={
+              !isProductInCart
+                ? {
+                    backgroundColor: "royalblue",
+                    color: "white",
+                    marginTop: "auto",
+                    width:"100%"
+                  }
+                : { backgroundColor: "red", color: "white", marginTop: "auto",width:"100%" }
+            }
+            onClick={(e) => {
+              e.stopPropagation();
+              isProductInCart
+                ? removeProductFromCart(product.id)
+                : addProductToCart(product, 1);
+            }}
+          >
+            {isProductInCart ? "Remove" : "Add"}
+          </Button>
         </Card>
       </>
     );
@@ -144,17 +203,24 @@ export default function Contents({ product }: { product: IProduct }) {
       <>
         <Card
           hoverable
-          onClick={(e) => router.push(`/product-details?id=${product.id}`)}
-          style={{ display: "flex", justifyContent: "center" }}
+          onClick={() => router.push(`/product-details?id=${product.id}`)}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "10px",
+            minHeight: "260px",
+          }}
         >
           <Popover content={popoverContent} trigger="hover">
             <img
               src={product.image}
+              alt={product.name}
               style={{
                 maxWidth: "100%",
                 maxHeight: "200px",
                 objectFit: "contain",
-                marginBottom: "15px",
+                marginBottom: "10px",
               }}
             />
           </Popover>
@@ -163,10 +229,53 @@ export default function Contents({ product }: { product: IProduct }) {
               fontWeight: "bold",
               fontSize: "12px",
               textAlign: "center",
+              margin: 0,
             }}
           >
             {product.name}
           </p>
+          <p
+            style={{
+              fontSize: "11px",
+              textAlign: "center",
+              color: "gray",
+              margin: "2px 0",
+            }}
+          >
+            {product.brandName}
+          </p>
+          <p
+            style={{
+              fontSize: "12px",
+              textAlign: "center",
+              color: "rosybrown",
+              fontWeight: "bold",
+              margin: "2px 0 8px",
+            }}
+          >
+            {product.price.toLocaleString()} VND
+          </p>
+          <Button
+            icon={<ShoppingCartOutlined />}
+            style={
+              !isProductInCart
+                ? {
+                    backgroundColor: "royalblue",
+                    color: "white",
+                    marginTop: "auto",
+                    width:"100%"
+                  }
+                : { backgroundColor: "red", color: "white", marginTop: "auto", width:"100%"}
+            }
+            onClick={(e) => {
+              e.stopPropagation();
+              isProductInCart
+                ? removeProductFromCart(product.id)
+                : addProductToCart(product, 1);
+            }}
+          >
+            {isProductInCart ? "Remove" : "Add"}
+          </Button>
         </Card>
 
         {/* The modal */}
