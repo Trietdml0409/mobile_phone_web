@@ -1,5 +1,4 @@
 import { Button, Col, Flex, Row, Rate, Grid } from "antd";
-import { StarOutlined } from "@ant-design/icons";
 import InputNumberBox from "../common/inputNumberBox";
 import { IProduct } from "@/shared/types/common.types";
 
@@ -7,8 +6,6 @@ const { useBreakpoint } = Grid;
 
 export default function ProductInformation({
   product,
-  quantity,
-  setQuantity,
   handleBuyNow,
   handleAddToCart,
 }: {
@@ -189,11 +186,7 @@ export default function ProductInformation({
               justifyContent: "center",
             }}
           >
-            <InputNumberBox
-              product={product}
-              quantity={quantity}
-              setQuantity={setQuantity}
-            />
+            <InputNumberBox product={product} />
           </Col>
         </Row>
       </>
@@ -367,11 +360,7 @@ export default function ProductInformation({
               justifyContent: "center",
             }}
           >
-            <InputNumberBox
-              product={product}
-              quantity={quantity}
-              setQuantity={setQuantity}
-            />
+            <InputNumberBox product={product} />
           </Col>
         </Row>
       </>
@@ -381,8 +370,10 @@ export default function ProductInformation({
   const screens = useBreakpoint();
   const isSmallScreen = screens.xs || (screens.sm && !screens.md);
   if (isSmallScreen) {
+    // eslint-disable-next-line react-hooks/static-components
     return <SmallScreenHeader />;
   } else {
+    // eslint-disable-next-line react-hooks/static-components
     return <LargeScreenHeader />;
   }
 }
