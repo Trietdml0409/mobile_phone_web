@@ -6,7 +6,6 @@ import {
   BreadcrumbItem,
 } from "@/shared/context/breadcrumbContext";
 
-
 const MAX_BREADCRUMBS = 10;
 
 export function BreadcrumbProvider({ children }: { children: ReactNode }) {

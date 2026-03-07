@@ -1,4 +1,3 @@
-
 import { useContext } from "react";
 import Account from "./header/account";
 import Cart from "./header/cart";
@@ -11,10 +10,9 @@ import SmallScreenHeader from "./header/smallScreenHeader";
 import LargeScreenHeader from "./header/largeScreenHeader";
 import AppBreadcrumb from "./breadcrumb";
 
-const { useBreakpoint } = Grid
+const { useBreakpoint } = Grid;
 
 export default function Header() {
-
   const screens = useBreakpoint();
 
   const isSmallScreen = screens.xs || (screens.sm && !screens.md);
@@ -33,5 +31,4 @@ export default function Header() {
       </>
     );
   }
-
 }

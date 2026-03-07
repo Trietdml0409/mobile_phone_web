@@ -1,9 +1,12 @@
 "use client";
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { AudioOutlined } from "@ant-design/icons";
 import { Input, Space } from "antd";
 import type { GetProps } from "antd";
 import debounce from "lodash/debounce";
+import { useProduct } from "@/shared/hooks/useProducts";
+import type { IProduct } from "@/shared/types/common.types";
+import SearchResult from "./components/SearchResult";
 
 type SearchProps = GetProps<typeof Input.Search>;
 
@@ -15,6 +18,23 @@ const onSearch: SearchProps["onSearch"] = (value, _e, info) =>
   console.log(info?.source, value);
 
 const SearchBox: React.FC = () => {
+  const { products } = useProduct(); // 100 products
+  const [searchValue, setSearchValue] = useState<string>(""); // ssd => filter 5 products.
+  const [searchResults, setSearchResults] = useState<IProduct[]>([]);
+
+  // get only the products that match the search value
+  // const filterProducts = products.filter(
+  //   (product) => product.name.toLowerCase().includes(searchValue.toLowerCase()), // check if the product name includes the search value
+  // ); // filter process: 0.2s = 200ms => every re-render, memory address of filterProducts is changed
+
+  // use memo => memorize the filterProducts function/values => only re-run when the searchValue or products change
+  // const filteredProducts = useMemo(() => {
+  //   return products.filter((product) =>
+  //     product.name.toLowerCase().includes(searchValue.toLowerCase()),
+  //   );
+  // return callAPI result
+  // }, [searchValue, products]); // keep the same memory address if searchValue or products not change
+
   const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       // user pressed enter
@@ -37,29 +57,29 @@ const SearchBox: React.FC = () => {
     }
   };
 
-  // fake api call to search products
   const searchProductsAPI = async (value: string) => {
-    await new Promise((resolve) => setTimeout(resolve, 5000)); // wait 5 seconds
-    return [
-      { id: 1, name: `Product ${value} 1`, price: 100 },
-      { id: 2, name: `Product ${value} 2`, price: 200 },
-      { id: 3, name: `Product ${value} 3`, price: 300 },
-    ];
+    console.log("searchProductsAPI", value);
+    await new Promise((resolve) => setTimeout(resolve, 2000)); // wait 2 seconds. fake api call
+    return products.filter((product) =>
+      product.name.toLowerCase().includes(value.toLowerCase()),
+    );
   };
 
-  // Create debounced function ONCE so repeated calls reset the timer; only the last call runs.
+  // Create debounced function when searchProductsAPI identity changes. Repeated calls reset the timer; only the last runs.
   const debouncedSearchFn = useMemo(
     () =>
       debounce((value: string) => {
-        searchProductsAPI(value).then((products) => {
-          console.log("Products:", products);
+        searchProductsAPI(value).then((results) => {
+          setSearchResults(results);
+          console.log("Products:", results);
         });
-      }, 2000),
-    [],
+      }, 2000), // after 2 seconds, the function will be called
+    [searchProductsAPI], // only re-run when searchProductsAPI changes
   );
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = event.target.value;
+    setSearchValue(searchValue);
     console.log("Value changed to:", searchValue);
     if (searchValue.length >= 3) {
       debouncedSearchFn(searchValue);
@@ -67,15 +87,18 @@ const SearchBox: React.FC = () => {
   };
 
   return (
-    <Search
-      placeholder="Search"
-      enterButton="Search"
-      size="large"
-      suffix={suffix}
-      onSearch={onSearch}
-      onKeyDown={onKeyDown}
-      onChange={onChange}
-    />
+    <div style={{ position: "relative", width: "100%" }}>
+      <Search
+        placeholder="Search"
+        enterButton="Search"
+        size="large"
+        suffix={suffix}
+        onSearch={onSearch}
+        onKeyDown={onKeyDown}
+        onChange={onChange}
+      />
+      <SearchResult products={searchResults} searchValue={searchValue} />
+    </div>
   );
 };
 

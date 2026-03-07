@@ -53,7 +53,6 @@ export default function CartPage() {
           textAlign: "center",
         }}
       >
-        <Header />
         <Empty
           image={Empty.PRESENTED_IMAGE_SIMPLE}
           description={
@@ -82,7 +81,6 @@ export default function CartPage() {
         margin: "0 auto",
       }}
     >
-      <Header />
       <div
         style={{
           marginBottom: "24px",

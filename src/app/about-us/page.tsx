@@ -14,8 +14,6 @@ export default function AboutPage() {
         paddingBottom: "50px",
       }}
     >
-      <Header />
-
       <main
         style={{
           maxWidth: 768,

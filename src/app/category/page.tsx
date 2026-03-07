@@ -173,7 +173,6 @@ export default function Category() {
         padding: "16px",
       }}
     >
-      <Header />
       <Flex vertical style={{ padding: "15px" }}>
         <p style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
           PC GAMING ({totalProducts} PRODUCTS)

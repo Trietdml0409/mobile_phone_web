@@ -15,12 +15,7 @@ import { useProductDetail } from "@/shared/hooks/useProductDetail";
 // TODO: @triet tạo interface IProduct tương tự như trong category/page.tsx
 // Hoặc có thể import từ một file chung nếu muốn tái sử dụng
 
-
-
-const { useBreakpoint } = Grid
-
-
-
+const { useBreakpoint } = Grid;
 
 export default function ProductDetails() {
   //URL là /product-details?id=1 thì lấy id=1
@@ -64,8 +59,6 @@ export default function ProductDetails() {
         padding: "16px",
       }}
     >
-      <Header />
-
       <Row>
         <Col span={isSmallScreen ? 24 : 8}>
           {product ? (

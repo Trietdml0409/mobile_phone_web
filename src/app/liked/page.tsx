@@ -113,8 +113,6 @@ export default function Favourite() {
           padding: "0 10px",
         }}
       >
-        <Header />
-
         {likedProductIds.length === 0 ? (
           <div
             style={{
