@@ -49,7 +49,7 @@ export default function Category() {
 
   // pagination state
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const PAGE_SIZE = 20; // number of items per page
+  const PAGE_SIZE = 18; // number of items per page
 
   // compute slice to show on current page
   const paginatedProducts = localProducts.slice(
@@ -71,6 +71,7 @@ export default function Category() {
   // state save Products
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
+  const [selectedBrandName, setSelectedBrandName] = useState<string|null>(null);
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
@@ -83,8 +84,9 @@ export default function Category() {
   }, [cartProducts]); // dependency is productIds
 
   function sortByBrand(brand: string): void {
-    let newProducts: IProduct[]; // camelCase, snake_case.
-    const allProducts: IProduct[] = [...products];
+    setSelectedBrandName(brand)
+    let newProducts: IProduct[]; 
+    const allProducts: IProduct[] = [...localProducts];
     if (brand == "All") {
       newProducts = allProducts;
     } else {
@@ -202,7 +204,7 @@ export default function Category() {
           ))}
         </Flex>
 
-        <BrandName sortByBrand={sortByBrand} />
+        <BrandName sortByBrand={sortByBrand} selectedBrandName = {selectedBrandName} />
 
         <div>
           <Row gutter={6}>

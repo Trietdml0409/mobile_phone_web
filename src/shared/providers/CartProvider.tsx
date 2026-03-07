@@ -1,9 +1,28 @@
-import { useState, useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 import { CartContext } from "../context/cartContext";
 import { CartProductState, IProduct } from "../types/common.types";
+import {notification } from 'antd';
+import type { NotificationArgsProps } from 'antd';
+import {RadiusBottomleftOutlined} from '@ant-design/icons';
+
+
+type NotificationPlacement = NotificationArgsProps['placement'];
+const Context = React.createContext({ name: 'Default' });
+
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cartProducts, setCartProducts] = useState<CartProductState>({});
+
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = (placement: NotificationPlacement) => {
+    api.info({
+      title: `Product Added`,
+      description: <Context.Consumer>{() => `Check your cart!`}</Context.Consumer>,
+      placement,
+    });
+  };
+
 
   /*
 
@@ -53,6 +72,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
 
   const addProductToCart = (product: IProduct, quantity: number = 1) => {
+    openNotification('bottomRight')
+
     const productKey = product.id.toString();
     console.log("xxxx productKey", productKey, product);
 
@@ -145,6 +166,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         getTotalPriceInCart,
       }}
     >
+      {contextHolder}
       {children}
     </CartContext.Provider>
   );

@@ -18,7 +18,11 @@ export default function AppBreadcrumb() {
     key: crumb.href,
   }));
 
-  return (
+  
+  if(breadcrumbs.length == 1){
+    return <></>
+  }else{
+    return (
     <Breadcrumb
       style={{
         margin: "8px 16px",
@@ -28,4 +32,6 @@ export default function AppBreadcrumb() {
       items={items}
     />
   );
+  }
+  
 }

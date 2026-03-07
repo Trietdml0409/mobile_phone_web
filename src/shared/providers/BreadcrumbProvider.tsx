@@ -49,6 +49,7 @@ export function BreadcrumbProvider({ children }: { children: ReactNode }) {
           ...updated.slice(updated.length - MAX_BREADCRUMBS + 1),
         ];
       }
+      console.log("breadcrumb"+breadcrumbs)
       return updated;
     });
   };
