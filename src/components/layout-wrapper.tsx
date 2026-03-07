@@ -2,8 +2,9 @@
 
 import { usePathname } from "next/navigation";
 import Footer from "./footer";
-import { NavigationTracker } from "./NavigationTracker";
+// import { NavigationTracker } from "./NavigationTracker";
 import Header from "./header";
+import AppBreadcrumb from "./breadcrumb";
 
 export default function LayoutWrapper({
   children,
@@ -15,8 +16,9 @@ export default function LayoutWrapper({
 
   return (
     <>
-      <NavigationTracker />
+      {/* <NavigationTracker /> */}
       <Header />
+      <AppBreadcrumb />
       {children}
       {shouldShowFooter && <Footer />}
     </>

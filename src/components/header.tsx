@@ -1,14 +1,6 @@
-import { useContext } from "react";
-import Account from "./header/account";
-import Cart from "./header/cart";
-import CategoriesButton from "./header/menu";
-import SearchBox from "./header/search_box";
-import Link from "next/link";
-import { CartContext } from "@/shared/context/cartContext";
-import { Row, Col, Flex, Button, Grid } from "antd";
+import { Grid } from "antd";
 import SmallScreenHeader from "./header/smallScreenHeader";
 import LargeScreenHeader from "./header/largeScreenHeader";
-import AppBreadcrumb from "./breadcrumb";
 
 const { useBreakpoint } = Grid;
 
@@ -20,14 +12,12 @@ export default function Header() {
     return (
       <>
         <SmallScreenHeader />
-        <AppBreadcrumb />
       </>
     );
   } else {
     return (
       <>
         <LargeScreenHeader />
-        <AppBreadcrumb />
       </>
     );
   }

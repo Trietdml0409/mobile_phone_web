@@ -1,37 +1,106 @@
 "use client";
-import { Breadcrumb } from "antd";
-import Link from "next/link";
-import { useContext } from "react";
-import { BreadcrumbContext } from "@/shared/context/breadcrumbContext";
+import { Breadcrumb, Row } from "antd";
+import { usePathname, useSearchParams } from "next/navigation";
 
-const linkStyle = { color: "royalblue" };
+// import { BreadcrumbContext } from "@/shared/context/breadcrumbContext";
+import { CompassOutlined, HomeOutlined, ShopOutlined } from "@ant-design/icons";
+import Link from "next/link";
+import { HeartOutlined } from "@ant-design/icons";
+import { useProductDetail } from "@/shared/hooks/useProductDetail";
+import { BreadcrumbItemType } from "antd/es/breadcrumb/Breadcrumb";
 
 export default function AppBreadcrumb() {
-  const { breadcrumbs } = useContext(BreadcrumbContext);
+  // const { breadcrumbs } = useContext(BreadcrumbContext);
+  // build the breadcrumbs from the pathname
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const productIdParam = searchParams.get("id");
+  const productId = productIdParam ? Number(productIdParam) : null;
 
-  const items = breadcrumbs.map((crumb) => ({
-    title: (
-      <Link href={crumb.href} style={linkStyle}>
-        {crumb.label}
-      </Link>
-    ),
-    key: crumb.href,
-  }));
+  const { product } = useProductDetail({ id: productId });
 
-  
-  if(breadcrumbs.length == 1){
-    return <></>
-  }else{
-    return (
+  console.log("xxx 0021 pathname", pathname);
+  console.log("xxx 0021 productId", productId);
+
+  const breadcrumbs: unknown[] = [
+    {
+      href: "/",
+      title: (
+        <Link href="/">
+          <HomeOutlined style={{ fontSize: "1.5rem", color: "royalblue" }} />
+        </Link>
+      ),
+    },
+  ];
+
+  if (pathname !== "/") {
+    const segments = pathname.split("/").filter(Boolean);
+    console.log("xxx 0022 segments", segments);
+    segments.map((segment) => {
+      if (segment === "product-details") {
+        breadcrumbs.push({
+          href: `/${segment}`,
+          title: (
+            <Row align="middle" justify="center" style={{ gap: "5px" }}>
+              <Link href={`/product-details`}>
+                <CompassOutlined
+                  style={{ fontSize: "1.5rem", color: "royalblue" }}
+                />
+                Product Details
+              </Link>
+            </Row>
+          ),
+        });
+        if (productId && product) {
+          breadcrumbs.push({
+            title: (
+              <p style={{ fontSize: "1.1rem", color: "royalblue" }}>
+                {product?.name}
+              </p>
+            ),
+          });
+        }
+      } else if (segment === "liked") {
+        breadcrumbs.push({
+          href: `/${segment}`,
+          title: (
+            <Row align="middle" justify="center" style={{ gap: "5px" }}>
+              <HeartOutlined
+                style={{ fontSize: "1.5rem", color: "royalblue" }}
+              />
+              <p style={{ fontSize: "1.1rem", color: "royalblue" }}>
+                Favourite Products
+              </p>
+            </Row>
+          ),
+        });
+      } else if (segment === "category") {
+        breadcrumbs.push({
+          href: `/${segment}`,
+          title: (
+            <Row align="middle" justify="center" style={{ gap: "5px" }}>
+              <Link href={`/category`}>
+                <ShopOutlined
+                  style={{ fontSize: "1.5rem", color: "royalblue" }}
+                />
+                Category
+              </Link>
+            </Row>
+          ),
+        });
+      }
+    });
+  }
+
+  console.log("xxx 0023 breadcrumbs", breadcrumbs);
+  return (
     <Breadcrumb
       style={{
         margin: "8px 16px",
         fontSize: "1.1rem",
         color: "royalblue",
       }}
-      items={items}
+      items={breadcrumbs as BreadcrumbItemType[]}
     />
   );
-  }
-  
 }
