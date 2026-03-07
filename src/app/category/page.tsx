@@ -71,7 +71,9 @@ export default function Category() {
   // state save Products
   // state save selected sort by
   const [selectedSortBy, setSelectedSortBy] = useState<string | null>(null);
-  const [selectedBrandName, setSelectedBrandName] = useState<string|null>(null);
+  const [selectedBrandName, setSelectedBrandName] = useState<string | null>(
+    null,
+  );
 
   // TODO: @triet thêm state để lưu giỏ hàng (cart)
   // Hint: có thể lưu mảng các product hoặc object với {productId, quantity}
@@ -83,10 +85,10 @@ export default function Category() {
     setLocalCartProductIds(cartProducts);
   }, [cartProducts]); // dependency is productIds
 
-  function sortByBrand(brand: string): void {
-    setSelectedBrandName(brand)
-    let newProducts: IProduct[]; 
-    const allProducts: IProduct[] = [...localProducts];
+  function filterByBrand(brand: string): void {
+    setSelectedBrandName(brand);
+    let newProducts: IProduct[];
+    const allProducts: IProduct[] = [...products];
     if (brand == "All") {
       newProducts = allProducts;
     } else {
@@ -98,44 +100,50 @@ export default function Category() {
     setLocalProducts(newProducts);
     setTotalProducts(newProducts.length);
     setCurrentPage(1); // reset to first page when filtering by brand
+
+    if (selectedSortBy) {
+      handleSortBy(selectedSortBy, newProducts);
+    }
   }
 
   // @Triet: filter product:
-  const handleSortBy = (newValue: string) => {
+  const handleSortBy = (newValue: string, overrideProducts?: IProduct[]) => {
     setSelectedSortBy(newValue); // selectedSortBy = newValue
 
     // TODO: @triet check what is switch statement in JavaScript/TS
 
-    let newProducts: IProduct[] = [...products];
+    let newProducts: IProduct[] = overrideProducts
+      ? overrideProducts
+      : [...localProducts];
     // Handle sort by options
     switch (newValue) {
       case "price-increase":
         // sort by price increase
-        newProducts = [...products].sort((a, b) => a.price - b.price);
+        newProducts = [...newProducts].sort((a, b) => a.price - b.price);
         break;
       case "price-decrease":
         // TODO: @triet sort by price decrease (từ cao xuống thấp)
         // Hint: sử dụng sort() với logic ngược lại so với price-increase
-        newProducts = [...products].sort((a, b) => b.price - a.price);
+        newProducts = [...newProducts].sort((a, b) => b.price - a.price);
         break;
       case "name-a-z":
         // TODO: @triet sort by name from A-Z
         // Hint: sử dụng sort() với localeCompare() để so sánh chuỗi
-        newProducts = [...products].sort((a, b) =>
+        newProducts = [...newProducts].sort((a, b) =>
           a.name.localeCompare(b.name),
         );
         break;
       case "name-z-a":
         // TODO: @triet sort by name from Z-A
         // Hint: tương tự name-a-z nhưng đảo ngược
-        newProducts = [...products].sort((a, b) =>
+        newProducts = [...newProducts].sort((a, b) =>
           b.name.localeCompare(a.name),
         );
         break;
       case "newest":
         // TODO: @triet sort by newest (mới nhất trước)
         // Hint: cần thêm createdAt vào IProduct interface và sử dụng sort()
-        newProducts = [...products].sort(
+        newProducts = [...newProducts].sort(
           (a, b) =>
             new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
         );
@@ -144,7 +152,7 @@ export default function Category() {
       case "oldest":
         // TODO: @triet sort by oldest (cũ nhất trước)
         // Hint: tương tự newest nhưng đảo ngược
-        newProducts = [...products].sort(
+        newProducts = [...newProducts].sort(
           (a, b) =>
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
         );
@@ -152,7 +160,7 @@ export default function Category() {
       case "best-seller":
         // TODO: @triet sort by best seller
         // Hint: cần thêm isBestSeller vào IProduct interface và filter/sort
-        newProducts = [...products].filter(
+        newProducts = [...newProducts].filter(
           (product) => product.isBestSeller === true,
         );
         break;
@@ -203,7 +211,10 @@ export default function Category() {
           ))}
         </Flex>
 
-        <BrandName sortByBrand={sortByBrand} selectedBrandName = {selectedBrandName} />
+        <BrandName
+          sortByBrand={filterByBrand}
+          selectedBrandName={selectedBrandName}
+        />
 
         <div>
           <Row gutter={6}>
