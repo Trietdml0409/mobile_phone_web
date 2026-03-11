@@ -1,0 +1,988 @@
+import {IProduct} from "@/shared/types/common.types"
+
+const PRODUCT_DATA: IProduct[] = [
+  {
+    "id": 10,
+    "name": "PC RTX 3050 2023",
+    "price": 11000000,
+    "image": "https://file.hstatic.net/200000722513/file/7-gearvn-pc-gvn-intel-i3-3050-t8.png",
+    "createdAt": "2026-3-1",
+    "isBestSeller": true,
+    "brandName": "NVIDIA",
+    "liked": false,
+    "comments": [
+      {
+        "id": 1224853,
+        "content": "Máy này rất tốt",
+        "createdAt": "2026-3-1",
+        "author": "John Doe",
+        "authorAvatar": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 2228405,
+        "content": "Tôi thích máy này",
+        "createdAt": "2026-3-1",
+        "author": "Jane Doe",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "PC GTX 1050 2023",
+    "price": 10000000,
+    "image": "https://cdn.hstatic.net/products/200000420363/5888-5050_866c83a581f44117a7dcb6264f71490f_large.jpg",
+    "createdAt": "2026-3-1",
+    "isBestSeller": true,
+    "brandName": "NVIDIA",
+    "comments": [
+      {
+        "id": 20001,
+        "content": "Great product: PC GTX 1050 2023",
+        "createdAt": "2026-3-1",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "PC Ryzen 5 5600G 2023",
+    "price": 50000000,
+    "image": "https://cdn.hstatic.net/products/200000420363/screenshot_2_e5ef09c2fb354e1b86a804bbb10e02a0_large.png",
+    "createdAt": "2026-3-1",
+    "isBestSeller": false,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 30001,
+        "content": "Great product: PC Ryzen 5 5600G 2023",
+        "createdAt": "2026-3-1",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "PC Ryzen 7 5800H Gen 1",
+    "price": 45000000,
+    "image": "https://cdn.hstatic.net/products/200000420363/_new_-_nh-sp-web_60fb8f06edf64bb5968c786a5aa36734_large.png",
+    "createdAt": "2026-3-1",
+    "isBestSeller": false,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 40001,
+        "content": "Great product: PC Ryzen 7 5800H Gen 1",
+        "createdAt": "2026-3-1",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "PC Ryzen 9 5900HX Gen 2",
+    "price": 30000000,
+    "image": "https://product.hstatic.net/200000420363/product/ls27dg502eexxv-2_a4e1e2792a654f66923442db7a43084b_large.png",
+    "createdAt": "2026-3-1",
+    "isBestSeller": false,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 50001,
+        "content": "Great product: PC Ryzen 9 5900HX Gen 2",
+        "createdAt": "2026-3-1",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "PC Intel Core i9 12900K Elite",
+    "price": 35000000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK9kc8Lvcn2EVN_RFC92AuV3AeDHJY_MRW3w&s",
+    "createdAt": "2026-3-3",
+    "isBestSeller": true,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 60001,
+        "content": "Great product: PC Intel Core i9 12900K Elite",
+        "createdAt": "2026-3-3",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "PC Intel Core i7 12700F Creator Edition",
+    "price": 27000000,
+    "image": "https://cdn2.cellphones.com.vn/x/media/catalog/product/p/c/pc-cps-gaming-g13_1_.png",
+    "createdAt": "2026-3-5",
+    "isBestSeller": false,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 70001,
+        "content": "Great product: PC Intel Core i7 12700F Creator Edition",
+        "createdAt": "2026-3-5",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "PC Ryzen Threadripper Pro 5975WX Workstation",
+    "price": 60000000,
+    "image": "https://product.hstatic.net/1000129940/product/pc_aps_x_amd_ryzen_threadripper_pro_5975wx_7e00635c1e654bc19e14f2aead2cc0fb_master.png",
+    "createdAt": "2026-3-6",
+    "isBestSeller": true,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 80001,
+        "content": "Great product: PC Ryzen Threadripper Pro 5975WX Workstation",
+        "createdAt": "2026-3-6",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "PC Intel Core i5 12600K Gaming Rig",
+    "price": 22000000,
+    "image": "https://m.media-amazon.com/images/I/91M4ZSKfn8L.jpg",
+    "createdAt": "2026-3-7",
+    "isBestSeller": false,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 90001,
+        "content": "Great product: PC Intel Core i5 12600K Gaming Rig",
+        "createdAt": "2026-3-7",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "PC AMD Ryzen 3 5300G Entry Build",
+    "price": 15000000,
+    "image": "https://m.media-amazon.com/images/I/81n2SioeSHS._AC_UF894,1000_QL80_.jpg",
+    "createdAt": "2026-3-8",
+    "isBestSeller": true,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 100001,
+        "content": "Great product: PC AMD Ryzen 3 5300G Entry Build",
+        "createdAt": "2026-3-8",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "PC NVIDIA RTX 4060 Ti Creator Pro",
+    "price": 40000000,
+    "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/329/122/products/ap201-bk.jpg?v=1725521336987",
+    "createdAt": "2026-3-9",
+    "isBestSeller": true,
+    "brandName": "NVIDIA",
+    "comments": [
+      {
+        "id": 110001,
+        "content": "Great product: PC NVIDIA RTX 4060 Ti Creator Pro",
+        "createdAt": "2026-3-9",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "PC Intel Core i3 12100F Budget Edition",
+    "price": 12000000,
+    "image": "https://pcmarket.vn/media/product/10606_w.jpg",
+    "createdAt": "2026-3-10",
+    "isBestSeller": false,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 120001,
+        "content": "Great product: PC Intel Core i3 12100F Budget Edition",
+        "createdAt": "2026-3-10",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "PC AMD Ryzen 9 7950X Ultimate Gaming",
+    "price": 65000000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCp1ZyjCJB3Ck9bkkwxrJ312CVPixcislL_w&s",
+    "createdAt": "2026-3-11",
+    "isBestSeller": true,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 130001,
+        "content": "Great product: PC AMD Ryzen 9 7950X Ultimate Gaming",
+        "createdAt": "2026-3-11",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "PC AMD Radeon RX 6800 XT Enthusiast",
+    "price": 48000000,
+    "image": "https://i.redd.it/vzycr3cnwk761.jpg",
+    "createdAt": "2026-3-12",
+    "isBestSeller": false,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 140001,
+        "content": "Great product: PC AMD Radeon RX 6800 XT Enthusiast",
+        "createdAt": "2026-3-12",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "PC Intel Core i9 13900K Ultra",
+    "price": 55000000,
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS4YIm7OBsDyMYpgIdF861i7p2uOYkOY527TcnRrWmwSBFakfxCC4pw1CrPK7zI29r3jh15N3jnEHS9QaZgDlZ3zeeQEurKV4CdpZkVKf2advjlm8FRldQMwAOpXxqtDxrEyUsOHRc&usqp=CAc",
+    "createdAt": "2026-3-13",
+    "isBestSeller": true,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 150001,
+        "content": "Great product: PC Intel Core i9 13900K Ultra",
+        "createdAt": "2026-3-13",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "name": "PC NVIDIA GeForce RTX 4090 Ti Dream",
+    "price": 120000000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvU5xMs4qbFdzyHm4msTN2uulWAwAQP0VEzw&s",
+    "createdAt": "2026-3-14",
+    "isBestSeller": true,
+    "brandName": "NVIDIA",
+    "comments": [
+      {
+        "id": 160001,
+        "content": "Great product: PC NVIDIA GeForce RTX 4090 Ti Dream",
+        "createdAt": "2026-3-14",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "name": "PC Intel Core i5 13600KF Midrange",
+    "price": 24000000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbFCu1Kc9AZJKmStaqbkLh5dmG6GHZYYAxlg&s",
+    "createdAt": "2026-3-15",
+    "isBestSeller": false,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 170001,
+        "content": "Great product: PC Intel Core i5 13600KF Midrange",
+        "createdAt": "2026-3-15",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "name": "PC AMD Ryzen 7 7700X Performance",
+    "price": 32000000,
+    "image": "https://assets.msy.com.au/newsite/images/202303/source_img/Gaming-PCs-G7-Ultra-Ryzen-7-7700X-RTX-4070-TI-Gaming-PC-Powered-by-ASUS-14.webp",
+    "createdAt": "2026-3-16",
+    "isBestSeller": false,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 180001,
+        "content": "Great product: PC AMD Ryzen 7 7700X Performance",
+        "createdAt": "2026-3-16",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "name": "PC NVIDIA Quadro RTX 6000 Pro",
+    "price": 90000000,
+    "image": "https://imagecdn.jw.com.au/media/catalog/product/j/w/jw_proart_rtx_6000_pro_thumbv2.jpg?width=514&height=514&store=default&image-type=image",
+    "createdAt": "2026-3-17",
+    "isBestSeller": false,
+    "brandName": "NVIDIA",
+    "comments": [
+      {
+        "id": 190001,
+        "content": "Great product: PC NVIDIA Quadro RTX 6000 Pro",
+        "createdAt": "2026-3-17",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "name": "PC Intel Pentium Gold G7400 Budget",
+    "price": 8000000,
+    "image": "https://taqwaitbd.com/wp-content/uploads/2024/02/Desktop-01-1.webp",
+    "createdAt": "2026-3-18",
+    "isBestSeller": false,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 200001,
+        "content": "Great product: PC Intel Pentium Gold G7400 Budget",
+        "createdAt": "2026-3-18",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "name": "PC AMD Athlon 3000G Basic",
+    "price": 6000000,
+    "image": "https://cdn.mos.cms.futurecdn.net/EdnUGYCMk8rEwbPDufRSL8.jpg",
+    "createdAt": "2026-3-19",
+    "isBestSeller": false,
+    "brandName": "AMD",
+    "comments": [
+      {
+        "id": 210001,
+        "content": "Great product: PC AMD Athlon 3000G Basic",
+        "createdAt": "2026-3-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "name": "PC NVIDIA GeForce GTX 1660 Super Classic",
+    "price": 20000000,
+    "image": "https://cdn.mos.cms.futurecdn.net/zWEbQuy8dwh5NuVHwu7AA4-2000-80.jpg",
+    "createdAt": "2026-3-20",
+    "isBestSeller": false,
+    "brandName": "NVIDIA",
+    "comments": [
+      {
+        "id": 220001,
+        "content": "Great product: PC NVIDIA GeForce GTX 1660 Super Classic",
+        "createdAt": "2026-3-20",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 230,
+    "name": "PC Intel Core i7 14700F Future",
+    "price": 38000000,
+    "image": "https:///encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY9V0X0NqHh-zkCNzkc659TfAD2h6HBlQuvw&s",
+    "createdAt": "2026-3-21",
+    "isBestSeller": true,
+    "brandName": "Intel",
+    "comments": [
+      {
+        "id": 230001,
+        "content": "Great product: PC Intel Core i7 14700F Future",
+        "createdAt": "2026-3-21",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 240,
+    "name": "Logitech G502 Wireless Gaming Mouse",
+    "price": 1500000,
+    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTu7lglT98VU3jpTGBwtNV-dfhK4lZRshJTOoHhm7XBC6wKFO32oN0tgPfHMcXwThJTNrShwp0QENb3f8WXoWwKhSQfUKuuMaKu8ebeex4l38LmC_EviCmkr8hLOFFBWUJFpvlFeA&usqp=CAc",
+    "createdAt": "2026-3-22",
+    "isBestSeller": false,
+    "brandName": "Logitech",
+    "comments": [
+      {
+        "id": 240001,
+        "content": "Great product: Logitech G502 Wireless Gaming Mouse",
+        "createdAt": "2026-3-22",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 250,
+    "name": "7-in-1 USB-C Multiport Adapter",
+    "price": 900000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/778635-Product-0-I-638569617003677934_77cd10af-b9b4-4e1d-a2df-7aa9e62cb53c.jpg?v=1724625852",
+    "createdAt": "2026-3-23",
+    "isBestSeller": false,
+    "brandName": "Anker",
+    "comments": [
+      {
+        "id": 250001,
+        "content": "Great product: 7-in-1 USB-C Multiport Adapter",
+        "createdAt": "2026-3-23",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 260,
+    "name": "JBL Boombox 3 Bluetooth Speaker",
+    "price": 2500000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/597954-Product-0-I-638144834598903544.jpg?v=1678847130",
+    "createdAt": "2026-3-24",
+    "isBestSeller": true,
+    "brandName": "JBL",
+    "comments": [
+      {
+        "id": 260001,
+        "content": "Great product: JBL Boombox 3 Bluetooth Speaker",
+        "createdAt": "2026-3-24",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 270,
+    "name": "GTEK Storm 75 Gaming Keyboard",
+    "price": 3200000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/796064-Product-0-I-638720617805379891.jpg?v=1736465056",
+    "createdAt": "2026-3-25",
+    "isBestSeller": false,
+    "brandName": "Razer",
+    "comments": [
+      {
+        "id": 270001,
+        "content": "Great product: GTEK Storm 75 Gaming Keyboard",
+        "createdAt": "2026-3-25",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "name": "C290 Webcam",
+    "price": 1800000,
+    "image": "https://m.media-amazon.com/images/I/71eGb1FcyiL.jpg",
+    "createdAt": "2026-3-26",
+    "isBestSeller": false,
+    "brandName": "Logitech",
+    "comments": [
+      {
+        "id": 280001,
+        "content": "Great product: C290 Webcam",
+        "createdAt": "2026-3-26",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 290,
+    "name": "Wireless Router AX3000",
+    "price": 5500000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/671653-Product-0-I-638931604803391758.jpg?v=1757563745",
+    "createdAt": "2026-3-27",
+    "isBestSeller": true,
+    "brandName": "TP-Link",
+    "comments": [
+      {
+        "id": 290001,
+        "content": "Great product: Wireless Router AX3000",
+        "createdAt": "2026-3-27",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 300,
+    "name": "1TB NVMe SSD",
+    "price": 2500000,
+    "image": "https://m.media-amazon.com/images/I/713h+shZfQL.jpg",
+    "createdAt": "2026-3-28",
+    "isBestSeller": false,
+    "brandName": "Samsung",
+    "comments": [
+      {
+        "id": 300001,
+        "content": "Great product: 1TB NVMe SSD",
+        "createdAt": "2026-3-28",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 310,
+    "name": "4TB External HDD",
+    "price": 3500000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/397633-Product-0-I_1024x1024.jpg",
+    "createdAt": "2026-3-29",
+    "isBestSeller": false,
+    "brandName": "Western Digital",
+    "comments": [
+      {
+        "id": 310001,
+        "content": "Great product: 4TB External HDD",
+        "createdAt": "2026-3-29",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 320,
+    "name": "27-inch 4K Monitor",
+    "price": 15000000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiIC3LQOAetmCnFZYWF9P7T8oX0QRzp53MnA&s",
+    "createdAt": "2026-3-30",
+    "isBestSeller": true,
+    "brandName": "Dell",
+    "comments": [
+      {
+        "id": 320001,
+        "content": "Great product: 27-inch 4K Monitor",
+        "createdAt": "2026-3-30",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 330,
+    "name": "Noise-Cancelling Headset WH-1000XM4",
+    "price": 6000000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/477061-Product-0-I-637308364268258341_26472290-a9eb-477a-af6a-04e485a33e4d.jpg?v=1634081952",
+    "createdAt": "2026-3-31",
+    "isBestSeller": false,
+    "brandName": "Sony",
+    "comments": [
+      {
+        "id": 330001,
+        "content": "Great product: Noise-Cancelling Headset WH-1000XM4",
+        "createdAt": "2026-3-31",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 340,
+    "name": "USB Condenser Microphone",
+    "price": 2700000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/597885-Product-0-I-637963322578637741.jpg?v=1660699552",
+    "createdAt": "2026-4-1",
+    "isBestSeller": false,
+    "brandName": "Blue",
+    "comments": [
+      {
+        "id": 340001,
+        "content": "Great product: USB Condenser Microphone",
+        "createdAt": "2026-4-1",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 350,
+    "name": "Samsung Tab S9",
+    "price": 9000000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/655507-Product-0-I-638524494007632462.jpg?v=1717558858",
+    "createdAt": "2026-4-2",
+    "isBestSeller": true,
+    "brandName": "Samsung",
+    "comments": [
+      {
+        "id": 350001,
+        "content": "Great product: Samsung Tab S9",
+        "createdAt": "2026-4-2",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 360,
+    "name": "Iphone 12",
+    "price": 25000000,
+    "image": "https://www.mobileciti.com.au/media/catalog/product/d/s/dss_1_1_1.jpg?width=265&height=265&store=mobileciti&image-type=image",
+    "createdAt": "2026-4-3",
+    "isBestSeller": true,
+    "brandName": "Apple",
+    "comments": [
+      {
+        "id": 360001,
+        "content": "Great product: Iphone 12",
+        "createdAt": "2026-4-3",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 370,
+    "name": "Apple Smartwatch Series 10",
+    "price": 8000000,
+    "image": "https://www.costco.com.au/medias/sys_master/images/hcf/h23/273530776125470.jpg",
+    "createdAt": "2026-4-4",
+    "isBestSeller": true,
+    "brandName": "Apple",
+    "comments": [
+      {
+        "id": 370001,
+        "content": "Great product: Apple Smartwatch Series 10",
+        "createdAt": "2026-4-4",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 380,
+    "name": "Fast Charger 112W",
+    "price": 700000,
+    "image": "https://m.media-amazon.com/images/I/511-EeWe28L._AC_UF1000,1000_QL80_.jpg",
+    "createdAt": "2026-4-5",
+    "isBestSeller": false,
+    "brandName": "Anker",
+    "comments": [
+      {
+        "id": 380001,
+        "content": "Great product: Fast Charger 112W",
+        "createdAt": "2026-4-5",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 390,
+    "name": "20000mAh Power Bank",
+    "price": 1200000,
+    "image": "https://www.gadgets4geeks.com.au/WebRoot/Store/Shops/gadgets4geeks/60CA/0774/2A9A/964A/F444/C0A8/DA16/7EE8/xiaomi-20000mah-mi-power-bank-3-usb-type-c-18w-charger-white.jpg",
+    "createdAt": "2026-4-6",
+    "isBestSeller": false,
+    "brandName": "Xiaomi",
+    "comments": [
+      {
+        "id": 390001,
+        "content": "Great product: 20000mAh Power Bank",
+        "createdAt": "2026-4-6",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 400,
+    "name": "Deskjet 2820e Printer",
+    "price": 5500000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/667285-Product-0-I-638451968431989505.jpg?v=1709600109",
+    "createdAt": "2026-4-7",
+    "isBestSeller": false,
+    "brandName": "HP",
+    "comments": [
+      {
+        "id": 400001,
+        "content": "Great product: Deskjet 2820e Printer",
+        "createdAt": "2026-4-7",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 410,
+    "name": "Gaming Mousepad XXL",
+    "price": 450000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/581795-Product-0-I-637985840845848428.jpg?v=1662951426",
+    "createdAt": "2026-4-8",
+    "isBestSeller": false,
+    "brandName": "Corsair",
+    "comments": [
+      {
+        "id": 410001,
+        "content": "Great product: Gaming Mousepad XXL",
+        "createdAt": "2026-4-8",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 420,
+    "name": "Graphics Drawing Tablet",
+    "price": 3800000,
+    "image": "https://cdn-media.wacom.com/-/media/images/carousels/homepage-a-slots/2020/2020-image-redux/wacom-never-stop-learning-m-mobile.jpg?h=450&iar=0&w=726&rev=6165768b62154280b22301d493f2434e&hash=33C261B1CCD35432C72B56B37D5CBBAE",
+    "createdAt": "2026-4-9",
+    "isBestSeller": false,
+    "brandName": "Wacom",
+    "comments": [
+      {
+        "id": 420001,
+        "content": "Great product: Graphics Drawing Tablet",
+        "createdAt": "2026-4-9",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 430,
+    "name": "Ethernet Cable Cat6",
+    "price": 150000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70Ijub54aElBqZpx1MptjDYffD_0p03H-8g&s",
+    "createdAt": "2026-4-10",
+    "isBestSeller": false,
+    "brandName": "Belkin",
+    "comments": [
+      {
+        "id": 430001,
+        "content": "Great product: Ethernet Cable Cat6",
+        "createdAt": "2026-4-10",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 440,
+    "name": "Buds 3 Pro",
+    "price": 2200000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/776220-Product-0-I-638561819463124022.jpg?v=1720621462",
+    "createdAt": "2026-4-11",
+    "isBestSeller": true,
+    "brandName": "Samsung",
+    "comments": [
+      {
+        "id": 440001,
+        "content": "Great product: Buds 3 Pro",
+        "createdAt": "2026-4-11",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 450,
+    "name": "Quest 2 VR headset",
+    "price": 18000000,
+    "image": "https://www.bigw.com.au/medias/sys_master/images/images/hbb/h91/64311724212254.jpg",
+    "createdAt": "2026-4-12",
+    "isBestSeller": true,
+    "brandName": "Oculus",
+    "comments": [
+      {
+        "id": 450001,
+        "content": "Great product: Quest 2 VR headset",
+        "createdAt": "2026-4-12",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 460,
+    "name": "USB-C Docking Station",
+    "price": 4200000,
+    "image": "https://www.caldigit.com/wp-content/uploads/2019/11/USB-Dock_800.jpg",
+    "createdAt": "2026-4-13",
+    "isBestSeller": false,
+    "brandName": "CalDigit",
+    "comments": [
+      {
+        "id": 460001,
+        "content": "Great product: USB-C Docking Station",
+        "createdAt": "2026-4-13",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 470,
+    "name": "Smart Light Bulb",
+    "price": 500000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/722963-Product-0-I-638542852203000432.jpg?v=1718688609",
+    "createdAt": "2026-4-14",
+    "isBestSeller": false,
+    "brandName": "Philips",
+    "comments": [
+      {
+        "id": 470001,
+        "content": "Great product: Smart Light Bulb",
+        "createdAt": "2026-4-14",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 480,
+    "name": "2-Bay NAS Drive",
+    "price": 12000000,
+    "image": "https://m.media-amazon.com/images/I/71FUj2j7ReL.jpg",
+    "createdAt": "2026-4-15",
+    "isBestSeller": false,
+    "brandName": "Synology",
+    "comments": [
+      {
+        "id": 480001,
+        "content": "Great product: 2-Bay NAS Drive",
+        "createdAt": "2026-4-15",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 490,
+    "name": "Nintendo switch",
+    "price": 8000000,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg/500px-Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg",
+    "createdAt": "2026-4-16",
+    "isBestSeller": true,
+    "brandName": "Nintendo",
+    "comments": [
+      {
+        "id": 490001,
+        "content": "Great product: Nintendo switch",
+        "createdAt": "2026-4-16",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 500,
+    "name": "Minin smart Projector",
+    "price": 6500000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRerCjH7QOXgBYNDxcxbOJlC6yJU2IYU4nvKQ&s",
+    "createdAt": "2026-4-17",
+    "isBestSeller": false,
+    "brandName": "Epson",
+    "comments": [
+      {
+        "id": 500001,
+        "content": "Great product: Minin smart Projector",
+        "createdAt": "2026-4-17",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 510,
+    "name": "Fitness Tracker Charge 6",
+    "price": 3000000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/662613-Product-0-I-638314516214165397_2a5a6ef9-365e-41ff-ac79-ac5fc89679ed.jpg?v=1695854907",
+    "createdAt": "2026-4-18",
+    "isBestSeller": true,
+    "brandName": "Fitbit",
+    "comments": [
+      {
+        "id": 510001,
+        "content": "Great product: Fitness Tracker Charge 6",
+        "createdAt": "2026-4-18",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 520,
+    "name": "Smart Thermostat",
+    "price": 5600000,
+    "image": "https://i.ebayimg.com/images/g/-hoAAOSwzeddk9YK/s-l1200.jpg",
+    "createdAt": "2026-4-19",
+    "isBestSeller": false,
+    "brandName": "Nest",
+    "comments": [
+      {
+        "id": 520001,
+        "content": "Great product: Smart Thermostat",
+        "createdAt": "2026-4-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 530,
+    "name": "Drone DJI Mini",
+    "price": 22000000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/623786-Product-0-I-638325781204882218.jpg?v=1698704622",
+    "createdAt": "2026-4-20",
+    "isBestSeller": true,
+    "brandName": "DJI",
+    "comments": [
+      {
+        "id": 530001,
+        "content": "Great product: Drone DJI Mini",
+        "createdAt": "2026-4-20",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 540,
+    "name": "Portable SSD 2TB",
+    "price": 4500000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/483261-Product-0-I-637418328137216513.jpg?v=1606196484",
+    "createdAt": "2026-4-21",
+    "isBestSeller": false,
+    "brandName": "SanDisk",
+    "comments": [
+      {
+        "id": 540001,
+        "content": "Great product: Portable SSD 2TB",
+        "createdAt": "2026-4-21",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  }
+]
+
+export default PRODUCT_DATA;
+
+    
