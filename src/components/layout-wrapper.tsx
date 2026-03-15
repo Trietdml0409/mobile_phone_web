@@ -13,12 +13,15 @@ export default function LayoutWrapper({
 }) {
   const pathname = usePathname();
   const shouldShowFooter = !pathname.startsWith("/checkouts");
+  const shouldShowHeader = !pathname.startsWith("/checkouts");
+  const shouldShowBreadcrumb = pathname !== "/" && !pathname.startsWith("/checkouts");
+
 
   return (
     <>
       {/* <NavigationTracker /> */}
-      <Header />
-      <AppBreadcrumb />
+      {shouldShowHeader && <Header />}
+      {shouldShowBreadcrumb && <AppBreadcrumb />}
       {children}
       {shouldShowFooter && <Footer />}
     </>

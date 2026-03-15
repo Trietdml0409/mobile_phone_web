@@ -30,7 +30,7 @@ export default function CatergoryProductCard({
     style={{
     height: "100%",
     width: "100%",
-    borderRadius: "6px",
+    borderRadius: "10px",
     cursor: "pointer",
     display:"flex",
     alignItems: "center",
@@ -88,6 +88,7 @@ export default function CatergoryProductCard({
           size="small"
           icon={<ShoppingCartOutlined />}
           style={
+            
             !isProductInCart
               ? { backgroundColor: "royalblue", color: "white" }
               : { backgroundColor: "red", color: "white" }

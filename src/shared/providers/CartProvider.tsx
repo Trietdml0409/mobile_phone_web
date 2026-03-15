@@ -15,10 +15,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const [api, contextHolder] = notification.useNotification();
 
-  const openNotification = (placement: NotificationPlacement) => {
+  const addNotification = (placement: NotificationPlacement) => {
     api.info({
       title: `Product Added`,
       description: <Context.Consumer>{() => `Check your cart!`}</Context.Consumer>,
+      placement,
+    });
+  };
+
+  const removeNotification = (placement: NotificationPlacement) => {
+    api.info({
+      title: `Product Removed`,
+      description: <Context.Consumer>{() => `Product succesfully removed!`}</Context.Consumer>,
       placement,
     });
   };
@@ -72,7 +80,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
 
   const addProductToCart = (product: IProduct, quantity: number = 1) => {
-    openNotification('bottomRight')
+    addNotification('bottomRight')
 
     const productKey = product.id.toString();
     console.log("xxxx productKey", productKey, product);
@@ -101,6 +109,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const removeProductFromCart = (productId: number) => {
+    removeNotification('bottomRight') 
     const productKey = productId.toString();
     const newCartProducts: CartProductState = { ...cartProducts };
     delete newCartProducts[productKey]; // delete the product from the cart

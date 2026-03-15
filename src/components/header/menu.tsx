@@ -24,14 +24,6 @@ const CategoriesButton = () => {
     {
       key: "2",
       label: (
-        <Link href="/product-details" className="cursor-pointer">
-          <CarOutlined /> Product Details
-        </Link>
-      ),
-    },
-    {
-      key: "3",
-      label: (
         <Link href="/liked" className="cursor-pointer">
           <HeartOutlined /> Liked Products
         </Link>

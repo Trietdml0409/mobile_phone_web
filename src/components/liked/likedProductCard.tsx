@@ -23,7 +23,7 @@ export default function LikedProductCard({ product }: { product: IProduct }) {
     style={{
     height: "100%",
     width: "100%",
-    borderRadius: "6px",
+    borderRadius: "10px",
     cursor: "pointer",
     display:"flex",
     alignItems: "center",

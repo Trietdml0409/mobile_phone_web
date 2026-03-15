@@ -15,6 +15,7 @@ import {
 } from "antd";
 
 
+
 import { useRouter } from "next/navigation"; // for App Router
 import { LoadingOutlined } from "@ant-design/icons";
 import ListCardProducts from "@/components/checkouts/listCartProducts";
@@ -101,6 +102,7 @@ const ward = (
 
 export default function Payment() {
   const screens = useBreakpoint();
+  const router = useRouter();
 
   //  sm < md < lg < xl < xxl.
   //  xs: independent
@@ -260,7 +262,7 @@ export default function Payment() {
                   <Button
                     type="primary"
                     htmlType="submit"
-                    style={{ width: "100%" }}
+                    style={{ width: "100%",backgroundColor:"green" }}
                   >
                     Submit
                   </Button>
@@ -268,7 +270,7 @@ export default function Payment() {
               </Col>
             </Row>
             <Col span="24">
-            <Button type="primary" style={{ width: "100%" }}>Return to card</Button>
+            <Button type="primary" onClick={()=>router.push("/category")} style={{ width: "100%",height:'50px' } }>Continue shopping</Button>
             </Col>
           </Form>
           
@@ -298,7 +300,7 @@ export default function Payment() {
           }}
           style={{}}
         >
-          <ListCardProducts />
+          <ListCardProducts  />
         </Col>
       </Row>
     </Flex>

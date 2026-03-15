@@ -192,7 +192,7 @@ export default function Favourite() {
               ))}
             </Flex>
 
-            <Row gutter={4} style={{ paddingTop: 12 }}>
+            <Row gutter={[16,16]} style={{ paddingTop: 12 }}>
               {localLikedProducts.map((product: IProduct) => (
                 <Col key={product.id} xs={12} sm={8} md={6} lg={4}>
                   <LikedProductCard product={product} />

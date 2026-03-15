@@ -217,7 +217,7 @@ export default function Category() {
         />
 
         <div>
-          <Row gutter={6}>
+          <Row gutter={[16, 16]}>
             {paginatedProducts.map((product: IProduct) => (
               <Col xs={12} sm={8} md={6} lg={4} key={product.id}>
                 <CatergoryProductCard product={product} />
@@ -231,6 +231,10 @@ export default function Category() {
               total={localProducts.length}
               onChange={(page) => setCurrentPage(page)}
               showSizeChanger={false}
+              style = {{
+                display: "flex",
+                justifyContent: "center"
+              }}
             />
           </div>
         </div>
