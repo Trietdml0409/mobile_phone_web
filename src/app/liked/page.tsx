@@ -1,5 +1,4 @@
 "use client";
-import Header from "@/components/header";
 import { useContext, useEffect, useState } from "react";
 import { LikedContext } from "@/shared/context/likedContext";
 import { Flex, Button, Empty, Typography, Row, Col } from "antd";
@@ -180,7 +179,7 @@ export default function Favourite() {
                   onClick={() => handleSortBy(option.value)}
                   style={{
                     backgroundColor:
-                      selectedSortBy === option.value ? "royalblue" : "white",
+                      selectedSortBy === option.value ? "#e21d2b" : "white",
                     color: selectedSortBy === option.value ? "white" : "black",
                     border: "1px solid rgb(224, 224, 224)",
                     borderRadius: "6px",

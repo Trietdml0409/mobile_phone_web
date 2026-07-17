@@ -1,181 +1,185 @@
 "use client";
 
-import Banner from "@/components/home/banner"; //$ is src
-import Header from "@/components/header";
+import Banner from "@/components/home/banner";
 import Contents from "@/components/home/contents";
-import { useEffect, useState } from "react";
 import MessageBanner from "@/components/MessageBanner";
-import { useProduct } from "@/shared/hooks/useProducts";
-import { Card, Col, Flex, Row, Grid } from "antd";
-import { IProduct } from "@/shared/types/common.types";
 import SegmentDiscount from "@/components/home/segmentedDiscount/segmentDiscount";
-// TODO: @triet import useState và useEffect từ react
-// TODO: @triet import Button và Input từ antd để sử dụng trong các bài tập
-
-const { useBreakpoint } = Grid;
+import Blog from "@/components/blog/blog";
+import { useProduct } from "@/shared/hooks/useProducts";
+import { IProduct } from "@/shared/types/common.types";
+import { Col, Row } from "antd";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const screens = useBreakpoint();
-  const isSmallScreen = screens.xs || (screens.sm && !screens.md);
-
-  // TODO: @triet tạo state để đếm số lượt truy cập trang (visitCount)
   const [visitCount, setVisitCount] = useState<number>(0);
   const [localProducts, setLocalProducts] = useState<IProduct[]>([]);
-  //get the information from useProduct hook
   const { products } = useProduct();
 
   useEffect(() => {
     setLocalProducts(products);
-  }, [products]); //dependency is products
+  }, [products]);
 
-  // TODO: @triet tạo state để hiển thị/ẩn một thông báo chào mừng (showWelcome)
-  // Hint: const [showWelcome, setShowWelcome] = useState<boolean>(true);
-
-  // TODO: @triet tạo state để lưu tên người dùng (userName)
-  // Hint: const [userName, setUserName] = useState<string>("");
-  const [userName, setUserName] = useState<string>("");
-
-  // TODO: @triet tạo hàm handleToggleWelcome để toggle showWelcome state
-  // Hint: const handleToggleWelcome = () => { setShowWelcome(!showWelcome); };
-
-  // TODO: @triet tạo hàm handleChangeUserName để cập nhật userName
-  // Hint: const handleChangeUserName = (name: string) => { setUserName(name); };
-
-  //Use effect to audit the visit times
   useEffect(() => {
-    // function to increase visitCount
-    // const newVisitCount = visitCount + 1;
-    // setVisitCount(newVisitCount);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setVisitCount((prev) => prev + 1);
-  }, []); // [] = empty dependency array = run only once when the component mounts
-
-  // visitCount: 5 => show message: "Xin chào, bạn đã truy cập trang này 5 lần"
+    setVisitCount((previousCount) => previousCount + 1);
+  }, []);
 
   return (
-    <div
-      className="app"
+    <main
       style={{
-        position: "relative",
         minHeight: "100vh",
         width: "100%",
-        backgroundColor: "white",
-        /* remove general padding so header can span full width */
-        padding: "0",
-        paddingBottom: "50px",
+        backgroundColor: "#f3f5f7",
+        padding: "24px 16px 56px",
       }}
     >
-      <div style={{ padding: "10px" }}>
-        <Row gutter={[0, 10]}>
-          {/* TODO: @triet hiển thị thông báo chào mừng nếu showWelcome === true */}
-          {/* Hint: sử dụng conditional rendering với {showWelcome && <div>...</div>} */}
-          {/* TODO: @triet thêm Button để đóng thông báo chào mừng (gọi handleToggleWelcome) */}
+      <div style={{ maxWidth: "1320px", margin: "0 auto" }}>
+        <section
+          style={{
+            backgroundColor: "white",
+            borderRadius: "12px",
+            padding: "12px",
+            marginBottom: "24px",
+            boxShadow: "0 4px 18px rgba(20, 33, 61, 0.07)",
+            overflow: "hidden",
+          }}
+        >
+          <Banner />
+        </section>
 
-          {/* TODO: @triet hiển thị visitCount ở đâu đó trên trang */}
-          {/* Ví dụ: <p>Bạn đã truy cập trang này {visitCount} lần</p> */}
+        <section
+          style={{
+            backgroundColor: "white",
+            borderRadius: "12px",
+            padding: "24px",
+            marginBottom: "24px",
+            boxShadow: "0 4px 18px rgba(20, 33, 61, 0.07)",
+          }}
+        >
+          <div
+            style={{
+              borderLeft: "7px solid #e51d2a",
+              paddingLeft: "16px",
+              marginBottom: "22px",
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "clamp(26px, 3vw, 34px)",
+                fontWeight: 900,
+                color: "#151515",
+                margin: 0,
+                textTransform: "uppercase",
+              }}
+            >
+              Store policies
+            </h2>
+            <p style={{ color: "#6b7280", fontSize: "16px", margin: "5px 0 0" }}>
+              Warranty, installation and delivery information
+            </p>
+          </div>
+          <Blog />
+        </section>
 
-          {/* TODO: @triet thêm một input field để nhập userName */}
-          {/* TODO: @triet hiển thị "Xin chào, {userName}!" nếu userName không rỗng */}
-          {/* Hint: sử dụng conditional rendering */}
-          <Col span={24}>
-            <Row>
-              <Col span={24}>
-                <Banner />
-              </Col>
-            </Row>
-          </Col>
+        <section
+          style={{
+            backgroundColor: "white",
+            borderRadius: "12px",
+            padding: "24px",
+            marginBottom: "24px",
+            boxShadow: "0 4px 18px rgba(20, 33, 61, 0.07)",
+          }}
+        >
+          <div
+            style={{
+              borderLeft: "7px solid #e51d2a",
+              paddingLeft: "16px",
+              marginBottom: "22px",
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "clamp(26px, 3vw, 34px)",
+                fontWeight: 900,
+                color: "#151515",
+                margin: 0,
+                textTransform: "uppercase",
+              }}
+            >
+              Discount
+            </h2>
+            <p style={{ color: "#6b7280", fontSize: "16px", margin: "5px 0 0" }}>
+              Limited offers and special prices selected for you
+            </p>
+          </div>
 
-          <Col span={24}>
-            <Row gutter={16}>
-              {[
-                "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_1_master.jpg?v=6221",
-                "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_2_master.jpg?v=6221",
-                "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_3_master.jpg?v=6221",
-                "https://theme.hstatic.net/200000420363/1001333448/14/banner_home_4_master.jpg?v=6221",
-              ].map((source, index) => (
-                <Col span={isSmallScreen ? 12 : 6} key={index}>
-                  <Card
-                    styles={{ body: { padding: 0 } }}
-                    style={{ border: "none", overflow: "hidden" }}
-                    hoverable
-                  >
-                    <div>
-                      <img
-                        style={{
-                          width: "100%",
-                          display: "block",
-                        }}
-                        src={source}
-                      />
-                    </div>
-                  </Card>
+          <img
+            src="https://file.hstatic.net/200000420363/file/flash-sale-banner-cho-nh_m-hot-promotion-copy.png"
+            alt="Flash sale"
+            style={{
+              width: "100%",
+              display: "block",
+              borderRadius: "8px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <SegmentDiscount />
+        </section>
+
+        <section
+          style={{
+            backgroundColor: "white",
+            borderRadius: "12px",
+            padding: "24px",
+            marginBottom: "24px",
+            boxShadow: "0 4px 18px rgba(20, 33, 61, 0.07)",
+          }}
+        >
+          <div
+            style={{
+              borderLeft: "7px solid #e51d2a",
+              paddingLeft: "16px",
+              marginBottom: "22px",
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "clamp(26px, 3vw, 34px)",
+                fontWeight: 900,
+                color: "#151515",
+                margin: 0,
+                textTransform: "uppercase",
+              }}
+            >
+              Best sellers
+            </h2>
+            <p style={{ color: "#6b7280", fontSize: "16px", margin: "5px 0 0" }}>
+              Popular products chosen by our customers
+            </p>
+          </div>
+
+          <Row gutter={[16, 16]}>
+            {localProducts
+              .filter((product: IProduct) => product.isBestSeller)
+              .map((product: IProduct) => (
+                <Col key={product.id} xs={12} sm={8} lg={4}>
+                  <Contents product={product} />
                 </Col>
               ))}
-            </Row>
-          </Col>
+          </Row>
+        </section>
 
-          <Col span={24}>
-            {/*Discount title*/}
-            <Row>
-              <p
-                style={{
-                  fontWeight: "bold",
-                  fontSize: "20px",
-                  color: "royalblue",
-                }}
-              >
-                Discount
-              </p>
-            </Row>
-          </Col>
-
-          <Col span={24}>
-            {/*Discount */}
-            <Row>
-              <div style={{ padding: "10px" }}>
-                <img src="https://file.hstatic.net/200000420363/file/flash-sale-banner-cho-nh_m-hot-promotion-copy.png" />
-              </div>
-
-              <SegmentDiscount />
-            </Row>
-          </Col>
-
-          <Col span={24}>
-            {/*Best seller title*/}
-            <Row>
-              <p
-                style={{
-                  fontWeight: "bold",
-                  fontSize: "20px",
-                  color: "royalblue",
-                }}
-              >
-                Best Seller
-              </p>
-            </Row>
-          </Col>
-
-          <Col span={24}>
-            {/*Best seller */}
-            <Row gutter={8}>
-              {localProducts
-                .filter((product: IProduct) => product.isBestSeller)
-                .map((product: IProduct) => (
-                  <Col key={product.id} span={isSmallScreen ? 8 : 4}>
-                    <Contents product={product} />
-                  </Col>
-                ))}
-            </Row>
-          </Col>
-
-          {/* TODO: @triet thêm một section hiển thị danh sách các tính năng nổi bật */}
-          {/* Tạo mảng features: ["Free Shipping", "24/7 Support", "Best Price"] */}
-          {/* Sử dụng map() để render danh sách này */}
-          {/* Hint: features.map((feature, index) => <div key={index}>...</div>) */}
-
+        <section
+          style={{
+            backgroundColor: "white",
+            borderRadius: "12px",
+            padding: "20px 24px",
+            boxShadow: "0 4px 18px rgba(20, 33, 61, 0.07)",
+          }}
+        >
           <MessageBanner visitCount={visitCount} />
-        </Row>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }

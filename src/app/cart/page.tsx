@@ -5,7 +5,6 @@ import { CartContext } from "@/shared/context/cartContext";
 import { useProduct } from "@/shared/hooks/useProducts";
 import { IProduct } from "@/shared/types/common.types";
 import Link from "next/link";
-import Header from "@/components/header";
 import { Button, message, Card, Row, Col, Typography, Empty, Flex } from "antd";
 import { ClearOutlined, ShoppingOutlined } from "@ant-design/icons";
 import CartProductCard from "@/components/cart/cartProductCard";
@@ -160,7 +159,7 @@ export default function CartPage() {
                 <Text strong style={{ fontSize: "16px" }}>
                   Total:
                 </Text>
-                <Text strong style={{ fontSize: "18px", color: "#1890ff" }}>
+                <Text strong style={{ fontSize: "18px", color: "#e21d2b" }}>
                   {(totalPrice * 1.1).toLocaleString()} VND
                 </Text>
               </div>

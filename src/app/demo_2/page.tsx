@@ -55,7 +55,7 @@ function CardComponent({person,handlePersonClicked,personClicked,handleLikedPers
         <p>Name: {person.name}</p>
         <p>Age: {person.age}</p>
         <p>Id: {person.id}</p>
-        <Button onClick={()=>handlePersonClicked(person.name)} style={{...(person.name===personClicked ? {color:"white",background:"blue"}:{} )}}>Clicked Here</Button>
+        <Button onClick={()=>handlePersonClicked(person.name)} style={{...(person.name===personClicked ? {color:"white",background:"#e21d2b"}:{} )}}>Clicked Here</Button>
         <Button onClick={()=>handleLikedPerson(person.name)} >  {likedPersons.includes(person.name) ? <HeartFilled style={{ color: "red" }} /> : <HeartOutlined />} </Button>
       </Card>
     </>

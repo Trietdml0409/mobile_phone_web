@@ -1,23 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 
 import React from "react";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "./globals.css";
-import { CartProvider } from "@/shared/providers/CartProvider";
 import { AppProvider } from "@/shared/providers/AppProvider";
-import { BreadcrumbProvider } from "@/shared/providers/BreadcrumbProvider";
 import LayoutWrapper from "@/components/layout-wrapper";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "TechGear Pro",
@@ -32,15 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <AntdRegistry>
-          <BreadcrumbProvider>
-            <AppProvider>
-              <LayoutWrapper>{children}</LayoutWrapper>
-            </AppProvider>
-          </BreadcrumbProvider>
+          <AppProvider>
+            <LayoutWrapper>{children}</LayoutWrapper>
+          </AppProvider>
         </AntdRegistry>
       </body>
     </html>

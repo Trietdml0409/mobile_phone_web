@@ -73,7 +73,7 @@ export default function CartProductCard({ product }: CartProductCardProps) {
           </Title>
           {/*This is Product Price*/}
           <Text
-            style={{ fontSize: "16px", fontWeight: "bold", color: "#1890ff" }}
+            style={{ fontSize: "16px", fontWeight: "bold", color: "#e21d2b" }}
           >
             {product.price.toLocaleString()} VND
           </Text>

@@ -152,8 +152,11 @@ export default function Payment() {
           }}
           style={{
             height: "100%",
-            color: "blueviolet",
-            backgroundColor: "rgba(128,128,128,0.1)",
+            color: "#171717",
+            backgroundColor: "#fafafa",
+            border: "1px solid #e4e4e4",
+            borderRadius: "10px",
+            padding: "24px",
           }}
         >
           {!isSmallScreen && (
@@ -173,7 +176,7 @@ export default function Payment() {
 
             
               <Col span={24}>
-                <p style={{fontSize: "20px", color: "royalblue" }}>
+                <p style={{fontSize: "20px", color: "#e21d2b", fontWeight: "bold" }}>
                   Delivery information
                 </p>
               </Col>
@@ -250,7 +253,7 @@ export default function Payment() {
               <Col span="12" style={{display:"flex", justifyContent:"flex-start"}}>{ward}</Col>
               
               <Col span={24}>
-                <p style={{ fontSize: "20px", color: "royalblue" }}>
+                <p style={{ fontSize: "20px", color: "#e21d2b", fontWeight: "bold" }}>
                   Payment Method
                 </p>
               </Col>
@@ -262,7 +265,7 @@ export default function Payment() {
                   <Button
                     type="primary"
                     htmlType="submit"
-                    style={{ width: "100%",backgroundColor:"green" }}
+                    style={{ width: "100%", backgroundColor: "#e21d2b" }}
                   >
                     Submit
                   </Button>

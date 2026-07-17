@@ -1,6 +1,5 @@
 "use client";
 
-import Header from "@/components/header";
 import { Button, Col, Flex, Row, Pagination } from "antd";
 import { useContext, useEffect, useState } from "react";
 import { IProduct } from "@/shared/types/common.types";
@@ -198,7 +197,7 @@ export default function Category() {
               onClick={() => handleSortBy(option.value)}
               style={{
                 backgroundColor:
-                  selectedSortBy === option.value ? "royalblue" : "white",
+                  selectedSortBy === option.value ? "#e21d2b" : "white",
                 color: selectedSortBy === option.value ? "white" : "black",
 
                 border: "1px solid rgb(224, 224, 224)",

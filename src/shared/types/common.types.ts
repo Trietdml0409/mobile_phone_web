@@ -37,3 +37,19 @@ export interface CartProduct {
 export interface CartProductState {
   [key: string]: CartProduct;
 }
+
+export interface BlogBody {
+  [headerName: string]: {
+    content: string;
+  };
+}
+
+export interface IBlog {
+  id: number;
+  title: string;
+  seo: string;
+  Published_date: string;
+  summary: string;
+  image: string;
+  body: BlogBody[];
+}

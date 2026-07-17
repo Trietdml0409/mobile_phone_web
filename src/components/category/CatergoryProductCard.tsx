@@ -71,7 +71,7 @@ export default function CatergoryProductCard({
           fontSize: "100%",
           fontWeight: "bold",
           textAlign: "center",
-          color: "rosybrown",
+          color: "#e21d2b",
         }}
       >
         {/*Changing the currency to local string */}
@@ -90,8 +90,8 @@ export default function CatergoryProductCard({
           style={
             
             !isProductInCart
-              ? { backgroundColor: "royalblue", color: "white" }
-              : { backgroundColor: "red", color: "white" }
+              ? { backgroundColor: "#e21d2b", color: "white" }
+              : { backgroundColor: "#151515", color: "white" }
           }
           onClick={(e) => {
             e.stopPropagation();

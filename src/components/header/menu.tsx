@@ -3,7 +3,7 @@ import type { MenuProps } from "antd";
 import { Dropdown,Grid,Flex } from "antd";
 import { Button } from "antd";
 import Link from "next/link";
-import { HeartOutlined, CarOutlined, MenuOutlined, ShopOutlined } from "@ant-design/icons";
+import { HeartOutlined, MenuOutlined, ShopOutlined } from "@ant-design/icons";
 
 const { useBreakpoint } = Grid
 
@@ -34,27 +34,29 @@ const CategoriesButton = () => {
   return (
 
       <Dropdown  trigger={["click"]} menu={{ items }}>
-        <div style={{width:"100%",height:"60%"}}>
+        <div style={{width:"100%"}}>
         <Button 
-        type={"text"}
         style={{
-          height: "100%",
+          height: isSmallScreen ? "42px" : "46px",
           width: "100%", 
-          color:"white",
+          color: isSmallScreen ? "#151515" : "white",
+          backgroundColor: isSmallScreen ? "#f3f3f3" : "#151515",
+          border: "none",
           display:"flex",
           justifyContent:"center",
           fontWeight: 600,
-          fontSize:"90%"
+          fontSize:"90%",
+          borderRadius: "6px",
         }}>
           {isSmallScreen && (
             <Flex vertical justify={"center"} align="center">
-              <MenuOutlined style={{fontSize:"30px"}} />
+              <MenuOutlined style={{fontSize:"23px"}} />
             </Flex>
             )}
             {!isSmallScreen && (
             <Flex gap={"small"} justify={"center"} align={"center"}>
               <MenuOutlined style={{fontSize:"20px"}} />
-              <p style={{fontSize:"15px"}}>Menu</p>
+              <p style={{fontSize:"15px", margin: 0}}>Product categories</p>
             </Flex>
             )}
 

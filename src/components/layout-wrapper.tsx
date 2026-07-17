@@ -2,9 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Footer from "./footer";
-// import { NavigationTracker } from "./NavigationTracker";
 import Header from "./header";
-import AppBreadcrumb from "./breadcrumb";
 
 export default function LayoutWrapper({
   children,
@@ -14,15 +12,13 @@ export default function LayoutWrapper({
   const pathname = usePathname();
   const shouldShowFooter = !pathname.startsWith("/checkouts");
   const shouldShowHeader = !pathname.startsWith("/checkouts");
-  const shouldShowBreadcrumb = pathname !== "/" && !pathname.startsWith("/checkouts");
-
 
   return (
     <>
-      {/* <NavigationTracker /> */}
       {shouldShowHeader && <Header />}
-      {shouldShowBreadcrumb && <AppBreadcrumb />}
-      {children}
+      <div className={pathname === "/" ? "site-home" : "site-page"}>
+        {children}
+      </div>
       {shouldShowFooter && <Footer />}
     </>
   );

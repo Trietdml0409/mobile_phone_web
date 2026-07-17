@@ -20,20 +20,60 @@ export default function Cart() {
       justify={"center"}
       align={"center"}
       onClick={() => router.push("/cart")}
-      style={{cursor:"pointer"}}
+      style={{cursor:"pointer", color: "#151515"}}
     >
-      <ShoppingCartOutlined style={{ fontSize: 30, color: "white" }} />
-      {isSmallScreen && totalQuantityInCart > 0 && (
-        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center min-w-[30%] min-h-[50%]">
-          {totalQuantityInCart > 99 ? "99+" : totalQuantityInCart}
-        </span>
-      )}
-      {!isSmallScreen && totalQuantityInCart > 0 && (
-        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center min-w-[30%] min-h-[50%]">
-          {totalQuantityInCart > 99 ? "99+" : totalQuantityInCart}
-        </span>
-      )}
-      {!isSmallScreen && <p style={{ fontWeight: "bold" }}>Cart</p>}
+      <Flex
+  gap={1}
+  justify="center"
+  align="center"
+  onClick={() => router.push("/cart")}
+  style={{
+    position: "relative",
+    cursor: "pointer",
+    color: "#151515",
+  }}
+>
+  <ShoppingCartOutlined
+    style={{
+      fontSize: "40px",
+      color: "#151515",
+      marginRight: "10px"
+    }}
+  />
+
+  {totalQuantityInCart > 0 && (
+    <span
+      style={{
+        position: "absolute",
+        top: "-5px",
+        right: "-10px",
+        minWidth: "20px",
+        height: "20px",
+        padding: "0 10px",
+        borderRadius: "50px",
+        backgroundColor: "#e21d2b",
+        color: "white",
+        fontSize: "12px",
+        fontWeight: "bold",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {totalQuantityInCart > 99 ? "99+" : totalQuantityInCart}
+    </span>
+  )}
+
+  {!isSmallScreen && (
+    <p
+      style={{
+        fontSize: "14px", fontWeight: "bold", margin: "3px 0 0" 
+      }}
+    >
+      Cart
+    </p>
+  )}
+</Flex>
     </Flex>
   );
 }

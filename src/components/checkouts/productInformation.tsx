@@ -15,7 +15,7 @@ export default function ProductInformation(){
         <div style={{border: "2px solid rgba(128, 128, 128, 0.3)"}}>
             <Flex justify="space-between" align="center" style={{padding:"10px"}}>
                 <div >
-                    <p style={{fontSize:"20px",color:"royalblue"}} onClick={()=> setIsDisplayInfo(!isDisplayInfo)}> <ShoppingCartOutlined style={{ marginRight: "8px" }} />Here is the information</p>
+                    <p style={{fontSize:"20px",color:"#e21d2b",fontWeight:"bold"}} onClick={()=> setIsDisplayInfo(!isDisplayInfo)}> <ShoppingCartOutlined style={{ marginRight: "8px" }} />Here is the information</p>
 
                 </div>
                 <p style={{ fontSize:"20px",color:"black",fontWeight: "bold"}}>Price</p>

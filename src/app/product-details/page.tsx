@@ -2,11 +2,9 @@
 
 import ProductImage from "@/components/category/images_product";
 import ProductInformation from "@/components/category/information";
-import Header from "@/components/header";
-import { Flex, Skeleton, Grid, Row, Col } from "antd";
+import { Skeleton, Grid, Row, Col } from "antd";
 import { useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
-import { IProduct } from "@/shared/types/common.types";
+import { useState } from "react";
 import { useProductDetail } from "@/shared/hooks/useProductDetail";
 
 // TODO: @triet import useSearchParams từ next/navigation để lấy productId từ URL

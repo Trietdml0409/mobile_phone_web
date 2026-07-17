@@ -38,7 +38,7 @@ export default function BrandName({sortByBrand,selectedBrandName}:{sortByBrand(b
             <Flex style={{ flexWrap: "wrap", gap: "8px" }}>
                 {productBrands.map((brand:brandName,index: number)=>(
                     <Button key={index} onClick={()=> sortByBrand(brand.name)} style={{
-                        backgroundColor: selectedBrandName === brand.name ? "royalblue" : "white",
+                        backgroundColor: selectedBrandName === brand.name ? "#e21d2b" : "white",
                         color: selectedBrandName === brand.name ? "white" : "black",
                     }} >{brand.name}</Button>
                 ))}

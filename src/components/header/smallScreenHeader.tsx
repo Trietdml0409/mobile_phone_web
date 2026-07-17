@@ -1,59 +1,46 @@
 "use client";
-import { Button, Col, Row } from "antd";
+import { Col, Row } from "antd";
 import SearchBox from "./search_box";
 import Cart from "./cart";
 import CategoriesButton from "./menu";
+import Account from "./account";
 import { useRouter } from "next/navigation"; //
 
 export default function SmallScreenHeader() {
   const router = useRouter();
   return (
-    <Row style={{ height: 50, backgroundColor: "lightblue", width: "100%" }}>
-      <Col
-        span={4}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <img
-          onClick={() => router.push("/")}
-          src="https://upload.wikimedia.org/wikipedia/vi/f/f6/Emblem_of_Da_Nang_City.png"
-          style={{ height: "40px", objectFit: "contain", cursor: "pointer"}}
-          
-        />
-      </Col>
-      <Col
-        span={13}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <SearchBox />
-      </Col>
-      <Col
-        span={3}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Cart />
-      </Col>
-      <Col
-        span={4}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <CategoriesButton />
-      </Col>
-    </Row>
+    <header
+      style={{
+        backgroundColor: "white",
+        borderTop: "4px solid #e51d2a",
+        borderBottom: "1px solid #e8e8e8",
+        padding: "12px",
+      }}
+    >
+      <Row align="middle" gutter={8}>
+        <Col span={9}>
+          <div onClick={() => router.push("/")} style={{ cursor: "pointer" }}>
+            <div style={{ fontSize: "19px", fontWeight: 900, color: "#151515" }}>
+              TECH<span style={{ color: "#e51d2a" }}>GEAR</span>
+            </div>
+            <div style={{ fontSize: "9px", letterSpacing: "2px", color: "#687086" }}>
+              PRO STORE
+            </div>
+          </div>
+        </Col>
+        <Col span={5}>
+          <Account />
+        </Col>
+        <Col span={5}>
+          <Cart />
+        </Col>
+        <Col span={5}>
+          <CategoriesButton />
+        </Col>
+        <Col span={24} style={{ marginTop: "12px" }}>
+          <SearchBox />
+        </Col>
+      </Row>
+    </header>
   );
 }

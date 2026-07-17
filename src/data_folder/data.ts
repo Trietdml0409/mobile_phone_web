@@ -913,7 +913,7 @@ const PRODUCT_DATA: IProduct[] = [
     "id": 510,
     "name": "Fitness Tracker Charge 6",
     "price": 3000000,
-    "image": "https://www.jbhifi.com.au/cdn/shop/products/662613-Product-0-I-638314516214165397_2a5a6ef9-365e-41ff-ac79-ac5fc89679ed.jpg?v=1695854907",
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/662613-Product-0-I-638314516214165397.jpg?v=1782436096",
     "createdAt": "2026-4-18",
     "isBestSeller": true,
     "brandName": "Fitbit",

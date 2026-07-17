@@ -8,61 +8,71 @@ import { useRouter } from "next/navigation"; //
 export default function LargeScreenHeader() {
   const router = useRouter();
   return (
-    <Row style={{ height: 50, backgroundColor: "lightblue", width: "100%" }}>
-      <Col
-        span={2}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <img
-          onClick={() => router.push("/")}
-          src="https://upload.wikimedia.org/wikipedia/vi/f/f6/Emblem_of_Da_Nang_City.png"
-          style={{ height: "40px", objectFit: "contain", cursor: "pointer"}}
-        />
-      </Col>
-      <Col
-        span={3}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <CategoriesButton />
-      </Col>
-      <Col
-        span={13}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <SearchBox />
-      </Col>
-      <Col
-        span={3}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Account />
-      </Col>
-      <Col
-        span={3}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Cart />
-      </Col>
-    </Row>
+    <header
+      style={{
+        backgroundColor: "white",
+        borderTop: "4px solid #e51d2a",
+        borderBottom: "1px solid #e8e8e8",
+        boxShadow: "0 2px 10px rgba(0, 0, 0, 0.06)",
+      }}
+    >
+      <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "18px 24px 10px" }}>
+        <Row gutter={24} align="middle">
+          <Col span={4}>
+            <div
+              onClick={() => router.push("/")}
+              style={{ cursor: "pointer", lineHeight: 1 }}
+            >
+              <div style={{ fontSize: "25px", fontWeight: 900, color: "#151515" }}>
+                TECH<span style={{ color: "#e51d2a" }}>GEAR</span>
+              </div>
+              <div
+                style={{
+                  fontSize: "11px",
+                  fontWeight: "bold",
+                  letterSpacing: "3px",
+                  color: "#687086",
+                  marginTop: "5px",
+                }}
+              >
+                PRO STORE
+              </div>
+            </div>
+          </Col>
+
+          <Col span={4}>
+            <CategoriesButton />
+          </Col>
+
+          <Col span={9}>
+            <SearchBox />
+          </Col>
+
+          <Col span={4}>
+            <Account />
+          </Col>
+
+          <Col span={3}>
+            <Cart />
+          </Col>
+        </Row>
+
+        <Row style={{ marginTop: "10px" }}>
+          <Col offset={8} span={13}>
+            <nav style={{ display: "flex", gap: "24px", fontSize: "14px" }}>
+              {["PC Gaming", "Laptop", "CPU", "VGA", "RAM", "Mainboard"].map((item) => (
+                <span
+                  key={item}
+                  onClick={() => router.push("/category")}
+                  style={{ cursor: "pointer", color: "#4b5263", fontWeight: 600 }}
+                >
+                  {item}
+                </span>
+              ))}
+            </nav>
+          </Col>
+        </Row>
+      </div>
+    </header>
   );
 }

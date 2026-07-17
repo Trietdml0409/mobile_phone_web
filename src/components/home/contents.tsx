@@ -17,6 +17,7 @@ import InputNumberBox from "../common/inputNumberBox";
 import { LikedContext } from "@/shared/context/likedContext";
 import { CartContext } from "@/shared/context/cartContext";
 
+
 const { useBreakpoint } = Grid;
 
 export default function Contents({ product }: { product: IProduct }) {
@@ -55,8 +56,8 @@ export default function Contents({ product }: { product: IProduct }) {
         }}
         shape="circle"
         style={{
-          color: "royalblue", // makes the icon white
-          border: "1px solid royalblue", // removes default border
+          color: "#e21d2b",
+          border: "1px solid #e21d2b",
         }}
       >
         <EyeOutlined />
@@ -64,8 +65,8 @@ export default function Contents({ product }: { product: IProduct }) {
       <Button
         shape="circle"
         style={{
-          color: "royalblue", // makes the icon white
-          border: "1px solid royalblue", // removes default border
+          color: "#e21d2b",
+          border: "1px solid #e21d2b",
         }}
         onClick={(e) => {
           e.stopPropagation();
@@ -78,8 +79,8 @@ export default function Contents({ product }: { product: IProduct }) {
       <Button
         shape="circle"
         style={{
-          color: "royalblue", // makes the icon white
-          border: "1px solid royalblue", // removes default border
+          color: "#e21d2b",
+          border: "1px solid #e21d2b",
         }}
         onClick={(e) => {
           e.stopPropagation();
@@ -91,8 +92,8 @@ export default function Contents({ product }: { product: IProduct }) {
       <Button
         shape="circle"
         style={{
-          color: "royalblue",
-          border: "1px solid royalblue",
+          color: "#e21d2b",
+          border: "1px solid #e21d2b",
         }}
         onClick={(e) => {
           e.stopPropagation();
@@ -191,7 +192,7 @@ export default function Contents({ product }: { product: IProduct }) {
     style={{
       fontSize: "12px",
       textAlign: "center",
-      color: "rosybrown",
+      color: "#e21d2b",
       fontWeight: "bold",
       margin: "2px 0 8px",
     }}
@@ -202,7 +203,7 @@ export default function Contents({ product }: { product: IProduct }) {
   <Button
     icon={<ShoppingCartOutlined />}
     style={{
-      backgroundColor: isProductInCart ? "red" : "royalblue",
+      backgroundColor: isProductInCart ? "#151515" : "#e21d2b",
       color: "white",
       width: "100%",
     }}
@@ -289,7 +290,7 @@ export default function Contents({ product }: { product: IProduct }) {
             style={{
               fontSize: "12px",
               textAlign: "center",
-              color: "rosybrown",
+              color: "#e21d2b",
               fontWeight: "bold",
               margin: "2px 0 8px",
             }}
@@ -301,12 +302,12 @@ export default function Contents({ product }: { product: IProduct }) {
             style={
               !isProductInCart
                 ? {
-                    backgroundColor: "royalblue",
+                    backgroundColor: "#e21d2b",
                     color: "white",
                     marginTop: "auto",
                     width:"100%"
                   }
-                : { backgroundColor: "red", color: "white", marginTop: "auto", width:"100%"}
+                : { backgroundColor: "#151515", color: "white", marginTop: "auto", width:"100%"}
             }
             onClick={(e) => {
               e.stopPropagation();
@@ -346,7 +347,7 @@ export default function Contents({ product }: { product: IProduct }) {
               </p>
               <p
                 style={{
-                  color: "rosybrown",
+                  color: "#e21d2b",
                   fontWeight: "bold",
                   fontSize: "15px",
                 }}

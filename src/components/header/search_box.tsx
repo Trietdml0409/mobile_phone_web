@@ -12,7 +12,7 @@ type SearchProps = GetProps<typeof Input.Search>;
 
 const { Search } = Input;
 
-const suffix = <AudioOutlined style={{ fontSize: 16, color: "#1677ff" }} />;
+const suffix = <AudioOutlined style={{ fontSize: 16, color: "#e21d2b" }} />;
 
 const onSearch: SearchProps["onSearch"] = (value, _e, info) =>
   console.log(info?.source, value);

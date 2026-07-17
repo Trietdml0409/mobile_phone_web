@@ -39,7 +39,7 @@ export default function ListCardProducts() {
 
       <Divider />
       <Flex justify={"space-between"}>
-        <div style={{color:"royalblue",fontWeight:"bold"}}>Chuong Trinh than thiet</div>
+        <div style={{color:"#e21d2b",fontWeight:"bold"}}>Chuong Trinh than thiet</div>
         <Button> Login</Button>
       </Flex>
 
@@ -79,7 +79,7 @@ export default function ListCardProducts() {
       </Flex>
       <Divider />
       <Flex justify="space-between" align="center">
-        <div style={{ fontSize: "20px", fontWeight: "bold", color:"royalblue" }}>Total</div>
+        <div style={{ fontSize: "20px", fontWeight: "bold", color:"#e21d2b" }}>Total</div>
         <PriceDisplay price={getTotalPriceInCart()} fontSize="26px" />
       </Flex>
     </Flex>

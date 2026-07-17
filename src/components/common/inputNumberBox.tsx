@@ -38,7 +38,7 @@ const InputNumberBox = ({ product }: { product: IProduct }) => {
       <Button
         icon={<ShoppingCartOutlined />}
         style={{
-          backgroundColor: "royalblue",
+          backgroundColor: "#e21d2b",
           color: "white", // ensure text is visible
         }}
         onClick={() => addProductToCart(product, quantity)}
