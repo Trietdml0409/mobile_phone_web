@@ -1,4 +1,19 @@
 
+export type ProductType =
+  | "PC_Gaming"
+  | "Office_PC"
+  | "laptop"
+  | "cpu"
+  | "VGA"
+  | "RAM"
+  | "SSD"
+  | "HDD"
+  | "MainBoard"
+  | "Gear"
+  | "Accesories";
+
+export type DiscountType = "buyOneGetOne" | "priceDiscount" | "none";
+
 interface comments {
   id: number;
   content: string;
@@ -15,6 +30,9 @@ export interface IProduct {
   createdAt: string; // time when the product was created in format: "YYYY-MM-DD HH:MM:SS"
   isBestSeller: boolean; // true if the product is a best seller, false otherwise
   brandName: string; // name of the brand of the product -> for filter by brand
+  product_type: ProductType;
+  discountype: DiscountType;
+  discount_value: number;
   liked?: boolean; // true if the product is liked, false otherwise
   comments: comments[];
 }

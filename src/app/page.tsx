@@ -1,23 +1,14 @@
 "use client";
 
 import Banner from "@/components/home/banner";
-import Contents from "@/components/home/contents";
 import MessageBanner from "@/components/MessageBanner";
 import SegmentDiscount from "@/components/home/segmentedDiscount/segmentDiscount";
 import Blog from "@/components/blog/blog";
-import { useProduct } from "@/shared/hooks/useProducts";
-import { IProduct } from "@/shared/types/common.types";
-import { Col, Row } from "antd";
+import BestSellerSection from "@/components/home/bestSeller/bestSellerSection";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const [visitCount, setVisitCount] = useState<number>(0);
-  const [localProducts, setLocalProducts] = useState<IProduct[]>([]);
-  const { products } = useProduct();
-
-  useEffect(() => {
-    setLocalProducts(products);
-  }, [products]);
 
   useEffect(() => {
     setVisitCount((previousCount) => previousCount + 1);
@@ -126,48 +117,7 @@ export default function Home() {
           <SegmentDiscount />
         </section>
 
-        <section
-          style={{
-            backgroundColor: "white",
-            borderRadius: "12px",
-            padding: "24px",
-            marginBottom: "24px",
-            boxShadow: "0 4px 18px rgba(20, 33, 61, 0.07)",
-          }}
-        >
-          <div
-            style={{
-              borderLeft: "7px solid #e51d2a",
-              paddingLeft: "16px",
-              marginBottom: "22px",
-            }}
-          >
-            <h2
-              style={{
-                fontSize: "clamp(26px, 3vw, 34px)",
-                fontWeight: 900,
-                color: "#151515",
-                margin: 0,
-                textTransform: "uppercase",
-              }}
-            >
-              Best sellers
-            </h2>
-            <p style={{ color: "#6b7280", fontSize: "16px", margin: "5px 0 0" }}>
-              Popular products chosen by our customers
-            </p>
-          </div>
-
-          <Row gutter={[16, 16]}>
-            {localProducts
-              .filter((product: IProduct) => product.isBestSeller)
-              .map((product: IProduct) => (
-                <Col key={product.id} xs={12} sm={8} lg={4}>
-                  <Contents product={product} />
-                </Col>
-              ))}
-          </Row>
-        </section>
+        <BestSellerSection />
 
         <section
           style={{

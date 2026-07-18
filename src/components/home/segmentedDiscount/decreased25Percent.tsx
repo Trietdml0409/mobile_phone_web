@@ -3,12 +3,12 @@
 import RowsOfDiscount from "./rowsOfDiscount";
 import { useProduct } from "@/shared/hooks/useProducts";
 
-export default function Decrease51Percent() {
+export default function Decrease25Percent() {
   const { products } = useProduct();
   const localProducts = products.filter(
     (product) =>
       product.discountype === "priceDiscount" &&
-      product.discount_value === 51,
+      product.discount_value === 25,
   );
 
   return (

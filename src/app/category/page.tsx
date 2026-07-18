@@ -182,7 +182,7 @@ export default function Category() {
     >
       <Flex vertical style={{ padding: "15px" }}>
         <p style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
-          PC GAMING ({totalProducts} PRODUCTS)
+          {totalProducts} PRODUCTS
         </p>
       </Flex>
 
