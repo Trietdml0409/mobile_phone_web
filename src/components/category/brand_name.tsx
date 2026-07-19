@@ -1,16 +1,13 @@
-import { IProduct,Brand } from "@/shared/types/common.types";
+import { IProduct } from "@/shared/types/common.types";
 import { Flex, Button } from "antd";
-import {useState} from "react";
-import {useProduct} from "@/shared/hooks/useProducts"
 
 
-export default function BrandName({sortByBrand,selectedBrandName}:{sortByBrand(brand:string):void,selectedBrandName:string|null}){
+export default function BrandName({sortByBrand,selectedBrandName,products}:{sortByBrand(brand:string):void,selectedBrandName:string|null,products:IProduct[]}){
     type brandName = {
         index: string,
         name: string
     }
 
-    const {products} = useProduct()
     const productBrands:brandName[] = [
         {
             index: "0",
@@ -26,12 +23,6 @@ export default function BrandName({sortByBrand,selectedBrandName}:{sortByBrand(b
             name
         })
     })
-
-    console.log("Brands"+productBrands)
-
-
-
-
     return(
         <>
         <p style={{ color: "black", fontSize: "15px", fontWeight: "bold"}}>Brand Name:</p>

@@ -10,7 +10,9 @@ export type ProductType =
   | "HDD"
   | "MainBoard"
   | "Gear"
-  | "Accesories";
+  | "Accesories"
+  | "phone"
+  | "tablet";
 
 export type DiscountType = "buyOneGetOne" | "priceDiscount" | "none";
 

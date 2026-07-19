@@ -262,237 +262,6 @@ const PRODUCT_DATA: IProduct[] = [
     ]
   },
   {
-    "id": 130,
-    "name": "PC AMD Ryzen 9 7950X Ultimate Gaming",
-    "price": 65000000,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCp1ZyjCJB3Ck9bkkwxrJ312CVPixcislL_w&s",
-    "createdAt": "2026-3-11",
-    "isBestSeller": true,
-    "brandName": "AMD",
-    "product_type": "Office_PC",
-    "discountype": "priceDiscount",
-    "discount_value": 40,
-    "comments": [
-      {
-        "id": 130001,
-        "content": "Great product: PC AMD Ryzen 9 7950X Ultimate Gaming",
-        "createdAt": "2026-3-11",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 140,
-    "name": "PC AMD Radeon RX 6800 XT Enthusiast",
-    "price": 48000000,
-    "image": "https://i.redd.it/vzycr3cnwk761.jpg",
-    "createdAt": "2026-3-12",
-    "isBestSeller": false,
-    "brandName": "AMD",
-    "product_type": "Office_PC",
-    "discountype": "none",
-    "discount_value": 0,
-    "comments": [
-      {
-        "id": 140001,
-        "content": "Great product: PC AMD Radeon RX 6800 XT Enthusiast",
-        "createdAt": "2026-3-12",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 150,
-    "name": "PC Intel Core i9 13900K Ultra",
-    "price": 55000000,
-    "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS4YIm7OBsDyMYpgIdF861i7p2uOYkOY527TcnRrWmwSBFakfxCC4pw1CrPK7zI29r3jh15N3jnEHS9QaZgDlZ3zeeQEurKV4CdpZkVKf2advjlm8FRldQMwAOpXxqtDxrEyUsOHRc&usqp=CAc",
-    "createdAt": "2026-3-13",
-    "isBestSeller": true,
-    "brandName": "Intel",
-    "product_type": "Office_PC",
-    "discountype": "none",
-    "discount_value": 0,
-    "comments": [
-      {
-        "id": 150001,
-        "content": "Great product: PC Intel Core i9 13900K Ultra",
-        "createdAt": "2026-3-13",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 160,
-    "name": "PC NVIDIA GeForce RTX 4090 Ti Dream",
-    "price": 120000000,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvU5xMs4qbFdzyHm4msTN2uulWAwAQP0VEzw&s",
-    "createdAt": "2026-3-14",
-    "isBestSeller": true,
-    "brandName": "NVIDIA",
-    "product_type": "Office_PC",
-    "discountype": "buyOneGetOne",
-    "discount_value": 50,
-    "comments": [
-      {
-        "id": 160001,
-        "content": "Great product: PC NVIDIA GeForce RTX 4090 Ti Dream",
-        "createdAt": "2026-3-14",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 170,
-    "name": "PC Intel Core i5 13600KF Midrange",
-    "price": 24000000,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbFCu1Kc9AZJKmStaqbkLh5dmG6GHZYYAxlg&s",
-    "createdAt": "2026-3-15",
-    "isBestSeller": false,
-    "brandName": "Intel",
-    "product_type": "Office_PC",
-    "discountype": "none",
-    "discount_value": 0,
-    "comments": [
-      {
-        "id": 170001,
-        "content": "Great product: PC Intel Core i5 13600KF Midrange",
-        "createdAt": "2026-3-15",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 180,
-    "name": "PC AMD Ryzen 7 7700X Performance",
-    "price": 32000000,
-    "image": "https://assets.msy.com.au/newsite/images/202303/source_img/Gaming-PCs-G7-Ultra-Ryzen-7-7700X-RTX-4070-TI-Gaming-PC-Powered-by-ASUS-14.webp",
-    "createdAt": "2026-3-16",
-    "isBestSeller": false,
-    "brandName": "AMD",
-    "product_type": "Office_PC",
-    "discountype": "none",
-    "discount_value": 0,
-    "comments": [
-      {
-        "id": 180001,
-        "content": "Great product: PC AMD Ryzen 7 7700X Performance",
-        "createdAt": "2026-3-16",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 190,
-    "name": "PC NVIDIA Quadro RTX 6000 Pro",
-    "price": 90000000,
-    "image": "https://imagecdn.jw.com.au/media/catalog/product/j/w/jw_proart_rtx_6000_pro_thumbv2.jpg?width=514&height=514&store=default&image-type=image",
-    "createdAt": "2026-3-17",
-    "isBestSeller": false,
-    "brandName": "NVIDIA",
-    "product_type": "Office_PC",
-    "discountype": "priceDiscount",
-    "discount_value": 30,
-    "comments": [
-      {
-        "id": 190001,
-        "content": "Great product: PC NVIDIA Quadro RTX 6000 Pro",
-        "createdAt": "2026-3-17",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 200,
-    "name": "PC Intel Pentium Gold G7400 Budget",
-    "price": 8000000,
-    "image": "https://taqwaitbd.com/wp-content/uploads/2024/02/Desktop-01-1.webp",
-    "createdAt": "2026-3-18",
-    "isBestSeller": false,
-    "brandName": "Intel",
-    "product_type": "Office_PC",
-    "discountype": "none",
-    "discount_value": 0,
-    "comments": [
-      {
-        "id": 200001,
-        "content": "Great product: PC Intel Pentium Gold G7400 Budget",
-        "createdAt": "2026-3-18",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 210,
-    "name": "PC AMD Athlon 3000G Basic",
-    "price": 6000000,
-    "image": "https://cdn.mos.cms.futurecdn.net/EdnUGYCMk8rEwbPDufRSL8.jpg",
-    "createdAt": "2026-3-19",
-    "isBestSeller": false,
-    "brandName": "AMD",
-    "product_type": "Office_PC",
-    "discountype": "buyOneGetOne",
-    "discount_value": 50,
-    "comments": [
-      {
-        "id": 210001,
-        "content": "Great product: PC AMD Athlon 3000G Basic",
-        "createdAt": "2026-3-19",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 220,
-    "name": "PC NVIDIA GeForce GTX 1660 Super Classic",
-    "price": 20000000,
-    "image": "https://cdn.mos.cms.futurecdn.net/zWEbQuy8dwh5NuVHwu7AA4-2000-80.jpg",
-    "createdAt": "2026-3-20",
-    "isBestSeller": false,
-    "brandName": "NVIDIA",
-    "product_type": "Office_PC",
-    "discountype": "priceDiscount",
-    "discount_value": 10,
-    "comments": [
-      {
-        "id": 220001,
-        "content": "Great product: PC NVIDIA GeForce GTX 1660 Super Classic",
-        "createdAt": "2026-3-20",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
-    "id": 230,
-    "name": "PC Intel Core i7 14700F Future",
-    "price": 38000000,
-    "image": "https:///encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY9V0X0NqHh-zkCNzkc659TfAD2h6HBlQuvw&s",
-    "createdAt": "2026-3-21",
-    "isBestSeller": true,
-    "brandName": "Intel",
-    "product_type": "Office_PC",
-    "discountype": "none",
-    "discount_value": 0,
-    "comments": [
-      {
-        "id": 230001,
-        "content": "Great product: PC Intel Core i7 14700F Future",
-        "createdAt": "2026-3-21",
-        "author": "Auto Reviewer",
-        "authorAvatar": "https://via.placeholder.com/150"
-      }
-    ]
-  },
-  {
     "id": 240,
     "name": "Logitech G502 Wireless Gaming Mouse",
     "price": 1500000,
@@ -561,7 +330,7 @@ const PRODUCT_DATA: IProduct[] = [
     "price": 3200000,
     "image": "https://www.jbhifi.com.au/cdn/shop/files/796064-Product-0-I-638720617805379891.jpg?v=1736465056",
     "createdAt": "2026-3-25",
-    "isBestSeller": false,
+    "isBestSeller": true,
     "brandName": "Razer",
     "product_type": "Gear",
     "discountype": "none",
@@ -731,7 +500,7 @@ const PRODUCT_DATA: IProduct[] = [
     "createdAt": "2026-4-2",
     "isBestSeller": true,
     "brandName": "Samsung",
-    "product_type": "Accesories",
+    "product_type": "tablet",
     "discountype": "none",
     "discount_value": 0,
     "comments": [
@@ -752,7 +521,7 @@ const PRODUCT_DATA: IProduct[] = [
     "createdAt": "2026-4-3",
     "isBestSeller": true,
     "brandName": "Apple",
-    "product_type": "Accesories",
+    "product_type": "phone",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
     "comments": [
@@ -2018,6 +1787,754 @@ const PRODUCT_DATA: IProduct[] = [
         "id": 940001,
         "content": "Great product: Keychron K8 Mechanical Keyboard",
         "createdAt": "2026-05-01",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 950,
+    "name": "Dell OptiPlex 7010 SFF Office PC",
+    "price": 14900000,
+    "image": "https://reboot-it.com.au/cdn/shop/files/dell-optiplex-7010-sff-i5-3470-3-2ghz-6gb-240gb-ssd-w10p-computer-or-3mth-wty-reboot-it-1.gif?v=1716572258",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Dell",
+    "product_type": "Office_PC",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 950001,
+        "content": "Great product: Dell OptiPlex 7010 SFF Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 960,
+    "name": "HP ProDesk 400 G9 Office PC",
+    "price": 13900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHJsiCTQstKzQG2k5Tza5prLt67x2m5YG3Hm-VyY8CdQ&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "HP",
+    "product_type": "Office_PC",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 960001,
+        "content": "Great product: HP ProDesk 400 G9 Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 970,
+    "name": "Lenovo ThinkCentre M70s Gen 4 Office PC",
+    "price": 15900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8SibZAWH4SZXNhj1Irxau4VuYRS8QEMTfpkbzT78G4A&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Lenovo",
+    "product_type": "Office_PC",
+    "discountype": "priceDiscount",
+    "discount_value": 10,
+    "liked": false,
+    "comments": [
+      {
+        "id": 970001,
+        "content": "Great product: Lenovo ThinkCentre M70s Gen 4 Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 980,
+    "name": "ASUS ExpertCenter D5 SFF Office PC",
+    "price": 12900000,
+    "image": "https://imagecdn.jw.com.au/media/catalog/product/d/5/d500sc-5114000_6_1.jpg?width=514&height=514&store=default&image-type=image",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "ASUS",
+    "product_type": "Office_PC",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 980001,
+        "content": "Great product: ASUS ExpertCenter D5 SFF Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 990,
+    "name": "Acer Veriton X5 Office PC",
+    "price": 11900000,
+    "image": "",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Acer",
+    "product_type": "Office_PC",
+    "discountype": "priceDiscount",
+    "discount_value": 20,
+    "liked": false,
+    "comments": [
+      {
+        "id": 990001,
+        "content": "Great product: Acer Veriton X5 Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1000,
+    "name": "Dell OptiPlex 3000 Micro Office PC",
+    "price": 12500000,
+    "image": "",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Dell",
+    "product_type": "Office_PC",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1000001,
+        "content": "Great product: Dell OptiPlex 3000 Micro Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1010,
+    "name": "HP Elite Mini 800 G9 Office PC",
+    "price": 18900000,
+    "image": "https://www.notebookcheck.net/fileadmin/Notebooks/HP/Elite_Mini_800_G9-5M9T9EA/Elite_Mini_800_G9_32.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "HP",
+    "product_type": "Office_PC",
+    "discountype": "priceDiscount",
+    "discount_value": 25,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1010001,
+        "content": "Great product: HP Elite Mini 800 G9 Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1020,
+    "name": "Lenovo ThinkCentre M90q Office PC",
+    "price": 17900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcpYiGtHRyZbqLVtsnpYgAQZ6mDGsLG-blx3hyIQtnHA&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Lenovo",
+    "product_type": "Office_PC",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1020001,
+        "content": "Great product: Lenovo ThinkCentre M90q Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1030,
+    "name": "MSI PRO DP21 Office PC",
+    "price": 10900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8jYUgEDrCDu9gTHCkfjFM8mOZygJwE2H4c9SQGvSSaPDLZjcKLOpQaRU&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "MSI",
+    "product_type": "Office_PC",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1030001,
+        "content": "Great product: MSI PRO DP21 Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1040,
+    "name": "ASUS ExpertCenter PN64 Mini Office PC",
+    "price": 16900000,
+    "image": "https://m.media-amazon.com/images/I/71CfXj+9U9L._AC_UF894,1000_QL80_.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "ASUS",
+    "product_type": "Office_PC",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1040001,
+        "content": "Great product: ASUS ExpertCenter PN64 Mini Office PC",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1050,
+    "name": "Samsung Galaxy S24 Phone",
+    "price": 21900000,
+    "image": "https://becextech.com.au/media/catalog/product/cache/87bf6cc783e51bde4c0e5a7b582a0719/G/a/GalS24Var_1_2.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Samsung",
+    "product_type": "phone",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1050001,
+        "content": "Great product: Samsung Galaxy S24 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1060,
+    "name": "Samsung Galaxy S24 Ultra Phone",
+    "price": 32900000,
+    "image": "https://becextech.com.au/media/catalog/product/cache/87bf6cc783e51bde4c0e5a7b582a0719/N/B/NBXTGalS24UltVio_1_7.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Samsung",
+    "product_type": "phone",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1060001,
+        "content": "Great product: Samsung Galaxy S24 Ultra Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1070,
+    "name": "Apple iPhone 15 Phone",
+    "price": 23900000,
+    "image": "https://telstra.com.au/content/dam/tcom/devices/mobile/mhdwhst-ip15/pink/front.png",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Apple",
+    "product_type": "phone",
+    "discountype": "priceDiscount",
+    "discount_value": 10,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1070001,
+        "content": "Great product: Apple iPhone 15 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1080,
+    "name": "Google Pixel 9 Phone",
+    "price": 24900000,
+    "image": "https://au.static.webuy.com/product_images/Phones/Phones%20Android/SGOOPIX9PX256GHAUNLB_l.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Google",
+    "product_type": "phone",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1080001,
+        "content": "Great product: Google Pixel 9 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1090,
+    "name": "Xiaomi 14 Phone",
+    "price": 19900000,
+    "image": "https://m.media-amazon.com/images/I/51N4Aww3+SL._AC_UF894,1000_QL80_.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Xiaomi",
+    "product_type": "phone",
+    "discountype": "priceDiscount",
+    "discount_value": 20,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1090001,
+        "content": "Great product: Xiaomi 14 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1100,
+    "name": "OPPO Reno 12 Phone",
+    "price": 12900000,
+    "image": "https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/reno-12-en/listpage/427-600-silver.png",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "OPPO",
+    "product_type": "phone",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1100001,
+        "content": "Great product: OPPO Reno 12 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1110,
+    "name": "OnePlus 12 Phone",
+    "price": 22900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzzBCqchBQe3d7FBtfVY63tBok6jS4YqFd9MXqAd3Kc09Ud_328Sdkbug&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "OnePlus",
+    "product_type": "phone",
+    "discountype": "priceDiscount",
+    "discount_value": 25,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1110001,
+        "content": "Great product: OnePlus 12 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1120,
+    "name": "Nokia G42 Phone",
+    "price": 5900000,
+    "image": "https://www.bigw.com.au/medias/sys_master/images/images/h19/hd3/117759316361246.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Nokia",
+    "product_type": "phone",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1120001,
+        "content": "Great product: Nokia G42 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1130,
+    "name": "Motorola Edge 50 Phone",
+    "price": 14900000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/781690-Product-0-I-638593570204663109_1024x1024.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Motorola",
+    "product_type": "phone",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1130001,
+        "content": "Great product: Motorola Edge 50 Phone",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1140,
+    "name": "Apple iPad Air M2 Tablet",
+    "price": 18900000,
+    "image": "https://www.telstra.com.au/content/dam/tcom/devices/mobile/mhdwtab-ia11m2/spacegrey/front.png",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Apple",
+    "product_type": "tablet",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1140001,
+        "content": "Great product: Apple iPad Air M2 Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1150,
+    "name": "Apple iPad 10th Generation Tablet",
+    "price": 11900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT575H2D-gH0nxA3_Hc3adciIHRPZv0eMsXaSmCpo1KRku9RHlCexOT3cYW&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Apple",
+    "product_type": "tablet",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1150001,
+        "content": "Great product: Apple iPad 10th Generation Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1160,
+    "name": "Samsung Galaxy Tab S10 Tablet",
+    "price": 24900000,
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/au/feature/166496934/au-feature--nbsp--548808710?$FB_TYPE_I_JPG$",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Samsung",
+    "product_type": "tablet",
+    "discountype": "priceDiscount",
+    "discount_value": 10,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1160001,
+        "content": "Great product: Samsung Galaxy Tab S10 Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1170,
+    "name": "Lenovo Tab P12 Tablet",
+    "price": 9900000,
+    "image": "https://m.media-amazon.com/images/I/71uoqeXNx6L._AC_UF894,1000_QL80_.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Lenovo",
+    "product_type": "tablet",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1170001,
+        "content": "Great product: Lenovo Tab P12 Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1180,
+    "name": "Xiaomi Pad 6 Tablet",
+    "price": 8990000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYl6yoNvZvbDiQ5wPcTTVqPQlyPi6d1fzohW7qPRKMMA&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Xiaomi",
+    "product_type": "tablet",
+    "discountype": "priceDiscount",
+    "discount_value": 20,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1180001,
+        "content": "Great product: Xiaomi Pad 6 Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1190,
+    "name": "Microsoft Surface Pro 11 Tablet",
+    "price": 29900000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/files/749809-Product-0-I-638518540205334260_7934c5e7-56d9-4a0d-905e-b69af3fef31b_grande.jpg?v=1739393109",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Microsoft",
+    "product_type": "tablet",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1190001,
+        "content": "Great product: Microsoft Surface Pro 11 Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1200,
+    "name": "OnePlus Pad 2 Tablet",
+    "price": 14900000,
+    "image": "https://m.media-amazon.com/images/I/61xavUupweL.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "OnePlus",
+    "product_type": "tablet",
+    "discountype": "priceDiscount",
+    "discount_value": 25,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1200001,
+        "content": "Great product: OnePlus Pad 2 Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1210,
+    "name": "OPPO Pad Neo Tablet",
+    "price": 7990000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoPlK78Ncl9cxGkEgyc-QA5TFTUrL_MitJGV7l3of202QNHrDCIiokW2E&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "OPPO",
+    "product_type": "tablet",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1210001,
+        "content": "Great product: OPPO Pad Neo Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1220,
+    "name": "Nokia T21 Tablet",
+    "price": 6490000,
+    "image": "https://i.ebayimg.com/00/s/MTUwMFgxNTAw/z/fjsAAOSwXYtjx41r/$_57.JPG?set_id=880000500F",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Nokia",
+    "product_type": "tablet",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1220001,
+        "content": "Great product: Nokia T21 Tablet",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1230,
+    "name": "Dell UltraSharp 27-inch Monitor",
+    "price": 10900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKSdQJScCBZ6s6F94QnZIpGnHMm-Wx5CYPrbvLg2RA5-AUZg_k-ZU0TdA&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Dell",
+    "product_type": "Gear",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1230001,
+        "content": "Great product: Dell UltraSharp 27-inch Monitor",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1240,
+    "name": "LG UltraGear 27-inch Monitor",
+    "price": 8900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGAkKDiVdEzeQoxVYl10nLiYGGXCVkp9yP2OAovnq0C4NRY27nURwil4tJ&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "LG",
+    "product_type": "Gear",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1240001,
+        "content": "Great product: LG UltraGear 27-inch Monitor",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1250,
+    "name": "ASUS ProArt 24-inch Monitor",
+    "price": 7900000,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT991uNtrmpy6VOKbzqMRkMb2ySDXRPl4z3tGB6f2yY7U-6dvIKmChLqE&s=10",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "ASUS",
+    "product_type": "Accesories",
+    "discountype": "priceDiscount",
+    "discount_value": 10,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1250001,
+        "content": "Great product: ASUS ProArt 24-inch Monitor",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1260,
+    "name": "Logitech MX Keys S Keyboard",
+    "price": 2790000,
+    "image": "https://sm.pcmag.com/t/pcmag_au/review/l/logitech-m/logitech-mx-keys-s-for-mac_c23y.1920.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": true,
+    "brandName": "Logitech",
+    "product_type": "Gear",
+    "discountype": "priceDiscount",
+    "discount_value": 15,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1260001,
+        "content": "Great product: Logitech MX Keys S Keyboard",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1270,
+    "name": "Razer BlackWidow V4 Keyboard",
+    "price": 4290000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/668623-Product-0-I-638331148206751121_1024x1024.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Razer",
+    "product_type": "Gear",
+    "discountype": "none",
+    "discount_value": 0,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1270001,
+        "content": "Great product: Razer BlackWidow V4 Keyboard",
+        "createdAt": "2026-07-19",
+        "author": "Auto Reviewer",
+        "authorAvatar": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+  {
+    "id": 1280,
+    "name": "Corsair K70 RGB Keyboard",
+    "price": 3990000,
+    "image": "https://www.jbhifi.com.au/cdn/shop/products/671826-Product-0-I-638373228635895445_1024x1024.jpg",
+    "createdAt": "2026-07-19",
+    "isBestSeller": false,
+    "brandName": "Corsair",
+    "product_type": "Gear",
+    "discountype": "priceDiscount",
+    "discount_value": 20,
+    "liked": false,
+    "comments": [
+      {
+        "id": 1280001,
+        "content": "Great product: Corsair K70 RGB Keyboard",
+        "createdAt": "2026-07-19",
         "author": "Auto Reviewer",
         "authorAvatar": "https://via.placeholder.com/150"
       }

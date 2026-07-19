@@ -4,6 +4,7 @@ import { useProduct } from "@/shared/hooks/useProducts";
 import ComputerBestSeller from "./computerBestSeller/computerBestSeller";
 import PCComponentsBestSeller from "./PCComponentsBestSeller/PCComponentsBestSeller";
 import AccessoriesBestSeller from "./AccessoriesBestSeller/AccessoriesBestSeller";
+import PhoneAndTabletBestSeller from "./PhoneAndTabletBestSeller/PhoneAndTabletBestSeller";
 
 export default function BestSellerSection() {
   const { products } = useProduct();
@@ -48,6 +49,7 @@ export default function BestSellerSection() {
 
       <ComputerBestSeller bestSellerProducts={localBestSellers} />
       <PCComponentsBestSeller bestSellerProducts={localBestSellers} />
+      <PhoneAndTabletBestSeller bestSellerProducts={localBestSellers} />
       <AccessoriesBestSeller bestSellerProducts={localBestSellers} />
     </section>
   );

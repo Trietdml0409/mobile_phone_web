@@ -60,13 +60,22 @@ export default function LargeScreenHeader() {
         <Row style={{ marginTop: "10px" }}>
           <Col offset={8} span={13}>
             <nav style={{ display: "flex", gap: "24px", fontSize: "14px" }}>
-              {["PC Gaming", "Laptop", "CPU", "VGA", "RAM", "Mainboard"].map((item) => (
+              {[
+                { label: "PC Gaming", value: "PC_Gaming" },
+                { label: "Laptop", value: "laptop" },
+                { label: "CPU", value: "cpu" },
+                { label: "VGA", value: "VGA" },
+                { label: "RAM", value: "RAM" },
+                { label: "Mainboard", value: "MainBoard" },
+              ].map((item) => (
                 <span
-                  key={item}
-                  onClick={() => router.push("/category")}
+                  key={item.value}
+                  onClick={() =>
+                    router.push(`/category?product_type=${item.value}`)
+                  }
                   style={{ cursor: "pointer", color: "#4b5263", fontWeight: 600 }}
                 >
-                  {item}
+                  {item.label}
                 </span>
               ))}
             </nav>

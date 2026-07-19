@@ -7,7 +7,43 @@ import CatergoryProductCard from "@/components/category/CatergoryProductCard";
 import BrandName from "@/components/category/brand_name";
 import { useProduct } from "@/shared/hooks/useProducts";
 import { CartContext } from "@/shared/context/cartContext";
-import { CartProductState } from "@/shared/types/common.types";
+import { CartProductState, ProductType } from "@/shared/types/common.types";
+import { useSearchParams } from "next/navigation";
+
+const PRODUCT_TYPES: ProductType[] = [
+  "PC_Gaming",
+  "Office_PC",
+  "laptop",
+  "cpu",
+  "VGA",
+  "RAM",
+  "SSD",
+  "HDD",
+  "MainBoard",
+  "Gear",
+  "Accesories",
+  "phone",
+  "tablet",
+];
+
+type CategoryType = ProductType | "Components";
+
+const PRODUCT_TYPE_NAMES: Record<CategoryType, string> = {
+  PC_Gaming: "PC Gaming",
+  Office_PC: "Office PC",
+  laptop: "Laptop",
+  cpu: "CPU",
+  VGA: "VGA",
+  RAM: "RAM",
+  SSD: "SSD",
+  HDD: "HDD",
+  MainBoard: "Mainboard",
+  Gear: "Gear",
+  Accesories: "Accessories",
+  phone: "Phone",
+  tablet: "Tablet",
+  Components: "Components",
+};
 const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
   {
     label: "Price: Increase",
@@ -41,6 +77,14 @@ const SORT_BY_OPTIONS: Array<{ label: string; value: string }> = [
 // statge management
 export default function Category() {
   const { products } = useProduct(); // initialize products = 0. 1 call api not response => products = 0.
+  const searchParams = useSearchParams();
+  const productTypeParameter = searchParams.get("product_type");
+  const selectedProductType: CategoryType | undefined = [
+    ...PRODUCT_TYPES,
+    "Components" as const,
+  ].find(
+    (productType) => productType === productTypeParameter,
+  );
   const [localProducts, setLocalProducts] = useState<IProduct[]>([]);
 
   // state save total products
@@ -62,10 +106,25 @@ export default function Category() {
   // TODO: @triet sử dụng useEffect để tự động cập nhật totalProducts khi products thay đổi
   // Hint: import useEffect từ react và thêm dependency [products]
   useEffect(() => {
-    setLocalProducts(products);
-    setTotalProducts(products.length);
+    const filteredProducts =
+      selectedProductType === "Components"
+        ? products.filter((product) =>
+            ["cpu", "VGA", "RAM", "SSD", "HDD", "MainBoard"].includes(
+              product.product_type,
+            ),
+          )
+        : selectedProductType
+          ? products.filter(
+              (product) => product.product_type === selectedProductType,
+            )
+          : [];
+
+    setLocalProducts(filteredProducts);
+    setTotalProducts(filteredProducts.length);
     setCurrentPage(1); // reset pagination when products change
-  }, [products]); // A depends on B => B changes => A changes.
+    setSelectedBrandName(null);
+    setSelectedSortBy(null);
+  }, [products, selectedProductType]); // A depends on B => B changes => A changes.
 
   // state save Products
   // state save selected sort by
@@ -87,11 +146,23 @@ export default function Category() {
   function filterByBrand(brand: string): void {
     setSelectedBrandName(brand);
     let newProducts: IProduct[];
-    const allProducts: IProduct[] = [...products];
+    const categoryProducts: IProduct[] =
+      selectedProductType === "Components"
+        ? products.filter((product) =>
+            ["cpu", "VGA", "RAM", "SSD", "HDD", "MainBoard"].includes(
+              product.product_type,
+            ),
+          )
+        : selectedProductType
+          ? products.filter(
+              (product) => product.product_type === selectedProductType,
+            )
+          : [];
+
     if (brand == "All") {
-      newProducts = allProducts;
+      newProducts = categoryProducts;
     } else {
-      newProducts = [...allProducts].filter(
+      newProducts = categoryProducts.filter(
         (product: IProduct) => brand === product.brandName,
       );
     }
@@ -182,7 +253,9 @@ export default function Category() {
     >
       <Flex vertical style={{ padding: "15px" }}>
         <p style={{ color: "black", fontSize: "30px", fontWeight: "bold" }}>
-          {totalProducts} PRODUCTS
+          {selectedProductType
+            ? `${PRODUCT_TYPE_NAMES[selectedProductType]} - ${totalProducts} PRODUCTS`
+            : "PLEASE SELECT A PRODUCT CATEGORY"}
         </p>
       </Flex>
 
@@ -213,6 +286,19 @@ export default function Category() {
         <BrandName
           sortByBrand={filterByBrand}
           selectedBrandName={selectedBrandName}
+          products={
+            selectedProductType === "Components"
+              ? products.filter((product) =>
+                  ["cpu", "VGA", "RAM", "SSD", "HDD", "MainBoard"].includes(
+                    product.product_type,
+                  ),
+                )
+              : selectedProductType
+                ? products.filter(
+                    (product) => product.product_type === selectedProductType,
+                  )
+                : []
+          }
         />
 
         <div>

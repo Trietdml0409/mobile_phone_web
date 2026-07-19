@@ -1,6 +1,7 @@
 import { Button, Col, Flex, Row, Rate, Grid } from "antd";
 import InputNumberBox from "../common/inputNumberBox";
 import { IProduct } from "@/shared/types/common.types";
+import Link from "next/link";
 
 const { useBreakpoint } = Grid;
 
@@ -143,13 +144,15 @@ export default function ProductInformation({
                 1: ALL COUPON <a>HERE</a>
               </p>
               <p style={{ color: "black", fontSize: "10px" }}>
-                2: SSD, HDD, MEMORY CARD <a>HERE</a>
+                2: SSD, HDD, MEMORY CARD{" "}
+                <Link href="/category?product_type=Components">HERE</Link>
               </p>
               <p style={{ color: "black", fontSize: "10px" }}>
-                3: MOUSE, GAMING TABLE, HEADPHONE <a>HERE</a>
+                3: MOUSE, GAMING TABLE, HEADPHONE{" "}
+                <Link href="/category?product_type=Gear">HERE</Link>
               </p>
               <p style={{ color: "black", fontSize: "10px" }}>
-                4: FREE DELIVERY <a>HERE</a>
+                4: FREE DELIVERY <Link href="/blogs?id=4">HERE</Link>
               </p>
             </div>
           </Col>
@@ -317,13 +320,15 @@ export default function ProductInformation({
                 1: ALL COUPON <a>HERE</a>
               </p>
               <p style={{ color: "black", fontSize: "10px" }}>
-                2: SSD, HDD, MEMORY CARD <a>HERE</a>
+                2: SSD, HDD, MEMORY CARD{" "}
+                <Link href="/category?product_type=Components">HERE</Link>
               </p>
               <p style={{ color: "black", fontSize: "10px" }}>
-                3: MOUSE, GAMING TABLE, HEADPHONE <a>HERE</a>
+                3: MOUSE, GAMING TABLE, HEADPHONE{" "}
+                <Link href="/category?product_type=Gear">HERE</Link>
               </p>
               <p style={{ color: "black", fontSize: "10px" }}>
-                4: FREE DELIVERY <a>HERE</a>
+                4: FREE DELIVERY <Link href="/blogs?id=4">HERE</Link>
               </p>
             </div>
           </Col>
