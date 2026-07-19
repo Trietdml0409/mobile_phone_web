@@ -52,12 +52,13 @@ export default function ProductDetails() {
     <div
       style={{
         minHeight: "100vh",
-        minWidth: "100vw",
         backgroundColor: "white",
         padding: "16px",
+        maxWidth: "1280px",
+        margin: "0 auto",
       }}
     >
-      <Row>
+      <Row gutter={[24, 24]}>
         <Col span={isSmallScreen ? 24 : 8}>
           {product ? (
             <ProductImage image={product.image} />
@@ -74,6 +75,55 @@ export default function ProductDetails() {
               handleBuyNow={() => {}}
               handleAddToCart={() => {}}
             />
+          ) : (
+            <Skeleton active />
+          )}
+        </Col>
+        <Col span={24}>
+          {product ? (
+            <section
+              style={{
+                borderTop: "3px solid #e21d2b",
+                padding: isSmallScreen ? "20px 4px" : "28px 24px",
+              }}
+            >
+              <h2
+                style={{
+                  color: "#151515",
+                  fontSize: isSmallScreen ? "25px" : "32px",
+                  fontWeight: "bold",
+                  marginTop: 0,
+                }}
+              >
+                Product description
+              </h2>
+
+              {product.FullDes.map((description, index) =>
+                Object.entries(description).map(([header, text]) => (
+                  <div key={`${header}-${index}`} style={{ marginBottom: "22px" }}>
+                    <h3
+                      style={{
+                        color: "#e21d2b",
+                        fontSize: isSmallScreen ? "20px" : "23px",
+                        marginBottom: "8px",
+                      }}
+                    >
+                      {header}
+                    </h3>
+                    <p
+                      style={{
+                        color: "#333333",
+                        fontSize: "16px",
+                        lineHeight: 1.8,
+                        margin: 0,
+                      }}
+                    >
+                      {text}
+                    </p>
+                  </div>
+                )),
+              )}
+            </section>
           ) : (
             <Skeleton active />
           )}

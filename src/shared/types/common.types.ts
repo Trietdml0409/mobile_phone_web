@@ -24,6 +24,10 @@ interface comments {
   authorAvatar: string;
 }
 
+export interface ProductFullDescription {
+  [headerName: string]: string;
+}
+
 export interface IProduct {
   id: number;
   name: string;
@@ -35,6 +39,8 @@ export interface IProduct {
   product_type: ProductType;
   discountype: DiscountType;
   discount_value: number;
+  ShortDes: string;
+  FullDes: ProductFullDescription[];
   liked?: boolean; // true if the product is liked, false otherwise
   comments: comments[];
 }

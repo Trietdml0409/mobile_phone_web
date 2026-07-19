@@ -76,22 +76,15 @@ export default function Contents({ product }: { product: IProduct }) {
         <SearchOutlined />
       </Button>
 
-      <Button
-        shape="circle"
-        style={{
-          color: "#e21d2b",
-          border: "1px solid #e21d2b",
-        }}
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-      >
-        <ZoomInOutlined />
-      </Button>
 
       <Button
         shape="circle"
-        style={{
+        style={isProductInLiked ? {
+          backgroundColor: "#e21d2b",
+          color: "white",
+          border: "1px solid #e21d2b",
+        }
+        :{
           color: "#e21d2b",
           border: "1px solid #e21d2b",
         }}
@@ -108,7 +101,7 @@ export default function Contents({ product }: { product: IProduct }) {
           style={
             isProductInLiked
               ? {
-                  color: "red",
+                  color: "white",
                   transform: "scale(1.3)",
                   transition: "all 0.3s ease",
                 }
@@ -354,12 +347,7 @@ export default function Contents({ product }: { product: IProduct }) {
               >
                 Price: {product.price}
               </p>
-              <p>
-                {" "}
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown.
-              </p>
+              <p>{product.ShortDes}</p>
               <p>
                 <span
                   style={{

@@ -12,6 +12,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "PC RTX 3050 2023 offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC RTX 3050 2023 is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the NVIDIA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -41,6 +53,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "PC GTX 1050 2023 offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC GTX 1050 2023 is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the NVIDIA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 20001,
@@ -62,6 +86,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "PC Ryzen 5 5600G 2023 offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Ryzen 5 5600G 2023 is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 30001,
@@ -83,6 +119,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "PC Ryzen 7 5800H Gen 1 offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Ryzen 7 5800H Gen 1 is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 40001,
@@ -104,6 +152,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "PC Ryzen 9 5900HX Gen 2 offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Ryzen 9 5900HX Gen 2 is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 50001,
@@ -125,6 +185,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "PC Intel Core i9 12900K Elite offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Intel Core i9 12900K Elite is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the Intel product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 60001,
@@ -146,6 +218,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "priceDiscount",
     "discount_value": 51,
+    "ShortDes": "PC Intel Core i7 12700F Creator Edition offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Intel Core i7 12700F Creator Edition is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the Intel product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 70001,
@@ -167,6 +251,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "PC Ryzen Threadripper Pro 5975WX Workstation offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Ryzen Threadripper Pro 5975WX Workstation is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 80001,
@@ -188,6 +284,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "PC Intel Core i5 12600K Gaming Rig offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Intel Core i5 12600K Gaming Rig is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the Intel product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 90001,
@@ -209,6 +317,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "PC AMD Ryzen 3 5300G Entry Build offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC AMD Ryzen 3 5300G Entry Build is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 100001,
@@ -230,6 +350,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "PC NVIDIA RTX 4060 Ti Creator Pro offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC NVIDIA RTX 4060 Ti Creator Pro is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the NVIDIA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 110001,
@@ -251,6 +383,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "PC_Gaming",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "PC Intel Core i3 12100F Budget Edition offers dependable gaming computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "PC Intel Core i3 12100F Budget Edition is a gaming computer made for customers who want dependable performance and straightforward daily use. It belongs to the Intel product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 120001,
@@ -272,6 +416,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Logitech G502 Wireless Gaming Mouse offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Logitech G502 Wireless Gaming Mouse is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Logitech product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 240001,
@@ -293,6 +449,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "7-in-1 USB-C Multiport Adapter offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "7-in-1 USB-C Multiport Adapter is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Anker product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 250001,
@@ -314,6 +482,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "JBL Boombox 3 Bluetooth Speaker offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "JBL Boombox 3 Bluetooth Speaker is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the JBL product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 260001,
@@ -335,6 +515,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "GTEK Storm 75 Gaming Keyboard offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "GTEK Storm 75 Gaming Keyboard is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Razer product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 270001,
@@ -356,6 +548,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 51,
+    "ShortDes": "C290 Webcam offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "C290 Webcam is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Logitech product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 280001,
@@ -377,6 +581,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Wireless Router AX3000 offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Wireless Router AX3000 is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the TP-Link product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 290001,
@@ -398,6 +614,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "SSD",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "1TB NVMe SSD offers dependable solid-state drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "1TB NVMe SSD is a solid-state drive made for customers who want dependable performance and straightforward daily use. It belongs to the Samsung product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 300001,
@@ -419,6 +647,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "HDD",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "4TB External HDD offers dependable hard drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "4TB External HDD is a hard drive made for customers who want dependable performance and straightforward daily use. It belongs to the Western Digital product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 310001,
@@ -440,6 +680,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "27-inch 4K Monitor offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "27-inch 4K Monitor is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Dell product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 320001,
@@ -461,6 +713,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Noise-Cancelling Headset WH-1000XM4 offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Noise-Cancelling Headset WH-1000XM4 is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Sony product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 330001,
@@ -482,6 +746,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 40,
+    "ShortDes": "USB Condenser Microphone offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "USB Condenser Microphone is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Blue product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 340001,
@@ -503,6 +779,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Samsung Tab S9 offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Samsung Tab S9 is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Samsung product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 350001,
@@ -524,6 +812,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "Iphone 12 offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Iphone 12 is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Apple product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 360001,
@@ -545,6 +845,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Apple Smartwatch Series 10 offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Apple Smartwatch Series 10 is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Apple product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 370001,
@@ -566,6 +878,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Fast Charger 112W offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Fast Charger 112W is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Anker product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 380001,
@@ -587,6 +911,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "20000mAh Power Bank offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "20000mAh Power Bank is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Xiaomi product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 390001,
@@ -608,6 +944,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 30,
+    "ShortDes": "Deskjet 2820e Printer offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Deskjet 2820e Printer is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the HP product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 400001,
@@ -629,6 +977,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "Gaming Mousepad XXL offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Gaming Mousepad XXL is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Corsair product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 410001,
@@ -650,6 +1010,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Graphics Drawing Tablet offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Graphics Drawing Tablet is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Wacom product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 420001,
@@ -671,6 +1043,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "Ethernet Cable Cat6 offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Ethernet Cable Cat6 is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Belkin product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 430001,
@@ -692,6 +1076,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Buds 3 Pro offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Buds 3 Pro is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Samsung product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 440001,
@@ -713,6 +1109,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Quest 2 VR headset offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Quest 2 VR headset is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Oculus product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 450001,
@@ -734,6 +1142,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "USB-C Docking Station offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "USB-C Docking Station is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the CalDigit product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 460001,
@@ -755,6 +1175,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Smart Light Bulb offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Smart Light Bulb is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Philips product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 470001,
@@ -776,6 +1208,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "HDD",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "2-Bay NAS Drive offers dependable hard drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "2-Bay NAS Drive is a hard drive made for customers who want dependable performance and straightforward daily use. It belongs to the Synology product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 480001,
@@ -797,6 +1241,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 51,
+    "ShortDes": "Nintendo switch offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Nintendo switch is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Nintendo product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 490001,
@@ -818,6 +1274,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Minin smart Projector offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Minin smart Projector is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Epson product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 500001,
@@ -839,6 +1307,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "Fitness Tracker Charge 6 offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Fitness Tracker Charge 6 is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Fitbit product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 510001,
@@ -860,6 +1340,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "Smart Thermostat offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Smart Thermostat is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the Nest product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 520001,
@@ -881,6 +1373,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Drone DJI Mini offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Drone DJI Mini is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the DJI product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 530001,
@@ -902,6 +1406,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "SSD",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Portable SSD 2TB offers dependable solid-state drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Portable SSD 2TB is a solid-state drive made for customers who want dependable performance and straightforward daily use. It belongs to the SanDisk product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "comments": [
       {
         "id": 540001,
@@ -923,6 +1439,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "laptop",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "ASUS TUF Gaming A15 Laptop offers dependable laptop performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ASUS TUF Gaming A15 Laptop is a laptop made for customers who want dependable performance and straightforward daily use. It belongs to the ASUS product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -945,6 +1473,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "laptop",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Acer Nitro V 15 Laptop offers dependable laptop performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Acer Nitro V 15 Laptop is a laptop made for customers who want dependable performance and straightforward daily use. It belongs to the Acer product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -967,6 +1507,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "laptop",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "Lenovo LOQ 15 Gaming Laptop offers dependable laptop performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Lenovo LOQ 15 Gaming Laptop is a laptop made for customers who want dependable performance and straightforward daily use. It belongs to the Lenovo product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -989,6 +1541,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "laptop",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "HP Victus 16 Laptop offers dependable laptop performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "HP Victus 16 Laptop is a laptop made for customers who want dependable performance and straightforward daily use. It belongs to the HP product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1011,6 +1575,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "laptop",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Dell Inspiron 15 Laptop offers dependable laptop performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Dell Inspiron 15 Laptop is a laptop made for customers who want dependable performance and straightforward daily use. It belongs to the Dell product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1033,6 +1609,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "laptop",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "Apple MacBook Air M3 offers dependable laptop performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Apple MacBook Air M3 is a laptop made for customers who want dependable performance and straightforward daily use. It belongs to the Apple product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1055,6 +1643,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "cpu",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Intel Core i3 12100F CPU offers dependable processor performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Intel Core i3 12100F CPU is a processor made for customers who want dependable performance and straightforward daily use. It belongs to the Intel product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1077,6 +1677,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "cpu",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Intel Core i5 12400F CPU offers dependable processor performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Intel Core i5 12400F CPU is a processor made for customers who want dependable performance and straightforward daily use. It belongs to the Intel product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1099,6 +1711,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "cpu",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "Intel Core i7 13700K CPU offers dependable processor performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Intel Core i7 13700K CPU is a processor made for customers who want dependable performance and straightforward daily use. It belongs to the Intel product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1121,6 +1745,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "cpu",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "AMD Ryzen 5 5600X CPU offers dependable processor performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "AMD Ryzen 5 5600X CPU is a processor made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1143,6 +1779,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "cpu",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "AMD Ryzen 7 7800X3D CPU offers dependable processor performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "AMD Ryzen 7 7800X3D CPU is a processor made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1165,6 +1813,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "cpu",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "AMD Ryzen 9 7950X CPU offers dependable processor performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "AMD Ryzen 9 7950X CPU is a processor made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1187,6 +1847,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "VGA",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "NVIDIA GTX 1660 Super VGA offers dependable graphics card performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "NVIDIA GTX 1660 Super VGA is a graphics card made for customers who want dependable performance and straightforward daily use. It belongs to the NVIDIA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1209,6 +1881,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "VGA",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "NVIDIA RTX 3060 12GB VGA offers dependable graphics card performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "NVIDIA RTX 3060 12GB VGA is a graphics card made for customers who want dependable performance and straightforward daily use. It belongs to the NVIDIA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1231,6 +1915,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "VGA",
     "discountype": "priceDiscount",
     "discount_value": 30,
+    "ShortDes": "NVIDIA RTX 4060 Ti VGA offers dependable graphics card performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "NVIDIA RTX 4060 Ti VGA is a graphics card made for customers who want dependable performance and straightforward daily use. It belongs to the NVIDIA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1253,6 +1949,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "VGA",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "NVIDIA RTX 4070 Super VGA offers dependable graphics card performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "NVIDIA RTX 4070 Super VGA is a graphics card made for customers who want dependable performance and straightforward daily use. It belongs to the NVIDIA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1275,6 +1983,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "VGA",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "AMD Radeon RX 7600 VGA offers dependable graphics card performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "AMD Radeon RX 7600 VGA is a graphics card made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1297,6 +2017,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "VGA",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "AMD Radeon RX 7900 XT VGA offers dependable graphics card performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "AMD Radeon RX 7900 XT VGA is a graphics card made for customers who want dependable performance and straightforward daily use. It belongs to the AMD product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1319,6 +2051,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "RAM",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Corsair Vengeance 16GB DDR4 RAM offers dependable memory product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Corsair Vengeance 16GB DDR4 RAM is a memory product made for customers who want dependable performance and straightforward daily use. It belongs to the Corsair product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1341,6 +2085,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "RAM",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Kingston Fury 16GB DDR5 RAM offers dependable memory product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Kingston Fury 16GB DDR5 RAM is a memory product made for customers who want dependable performance and straightforward daily use. It belongs to the Kingston product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1363,6 +2119,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "RAM",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "G.Skill Trident Z 32GB DDR5 RAM offers dependable memory product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "G.Skill Trident Z 32GB DDR5 RAM is a memory product made for customers who want dependable performance and straightforward daily use. It belongs to the G.Skill product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1385,6 +2153,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "RAM",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "TeamGroup T-Force 16GB DDR4 RAM offers dependable memory product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "TeamGroup T-Force 16GB DDR4 RAM is a memory product made for customers who want dependable performance and straightforward daily use. It belongs to the TeamGroup product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1407,6 +2187,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "RAM",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Crucial Pro 32GB DDR5 RAM offers dependable memory product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Crucial Pro 32GB DDR5 RAM is a memory product made for customers who want dependable performance and straightforward daily use. It belongs to the Crucial product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1429,6 +2221,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "RAM",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "ADATA XPG 64GB DDR5 RAM offers dependable memory product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ADATA XPG 64GB DDR5 RAM is a memory product made for customers who want dependable performance and straightforward daily use. It belongs to the ADATA product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1451,6 +2255,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "SSD",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Samsung 990 Pro 1TB SSD offers dependable solid-state drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Samsung 990 Pro 1TB SSD is a solid-state drive made for customers who want dependable performance and straightforward daily use. It belongs to the Samsung product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1473,6 +2289,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "SSD",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Kingston NV2 500GB SSD offers dependable solid-state drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Kingston NV2 500GB SSD is a solid-state drive made for customers who want dependable performance and straightforward daily use. It belongs to the Kingston product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1495,6 +2323,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "SSD",
     "discountype": "priceDiscount",
     "discount_value": 30,
+    "ShortDes": "Crucial P3 Plus 2TB SSD offers dependable solid-state drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Crucial P3 Plus 2TB SSD is a solid-state drive made for customers who want dependable performance and straightforward daily use. It belongs to the Crucial product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1517,6 +2357,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "SSD",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "WD Black SN850X 1TB SSD offers dependable solid-state drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "WD Black SN850X 1TB SSD is a solid-state drive made for customers who want dependable performance and straightforward daily use. It belongs to the Western Digital product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1539,6 +2391,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "HDD",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Seagate Barracuda 1TB HDD offers dependable hard drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Seagate Barracuda 1TB HDD is a hard drive made for customers who want dependable performance and straightforward daily use. It belongs to the Seagate product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1561,6 +2425,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "HDD",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Seagate Barracuda 2TB HDD offers dependable hard drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Seagate Barracuda 2TB HDD is a hard drive made for customers who want dependable performance and straightforward daily use. It belongs to the Seagate product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1583,6 +2459,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "HDD",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "Western Digital Blue 4TB HDD offers dependable hard drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Western Digital Blue 4TB HDD is a hard drive made for customers who want dependable performance and straightforward daily use. It belongs to the Western Digital product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1605,6 +2493,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "HDD",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "Toshiba X300 6TB HDD offers dependable hard drive performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Toshiba X300 6TB HDD is a hard drive made for customers who want dependable performance and straightforward daily use. It belongs to the Toshiba product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1627,6 +2527,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "MainBoard",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "ASUS Prime B760M Mainboard offers dependable mainboard performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ASUS Prime B760M Mainboard is a mainboard made for customers who want dependable performance and straightforward daily use. It belongs to the ASUS product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1649,6 +2561,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "MainBoard",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "MSI MAG B650 Tomahawk Mainboard offers dependable mainboard performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "MSI MAG B650 Tomahawk Mainboard is a mainboard made for customers who want dependable performance and straightforward daily use. It belongs to the MSI product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1671,6 +2595,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "MainBoard",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "Gigabyte Z790 Aorus Elite Mainboard offers dependable mainboard performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Gigabyte Z790 Aorus Elite Mainboard is a mainboard made for customers who want dependable performance and straightforward daily use. It belongs to the Gigabyte product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1693,6 +2629,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "MainBoard",
     "discountype": "buyOneGetOne",
     "discount_value": 50,
+    "ShortDes": "ASRock B550M Steel Legend Mainboard offers dependable mainboard performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ASRock B550M Steel Legend Mainboard is a mainboard made for customers who want dependable performance and straightforward daily use. It belongs to the ASRock product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1715,6 +2663,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "MainBoard",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "ASUS ROG Strix X670E Mainboard offers dependable mainboard performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ASUS ROG Strix X670E Mainboard is a mainboard made for customers who want dependable performance and straightforward daily use. It belongs to the ASUS product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1737,6 +2697,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "MainBoard",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "MSI Pro H610M Mainboard offers dependable mainboard performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "MSI Pro H610M Mainboard is a mainboard made for customers who want dependable performance and straightforward daily use. It belongs to the MSI product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1759,6 +2731,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Razer DeathAdder V3 Gaming Mouse offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Razer DeathAdder V3 Gaming Mouse is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Razer product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1781,6 +2765,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Keychron K8 Mechanical Keyboard offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Keychron K8 Mechanical Keyboard is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Keychron product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1803,6 +2799,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Dell OptiPlex 7010 SFF Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Dell OptiPlex 7010 SFF Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the Dell product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1825,6 +2833,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "HP ProDesk 400 G9 Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "HP ProDesk 400 G9 Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the HP product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1847,6 +2867,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "Lenovo ThinkCentre M70s Gen 4 Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Lenovo ThinkCentre M70s Gen 4 Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the Lenovo product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1869,6 +2901,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "ASUS ExpertCenter D5 SFF Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ASUS ExpertCenter D5 SFF Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the ASUS product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1891,6 +2935,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "Acer Veriton X5 Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Acer Veriton X5 Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the Acer product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1913,6 +2969,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Dell OptiPlex 3000 Micro Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Dell OptiPlex 3000 Micro Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the Dell product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1935,6 +3003,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "HP Elite Mini 800 G9 Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "HP Elite Mini 800 G9 Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the HP product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1957,6 +3037,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Lenovo ThinkCentre M90q Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Lenovo ThinkCentre M90q Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the Lenovo product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -1979,6 +3071,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "MSI PRO DP21 Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "MSI PRO DP21 Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the MSI product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2001,6 +3105,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Office_PC",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "ASUS ExpertCenter PN64 Mini Office PC offers dependable office computer performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ASUS ExpertCenter PN64 Mini Office PC is a office computer made for customers who want dependable performance and straightforward daily use. It belongs to the ASUS product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2023,6 +3139,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Samsung Galaxy S24 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Samsung Galaxy S24 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Samsung product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2045,6 +3173,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Samsung Galaxy S24 Ultra Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Samsung Galaxy S24 Ultra Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Samsung product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2067,6 +3207,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "Apple iPhone 15 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Apple iPhone 15 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Apple product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2089,6 +3241,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Google Pixel 9 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Google Pixel 9 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Google product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2111,6 +3275,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "Xiaomi 14 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Xiaomi 14 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Xiaomi product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2133,6 +3309,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "OPPO Reno 12 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "OPPO Reno 12 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the OPPO product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2155,6 +3343,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "OnePlus 12 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "OnePlus 12 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the OnePlus product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2177,6 +3377,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Nokia G42 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Nokia G42 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Nokia product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2199,6 +3411,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "phone",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Motorola Edge 50 Phone offers dependable smartphone performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Motorola Edge 50 Phone is a smartphone made for customers who want dependable performance and straightforward daily use. It belongs to the Motorola product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2221,6 +3445,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Apple iPad Air M2 Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Apple iPad Air M2 Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Apple product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2243,6 +3479,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Apple iPad 10th Generation Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Apple iPad 10th Generation Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Apple product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2265,6 +3513,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "Samsung Galaxy Tab S10 Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Samsung Galaxy Tab S10 Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Samsung product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2287,6 +3547,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Lenovo Tab P12 Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Lenovo Tab P12 Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Lenovo product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2309,6 +3581,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "Xiaomi Pad 6 Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Xiaomi Pad 6 Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Xiaomi product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2331,6 +3615,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Microsoft Surface Pro 11 Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Microsoft Surface Pro 11 Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Microsoft product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2353,6 +3649,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "priceDiscount",
     "discount_value": 25,
+    "ShortDes": "OnePlus Pad 2 Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "OnePlus Pad 2 Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the OnePlus product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2375,6 +3683,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "OPPO Pad Neo Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "OPPO Pad Neo Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the OPPO product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2397,6 +3717,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "tablet",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Nokia T21 Tablet offers dependable tablet performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Nokia T21 Tablet is a tablet made for customers who want dependable performance and straightforward daily use. It belongs to the Nokia product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2419,6 +3751,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Dell UltraSharp 27-inch Monitor offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Dell UltraSharp 27-inch Monitor is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Dell product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2441,6 +3785,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "LG UltraGear 27-inch Monitor offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "LG UltraGear 27-inch Monitor is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the LG product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2463,6 +3819,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Accesories",
     "discountype": "priceDiscount",
     "discount_value": 10,
+    "ShortDes": "ASUS ProArt 24-inch Monitor offers dependable computer accessory performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "ASUS ProArt 24-inch Monitor is a computer accessory made for customers who want dependable performance and straightforward daily use. It belongs to the ASUS product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2485,6 +3853,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "priceDiscount",
     "discount_value": 15,
+    "ShortDes": "Logitech MX Keys S Keyboard offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Logitech MX Keys S Keyboard is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Logitech product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2507,6 +3887,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "none",
     "discount_value": 0,
+    "ShortDes": "Razer BlackWidow V4 Keyboard offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Razer BlackWidow V4 Keyboard is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Razer product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
@@ -2529,6 +3921,18 @@ const PRODUCT_DATA: IProduct[] = [
     "product_type": "Gear",
     "discountype": "priceDiscount",
     "discount_value": 20,
+    "ShortDes": "Corsair K70 RGB Keyboard offers dependable gaming gear product performance for everyday work, entertainment, and regular use.",
+    "FullDes": [
+      {
+        "Overview": "Corsair K70 RGB Keyboard is a gaming gear product made for customers who want dependable performance and straightforward daily use. It belongs to the Corsair product range and can fit naturally into a home, office, study, or personal entertainment setup. The product focuses on practical operation, consistent results, and compatibility with commonly used equipment. Its balanced design makes it approachable for first-time buyers while still providing the reliability expected by experienced technology users."
+      },
+      {
+        "Usage and performance": "This product is suitable for regular tasks connected to its category, whether the user is working, studying, communicating, creating content, playing games, or improving an existing setup. For the best experience, customers should confirm that its specifications, connections, physical size, and supported standards match the other equipment they already own. Correct installation and sensible settings help the product work smoothly. Performance can vary according to the complete system, installed software, network conditions, workload, and accessories used with it."
+      },
+      {
+        "Care and support": "Keep the product in a clean, dry, and well-ventilated place, and follow the supplied instructions during installation or charging. Avoid liquid, heavy impact, blocked airflow, unstable power, and unsupported modifications. Regular cleaning and careful cable management can help preserve reliable operation. Customers should keep the invoice, packaging, serial number, and warranty information after purchase. If unusual heat, noise, connection problems, or unstable behaviour appears, stop using the product when necessary and contact the store so the issue can be checked safely."
+      }
+    ],
     "liked": false,
     "comments": [
       {
