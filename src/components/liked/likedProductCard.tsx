@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { LikedContext } from "@/shared/context/likedContext";
 import { CartContext } from "@/shared/context/cartContext";
 import { useRouter } from "next/navigation";
+import ProductPrice from "@/components/common/productPrice";
 
 export default function LikedProductCard({ product }: { product: IProduct }) {
   const router = useRouter();
@@ -61,16 +62,7 @@ export default function LikedProductCard({ product }: { product: IProduct }) {
       <p style={{ color: "black", fontSize: "100%", fontWeight: "bold",textAlign:"center" }}>
         {product.name}
       </p>
-      <p
-        style={{
-          fontSize: "100%",
-          fontWeight: "bold",
-          textAlign: "center",
-          color: "#e21d2b",
-        }}
-      >
-        {product.price.toLocaleString()} VND
-      </p>
+      <ProductPrice product={product} fontSize="16px" />
       <p
         style={{
           fontSize: "100%",

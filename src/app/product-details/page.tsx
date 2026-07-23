@@ -3,9 +3,10 @@
 import ProductImage from "@/components/category/images_product";
 import ProductInformation from "@/components/category/information";
 import { Skeleton, Grid, Row, Col } from "antd";
-import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useContext } from "react";
 import { useProductDetail } from "@/shared/hooks/useProductDetail";
+import { CartContext } from "@/shared/context/cartContext";
 
 // TODO: @triet import useSearchParams từ next/navigation để lấy productId từ URL
 // TODO: @triet import useState và useEffect từ react
@@ -16,6 +17,7 @@ import { useProductDetail } from "@/shared/hooks/useProductDetail";
 const { useBreakpoint } = Grid;
 
 export default function ProductDetails() {
+  const router = useRouter();
   //URL là /product-details?id=1 thì lấy id=1
   const searchParams = useSearchParams();
   const productIdParam = searchParams.get("id");
@@ -30,7 +32,7 @@ export default function ProductDetails() {
   // TODO: @triet tạo state để lưu thông tin sản phẩm hiện tại
 
   // TODO: @triet tạo state để lưu số lượng sản phẩm muốn mua
-  const [quantity, setQuantity] = useState<number>(1);
+  const { addProductToCart } = useContext(CartContext);
 
   // TODO: @triet sử dụng useEffect để fetch thông tin sản phẩm dựa trên productId
   // Hint: useEffect(() => { ... }, [productId])
@@ -70,10 +72,10 @@ export default function ProductDetails() {
           {product ? (
             <ProductInformation
               product={product}
-              quantity={1}
-              setQuantity={() => {}}
-              handleBuyNow={() => {}}
-              handleAddToCart={() => {}}
+              handleBuyNow={() => {
+                addProductToCart(product, 1);
+                router.push("/checkouts");
+              }}
             />
           ) : (
             <Skeleton active />

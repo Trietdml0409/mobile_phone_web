@@ -57,6 +57,8 @@ export interface CartProduct {
   quantity: number;
   price: number;
   totalPrice: number;
+  discountype: DiscountType;
+  discount_value: number;
   addedAt: string;
 }
 

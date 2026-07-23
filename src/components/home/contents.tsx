@@ -6,7 +6,6 @@ import { Flex } from "antd";
 import {
   EyeOutlined,
   SearchOutlined,
-  ZoomInOutlined,
   HeartOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
@@ -16,6 +15,7 @@ import { useState, useContext } from "react";
 import InputNumberBox from "../common/inputNumberBox";
 import { LikedContext } from "@/shared/context/likedContext";
 import { CartContext } from "@/shared/context/cartContext";
+import ProductPrice from "../common/productPrice";
 
 
 const { useBreakpoint } = Grid;
@@ -119,23 +119,31 @@ export default function Contents({ product }: { product: IProduct }) {
   hoverable
   onClick={() => router.push(`/product-details?id=${product.id}`)}
   style={{
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: "10px",
-    height: "auto",
+    height: "100%",
+    width: "100%",
+  }}
+  styles={{
+    body: {
+      width: "100%",
+      height: "100%",
+      boxSizing: "border-box",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      padding: "12px",
+    },
   }}
 >
   <Popover content={popoverContent} trigger="hover">
     <div
       style={{
-        width: "80%",
+        width: "100%",
+        height: "130px",
         padding: "3px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         overflow: "hidden",
-        aspectRatio: "1 / 1", // responsive image box
       }}
     >
       <img
@@ -154,16 +162,24 @@ export default function Contents({ product }: { product: IProduct }) {
     style={{
       margin: "2px",
       width: "100%",
-      minHeight: "20px",
-      height: "auto",
+      height: "54px",
       textAlign: "center",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      overflow: "hidden",
     }}
   >
     <p
       style={{
         fontWeight: "bold",
         fontSize: "12px",
+        lineHeight: "18px",
         margin: 0,
+        display: "-webkit-box",
+        WebkitLineClamp: 3,
+        WebkitBoxOrient: "vertical",
+        overflow: "hidden",
       }}
     >
       {product.name}
@@ -176,22 +192,15 @@ export default function Contents({ product }: { product: IProduct }) {
       textAlign: "center",
       color: "gray",
       margin: "2px 0",
+      minHeight: "18px",
     }}
   >
     {product.brandName}
   </p>
 
-  <p
-    style={{
-      fontSize: "12px",
-      textAlign: "center",
-      color: "#e21d2b",
-      fontWeight: "bold",
-      margin: "2px 0 8px",
-    }}
-  >
-    {product.price.toLocaleString()} VND
-  </p>
+  <div style={{ margin: "2px 0 8px", height: "42px" }}>
+    <ProductPrice product={product} fontSize="12px" />
+  </div>
 
   <Button
     icon={<ShoppingCartOutlined />}
@@ -199,6 +208,7 @@ export default function Contents({ product }: { product: IProduct }) {
       backgroundColor: isProductInCart ? "#151515" : "#e21d2b",
       color: "white",
       width: "100%",
+      marginTop: "auto",
     }}
     onClick={(e) => {
       e.stopPropagation();
@@ -219,18 +229,26 @@ export default function Contents({ product }: { product: IProduct }) {
           hoverable
           onClick={() => router.push(`/product-details?id=${product.id}`)}
           style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            padding: "10px",
-            minHeight: "260px",
+            height: "100%",
+            width: "100%",
+          }}
+          styles={{
+            body: {
+              width: "100%",
+              height: "100%",
+              boxSizing: "border-box",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              padding: "16px",
+            },
           }}
         >
           <Popover content={popoverContent} trigger="hover">
                       <div
             style={{
               height: "160px",
-              width: "80%",
+              width: "100%",
               padding: "3px",
               display: "flex",
               justifyContent: "center",
@@ -245,7 +263,6 @@ export default function Contents({ product }: { product: IProduct }) {
                 maxWidth: "100%",
                 maxHeight: "200px",
                 objectFit: "contain",
-                marginBottom: "10px",
               }}
             />
           </div>
@@ -254,15 +271,23 @@ export default function Contents({ product }: { product: IProduct }) {
           <div style={{
             margin:"2px",
             width:"100%",
-            height:"35px",
+            height:"54px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            overflow: "hidden",
           }}>
           <p
             style={{
               fontWeight: "bold",
               fontSize: "12px",
               textAlign: "center",
+              lineHeight: "18px",
               margin: 0,
-              
+              display: "-webkit-box",
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
             }}
           >
             {product.name}
@@ -275,21 +300,14 @@ export default function Contents({ product }: { product: IProduct }) {
               textAlign: "center",
               color: "gray",
               margin: "2px 0",
+              minHeight: "18px",
             }}
           >
             {product.brandName}
           </p>
-          <p
-            style={{
-              fontSize: "12px",
-              textAlign: "center",
-              color: "#e21d2b",
-              fontWeight: "bold",
-              margin: "2px 0 8px",
-            }}
-          >
-            {product.price.toLocaleString()} VND
-          </p>
+          <div style={{ margin: "2px 0 8px", height: "42px" }}>
+            <ProductPrice product={product} fontSize="12px" />
+          </div>
           <Button
             icon={<ShoppingCartOutlined />}
             style={
@@ -338,15 +356,7 @@ export default function Contents({ product }: { product: IProduct }) {
               >
                 {product.name}
               </p>
-              <p
-                style={{
-                  color: "#e21d2b",
-                  fontWeight: "bold",
-                  fontSize: "15px",
-                }}
-              >
-                Price: {product.price}
-              </p>
+              <ProductPrice product={product} fontSize="15px" textAlign="left" />
               <p>{product.ShortDes}</p>
               <p>
                 <span

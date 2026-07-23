@@ -5,6 +5,7 @@ import { ShoppingCartOutlined, HeartOutlined } from "@ant-design/icons";
 import { Flex, Button,Card } from "antd";
 import { useRouter } from "next/navigation";
 import { useContext } from "react";
+import ProductPrice from "@/components/common/productPrice";
 
 interface CatergoryProductCardProps {
   product: IProduct;
@@ -65,18 +66,7 @@ export default function CatergoryProductCard({
       <p style={{ color: "black", fontSize: "100%", fontWeight: "bold" }}>
         {product.name}
       </p>
-      {/* price */}
-      <p
-        style={{
-          fontSize: "100%",
-          fontWeight: "bold",
-          textAlign: "center",
-          color: "#e21d2b",
-        }}
-      >
-        {/*Changing the currency to local string */}
-        {product.price.toLocaleString()} VND
-      </p>
+      <ProductPrice product={product} fontSize="16px" />
       {/* Action Button */}
       <Flex
         justify="center"

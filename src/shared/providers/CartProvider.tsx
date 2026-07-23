@@ -3,11 +3,21 @@ import { CartContext } from "../context/cartContext";
 import { CartProductState, IProduct } from "../types/common.types";
 import {notification } from 'antd';
 import type { NotificationArgsProps } from 'antd';
-import {RadiusBottomleftOutlined} from '@ant-design/icons';
+import PRODUCT_DATA from "@/data_folder/data";
 
 
 type NotificationPlacement = NotificationArgsProps['placement'];
 const Context = React.createContext({ name: 'Default' });
+
+function getProductPrice(product: IProduct): number {
+  if (product.discountype === "priceDiscount") {
+    return Math.round(
+      product.price - product.price * (product.discount_value / 100),
+    );
+  }
+
+  return product.price;
+}
 
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
@@ -61,7 +71,29 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     if (saveCart) {
       try {
         //transform the data into list of object
-        const values = JSON.parse(saveCart) as CartProductState;
+        const savedValues = JSON.parse(saveCart) as CartProductState;
+        const values: CartProductState = {};
+
+        Object.keys(savedValues).forEach((productKey) => {
+          const savedProduct = savedValues[productKey];
+          const currentProduct = PRODUCT_DATA.find(
+            (product) => product.id === savedProduct.productId,
+          );
+
+          const unitPrice = currentProduct
+            ? getProductPrice(currentProduct)
+            : savedProduct.price;
+
+          values[productKey] = {
+            ...savedProduct,
+            price: unitPrice,
+            totalPrice: unitPrice * savedProduct.quantity,
+            discountype:
+              currentProduct?.discountype || savedProduct.discountype || "none",
+            discount_value:
+              currentProduct?.discount_value || savedProduct.discount_value || 0,
+          };
+        });
 
         //set data
         // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -83,6 +115,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     addNotification('bottomRight')
 
     const productKey = product.id.toString();
+    const unitPrice = getProductPrice(product);
     console.log("xxxx productKey", productKey, product);
 
     const newCartProducts: CartProductState = { ...cartProducts };
@@ -90,15 +123,20 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     // product already in cart
     if (cartProducts[productKey]) {
       newCartProducts[productKey].quantity += quantity;
+      newCartProducts[productKey].price = unitPrice;
+      newCartProducts[productKey].discountype = product.discountype;
+      newCartProducts[productKey].discount_value = product.discount_value;
       newCartProducts[productKey].totalPrice =
-        product.price * newCartProducts[productKey].quantity;
+        unitPrice * newCartProducts[productKey].quantity;
     } else {
       // new product in cart
       newCartProducts[productKey] = {
         productId: product.id,
         quantity: quantity,
-        price: product.price,
-        totalPrice: product.price * quantity,
+        price: unitPrice,
+        totalPrice: unitPrice * quantity,
+        discountype: product.discountype,
+        discount_value: product.discount_value,
         addedAt: new Date().toISOString(),
       };
     }
@@ -127,10 +165,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     const newCartProducts: CartProductState = { ...cartProducts };
 
     if (cartProducts[productKey]) {
-      newCartProducts[productKey].quantity -= 1;
-      newCartProducts[productKey].totalPrice =
-        newCartProducts[productKey].totalPrice -
-        newCartProducts[productKey].price;
+      if (newCartProducts[productKey].quantity <= 1) {
+        delete newCartProducts[productKey];
+      } else {
+        newCartProducts[productKey].quantity -= 1;
+        newCartProducts[productKey].totalPrice =
+          newCartProducts[productKey].price *
+          newCartProducts[productKey].quantity;
+      }
 
       setCartProducts({ ...newCartProducts });
     }

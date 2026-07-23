@@ -5,6 +5,7 @@ import { CartContext } from "@/shared/context/cartContext";
 import { IProduct } from "@/shared/types/common.types";
 import { Button, InputNumber, Card, Typography } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
+import ProductPrice from "@/components/common/productPrice";
 
 const { Title, Text } = Typography;
 
@@ -72,11 +73,7 @@ export default function CartProductCard({ product }: CartProductCardProps) {
             {product.name}
           </Title>
           {/*This is Product Price*/}
-          <Text
-            style={{ fontSize: "16px", fontWeight: "bold", color: "#e21d2b" }}
-          >
-            {product.price.toLocaleString()} VND
-          </Text>
+          <ProductPrice product={product} fontSize="16px" textAlign="left" />
 
           <br />
 

@@ -29,7 +29,7 @@ export default function RowsOfDiscount({
     <div style={{ width: "100%", height: "100%" }}>
       <Row gutter={[12, 12]}>
         {displayedProducts.map((product) => (
-          <Col key={product.id} xs={12} sm={8} lg={4}>
+          <Col key={product.id} xs={12} sm={8} lg={4} style={{ display: "flex" }}>
             <Contents product={product} />
           </Col>
         ))}

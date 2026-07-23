@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import Footer from "./footer";
 import Header from "./header";
+import BreadcrumbNavigation from "./breadcrumb";
 
 export default function LayoutWrapper({
   children,
@@ -17,6 +18,7 @@ export default function LayoutWrapper({
     <>
       {shouldShowHeader && <Header />}
       <div className={pathname === "/" ? "site-home" : "site-page"}>
+        {shouldShowHeader && <BreadcrumbNavigation />}
         {children}
       </div>
       {shouldShowFooter && <Footer />}
